@@ -1,0 +1,43 @@
+.sideNavigation {
+  border: 2px solid black;
+  font-size: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  padding: 5px;
+}
+
+.sideNavigation ul {
+  list-style: none;
+  border: 1px solid black;
+}
+
+.sideNavigation ul li {
+  text-align: right;
+  border: 1px solid black;
+  background: blue;
+  color: white;
+  margin: 7px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sideNavigation ul li :hover {
+  visibility: hidden;
+  background-color: gray;
+}
+
+.sideNavigation ul li span {
+  display: inline-block;
+  margin-left: 10px;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid white;
+}
+/*# sourceMappingURL=SideNavigation.css.map */
