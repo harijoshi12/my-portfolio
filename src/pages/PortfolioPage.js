@@ -2,7 +2,7 @@ import React from 'react'
 
 function PortfolioPage() {
   return (
-    <div>PortfolioPage</div>
+    <section>PortfolioPage</section>
   )
 }
 

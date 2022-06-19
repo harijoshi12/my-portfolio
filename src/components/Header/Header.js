@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './Header.css'
+import { NavLink } from 'react-router-dom'
 import Burger from './subComponents/Burger'
 import Logo from './subComponents/Logo'
 import Navbar from './subComponents/Navbar'
@@ -66,11 +67,11 @@ function Header() {
           <Burger/> */}
           <div className='logo'><a href=''>Logo</a></div>
           <nav ref={nav}>
-            <a ref={navlinks} href=''>Home</a>
-            <a ref={navlinks} href=''>Services</a>
-            <a ref={navlinks} href=''>Portfolio</a>
-            <a ref={navlinks} href=''>My Resume</a>
-            <a ref={navlinks} href='' id='nav_resumeMaker'>Create your resume</a>
+            <NavLink to='/' exact>Home</NavLink>
+            <NavLink to='/my-services' exact>Services</NavLink>
+            <NavLink to='/my-portfolio' exact>Portfolio</NavLink>
+            <NavLink to='/my-resume' exact>My Resume</NavLink>
+            <NavLink to='/resume-builder' id='nav_resumeMaker' exact>Create your resume</NavLink>
           </nav>
           <div className="burger" >
             <div className="line line1"></div>

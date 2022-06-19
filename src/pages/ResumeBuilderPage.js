@@ -2,7 +2,7 @@ import React from 'react'
 
 function ResumeBuilderPage() {
   return (
-    <div>ResumeBuilderPage</div>
+    <section>ResumeBuilderPage</section>
   )
 }
 
