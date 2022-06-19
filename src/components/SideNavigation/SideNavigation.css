@@ -1,18 +1,33 @@
 .sideNavigation {
   border: 2px solid black;
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: fixed;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 30px;
   padding: 5px;
+  pointer-events: none;
 }
 
 .sideNavigation ul {
   list-style: none;
   border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .sideNavigation ul li {
@@ -20,15 +35,24 @@
   border: 1px solid black;
   background: blue;
   color: white;
-  margin: 7px;
-  padding: 3px 10px;
+  margin: 5px;
+  padding: 1px 10px 1px 15px;
+  padding-bottom: 5px;
   border-radius: 20px;
   cursor: pointer;
+  pointer-events: all;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.sideNavigation ul li :hover {
-  visibility: hidden;
-  background-color: gray;
+.sideNavigation ul li:hover {
+  visibility: visible;
+}
+
+.sideNavigation ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 .sideNavigation ul li span {

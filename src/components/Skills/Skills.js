@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skills() {
   return (
-    <section>
+    <section id='skills'>
         Skills
     </section>
   )

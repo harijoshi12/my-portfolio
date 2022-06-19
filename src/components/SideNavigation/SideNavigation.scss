@@ -1,30 +1,41 @@
 .sideNavigation{
     border: 2px solid black;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
     width: fit-content;
     position: fixed;
     top: 50%;
+    transform: translateY(-50%);
     right: 30px;
     padding: 5px;
+    pointer-events: none;
     ul{
         list-style: none;
         border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         li{
             // visibility: hidden;
             text-align: right;
             border: 1px solid black;
             background: blue;
             color: white;
-            margin: 7px;
-            padding: 3px 10px;
+            margin: 5px;
+            padding: 1px 10px 1px 15px;
+            padding-bottom: 5px;
             border-radius: 20px;
             cursor: pointer;
-            :hover{
-                visibility: hidden;
-                background-color: gray;
+            pointer-events: all;
+            width: fit-content;
+            &:hover{
+                visibility: visible;
+                // background-color: gray;
             }
             a{
-
+                text-decoration: none;
+                color: white;
             }
             span{
                 display: inline-block;
