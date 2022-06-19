@@ -3,7 +3,6 @@ import {Route, Switch} from "react-router-dom"
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle"
 import Header from "./components/Header/Header"
 import './App.css'
-import SideNavigation from "./components/SideNavigation/SideNavigation";
 
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';

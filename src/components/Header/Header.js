@@ -1,21 +1,21 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
-import Burger from './subComponents/Burger'
-import Logo from './subComponents/Logo'
-import Navbar from './subComponents/Navbar'
+// import Burger from './subComponents/Burger'
+// import Logo from './subComponents/Logo'
+// import Navbar from './subComponents/Navbar'
 
 function Header() {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  // const [toggleMenu, setToggleMenu] = useState(false)
 
   const progress = useRef()
   const navOverlay = useRef()
   const header = useRef()
   const nav = useRef()
-  const navlinks = useRef()
-  const burger = useRef()
-  const burgerActive = useRef()
-  const burgerInactive = useRef()
+  // const navlinks = useRef()
+  // const burger = useRef()
+  // const burgerActive = useRef()
+  // const burgerInactive = useRef()
 
   // Progress Bar
   const progressBar = () => {
@@ -52,9 +52,9 @@ function Header() {
   progressBar();
   
   // Responsive Navbar
-  const responsieNav = ()=>{
+  // const responsieNav = ()=>{
 
-  }
+  // }
 
   return (
     <>
@@ -65,7 +65,7 @@ function Header() {
           {/* <Logo/>
           <Navbar/>
           <Burger/> */}
-          <div className='logo'><a href=''>Logo</a></div>
+          <div className='logo'><NavLink to='/' exact>Hari joshi</NavLink></div>
           <nav ref={nav}>
             <NavLink to='/' exact>Home</NavLink>
             <NavLink to='/my-services' exact>Services</NavLink>
