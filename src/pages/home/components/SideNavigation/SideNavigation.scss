@@ -33,7 +33,7 @@
                 line-height: 100%;
                 border: 2px solid white ;
                 border-radius: 20px;
-                padding: 5px 33px 7px 15px;
+                padding: 5px 30px 7px 15px;
                 background: blue;
                 color: white;
                 visibility: hidden;
@@ -42,16 +42,33 @@
             }
             span{
                 position: absolute;
-                right: 13px;
+                right: 11px;
                 top: 50%;
                 transform: translateY(-50%);
                 display: inline-block;
-                margin-left: 10px;
                 height: 10px;
                 width: 10px;
                 border: 1px solid rgb(0, 0, 0);
                 border-radius: 50%;
                 background: white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sideNavigation{
+        transform: translateY(-30%);
+        right: 0px;
+        ul{
+            li{
+                margin: 2px 0;
+                a{
+                    padding: 5px 25px 7px 15px;
+                }
+                span{
+                    right: 7px;
+                }
             }
         }
     }
