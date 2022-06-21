@@ -45,7 +45,7 @@ function Header() {
       <div  className="nav-overlay"></div>
       <header >
         <div ref={progress} className="progress"></div>
-        <div className="wrapper">
+        <div className="nav_wrapper">
           <div className='logo'><NavLink to='/' exact>Hari joshi</NavLink></div>
           <nav className={toggleMenu ? "toggle": ""}>
             <NavLink to='/' activeStyle={{color: "red"}} exact>Home</NavLink>

@@ -7,6 +7,7 @@ import Experience from './components/Experience/Experience'
 import Portfolio from './components/Portfolio/Portfolio'
 import Testimonial from './components/Testimonial/Testimonial'
 import Contact from './components/Contact/Contact'
+import './HomePage.css'
 
 function HomePage() {
   return (

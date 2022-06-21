@@ -1,0 +1,46 @@
+section {
+  background-color: red;
+  border-bottom: 1px solid white;
+}
+
+section .sec_wrapper {
+  max-width: 1400px;
+  height: 100vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  border: 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  margin: auto;
+}
+
+.sec_hero {
+  margin-top: 71px;
+  margin-bottom: 1px;
+}
+
+.sec_hero .sec_left h1 {
+  border: 1px solid;
+}
+
+.sec_hero .sec_left h2 {
+  border: 1px solid;
+}
+
+.sec_hero .sec_left .hero_btns {
+  border: 1px solid;
+}
+
+.sec_hero .sec_right img {
+  height: 400px;
+}
+/*# sourceMappingURL=HomePage.css.map */

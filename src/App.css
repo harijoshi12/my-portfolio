@@ -6,21 +6,3 @@
 a{
   text-decoration: none;
 }
-section, footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  font-size: 25px;
-  color: white;
-}
-section{
-  min-height: 400px;
-  background: red;
-}
-
-footer{
-  min-height: 300px;
-  background: blue;
-
-}

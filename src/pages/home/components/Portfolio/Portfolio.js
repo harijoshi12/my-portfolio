@@ -3,7 +3,7 @@ import React from 'react'
 function Portfolio() {
   return (
     <section id='portfolio'>
-        Portfolio
+       <div className="sec_wrapper">Hero</div>
     </section>
   )
 }

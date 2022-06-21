@@ -3,7 +3,7 @@ import React from 'react'
 function Services() {
   return (
     <section id='services'>
-        Services
+        <div className="sec_wrapper">Hero</div>
     </section>
   )
 }

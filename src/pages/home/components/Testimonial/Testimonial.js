@@ -3,7 +3,7 @@ import React from 'react'
 function Testimonial() {
   return (
     <section id='testimonial'>
-        Testimonial
+        <div className="sec_wrapper">Hero</div>
     </section>
   )
 }
