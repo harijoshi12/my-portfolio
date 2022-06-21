@@ -1,22 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
-// import Burger from './subComponents/Burger'
-// import Logo from './subComponents/Logo'
-// import Navbar from './subComponents/Navbar'
 
 function Header() {
-  // const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   const progress = useRef()
-  const navOverlay = useRef()
-  const header = useRef()
-  const nav = useRef()
-  // const navlinks = useRef()
-  // const burger = useRef()
-  // const burgerActive = useRef()
-  // const burgerInactive = useRef()
-
   // Progress Bar
   const progressBar = () => {
     let body = document.body;
@@ -50,30 +39,22 @@ function Header() {
     });
   };
   progressBar();
-  
-  // Responsive Navbar
-  // const responsieNav = ()=>{
-
-  // }
 
   return (
     <>
-      <div ref={navOverlay} className="nav-overlay"></div>
-      <header ref={header}>
+      <div  className="nav-overlay"></div>
+      <header >
         <div ref={progress} className="progress"></div>
         <div className="wrapper">
-          {/* <Logo/>
-          <Navbar/>
-          <Burger/> */}
           <div className='logo'><NavLink to='/' exact>Hari joshi</NavLink></div>
-          <nav ref={nav}>
-            <NavLink to='/' exact>Home</NavLink>
-            <NavLink to='/my-services' exact>Services</NavLink>
-            <NavLink to='/my-portfolio' exact>Portfolio</NavLink>
-            <NavLink to='/my-resume' exact>My Resume</NavLink>
-            <NavLink to='/resume-builder' id='nav_resumeMaker' exact>Create your resume</NavLink>
+          <nav className={toggleMenu ? "toggle": ""}>
+            <NavLink to='/' activeStyle={{color: "red"}} exact>Home</NavLink>
+            <NavLink to='/my-services' activeStyle={{color: "red"}} exact>Services</NavLink>
+            <NavLink to='/my-portfolio' activeStyle={{color: "red"}} exact>Portfolio</NavLink>
+            <NavLink to='/my-resume' activeStyle={{color: "red"}} exact>My Resume</NavLink>
+            <NavLink to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact>Create your resume</NavLink>
           </nav>
-          <div className="burger" >
+          <div className={toggleMenu ? "burger toggle": "burger"} onClick={()=>setToggleMenu(!toggleMenu)} >
             <div className="line line1"></div>
             <div className="line line2"></div>
             <div className="line line3"></div>

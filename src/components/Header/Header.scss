@@ -1,5 +1,4 @@
 header{
-    border: 2px solid black;
     padding: 5px;
     width: 100%;
     position: fixed;
@@ -8,6 +7,7 @@ header{
     background-color: dodgerblue;
     align-items: center;
     justify-content: center;
+    border: 1px solid;
     .progress{
         position: absolute;
         bottom: 1px;
@@ -31,17 +31,15 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 2px solid black;
         .logo{
-            border: 2px solid black;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-        }
-        a{
-            
+            a{
+
+            }
         }
     }
     nav{
@@ -49,12 +47,18 @@ header{
         align-items: center;
         justify-content: space-around;
         width: 60%;
-        border: 2px solid;
+        #nav_resumeMaker{
+            border: 2px solid orangered;
+            background-color: #2bd2ff;
+            box-shadow: 5px 9px 27px 0px orangered;
+            padding: 7px 15px;
+            border-radius: 20px;
+        }
         a{
             white-space: nowrap;
-            font-size: 20px;
-            letter-spacing: 2px;
-            border: 1px solid black;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
             padding: 5px;
             margin: 5px;
             span{
@@ -63,6 +67,7 @@ header{
         }
     }
     .burger{
+        display: none;
         cursor: pointer;
         background-color: white;
         transition: all 0.3s ease;
