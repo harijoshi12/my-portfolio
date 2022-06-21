@@ -9,8 +9,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 15px;
-  padding: 5px;
+  right: 5px;
   pointer-events: none;
 }
 
@@ -31,7 +30,7 @@
 .sideNavigation ul li {
   position: relative;
   text-align: right;
-  margin: 5px;
+  margin: 5px 0;
   pointer-events: all;
 }
 
