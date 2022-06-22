@@ -13,7 +13,7 @@ section{
         margin: auto;
     }
 }
-.sec_hero{
+#top{
     margin-top: 71px;
     margin-bottom: 1px;
     .sec_left{
@@ -30,6 +30,79 @@ section{
     .sec_right{
         img{
             height: 400px;
+        }
+    }
+}
+#portfolio{
+    .sec_wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        padding-bottom: 30px;
+        h1{
+            margin: 35px;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            span{
+                color: blue;
+                font-size: 37px;
+            }
+        }
+        .viewall_btn{
+            margin: 40px;
+            padding: 10px 40px;
+            font-size: 25px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+        }
+    }
+    .item_wrapper{
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px 50px;
+    }
+    .portfolio_item{
+        height: 400px;
+        width: 300px;
+        padding: 10px;
+        border-radius: 25px;
+        background-color: rgb(47, 8, 116);
+        .imgbox{
+            height: 230px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            img{
+                height: 230px;
+            }
+        }
+        h2{
+            padding: 10px 0;
+        }
+        .item_btns{
+            margin-top: 10px;
+            height: fit-content;
+            a{
+                display: inline-flex;
+                border-radius: 10px;
+                padding: 10px 20px;
+            }
+            a:first-child{
+                border: 2px solid rgb(255, 255, 255);
+                background-color: transparent;
+                color: white;
+                margin-right: 10px;
+            }
+            a:last-child{
+                margin-left: 10px;
+                background: rgb(255, 255, 255);
+                color: blue;
+            }
         }
     }
 }

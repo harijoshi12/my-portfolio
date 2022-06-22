@@ -1,14 +1,14 @@
 import React, {useState} from 'react'
 import './SocialLinks.css'
 
-import arrow from '../../media/images/arrow.svg'
-import facebook from '../../media/images/facebook.svg'
-import github from '../../media/images/github.svg'
-import instagram from '../../media/images/instagram.svg'
-import linkedin from '../../media/images/linkedin.svg'
-import pinterest from '../../media/images/pinterest.svg'
-import youtube from '../../media/images/youtube.svg'
-import twitter from '../../media/images/twitter.svg'
+import arrow from '../../media/images/socialicons/arrow.svg'
+import facebook from '../../media/images/socialicons/facebook.svg'
+import github from '../../media/images/socialicons/github.svg'
+import instagram from '../../media/images/socialicons/instagram.svg'
+import linkedin from '../../media/images/socialicons/linkedin.svg'
+import pinterest from '../../media/images/socialicons/pinterest.svg'
+import youtube from '../../media/images/socialicons/youtube.svg'
+import twitter from '../../media/images/socialicons/twitter.svg'
 
 
 function SocialLinks() {

@@ -23,24 +23,127 @@ section .sec_wrapper {
   margin: auto;
 }
 
-.sec_hero {
+#top {
   margin-top: 71px;
   margin-bottom: 1px;
 }
 
-.sec_hero .sec_left h1 {
+#top .sec_left h1 {
   border: 1px solid;
 }
 
-.sec_hero .sec_left h2 {
+#top .sec_left h2 {
   border: 1px solid;
 }
 
-.sec_hero .sec_left .hero_btns {
+#top .sec_left .hero_btns {
   border: 1px solid;
 }
 
-.sec_hero .sec_right img {
+#top .sec_right img {
   height: 400px;
+}
+
+#portfolio .sec_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 30px;
+}
+
+#portfolio .sec_wrapper h1 {
+  margin: 35px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#portfolio .sec_wrapper h1 span {
+  color: blue;
+  font-size: 37px;
+}
+
+#portfolio .sec_wrapper .viewall_btn {
+  margin: 40px;
+  padding: 10px 40px;
+  font-size: 25px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
+
+#portfolio .item_wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 30px 50px;
+}
+
+#portfolio .portfolio_item {
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #2f0874;
+}
+
+#portfolio .portfolio_item .imgbox {
+  height: 230px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#portfolio .portfolio_item .imgbox img {
+  height: 230px;
+}
+
+#portfolio .portfolio_item h2 {
+  padding: 10px 0;
+}
+
+#portfolio .portfolio_item .item_btns {
+  margin-top: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#portfolio .portfolio_item .item_btns a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#portfolio .portfolio_item .item_btns a:first-child {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  margin-right: 10px;
+}
+
+#portfolio .portfolio_item .item_btns a:last-child {
+  margin-left: 10px;
+  background: white;
+  color: blue;
 }
 /*# sourceMappingURL=HomePage.css.map */
