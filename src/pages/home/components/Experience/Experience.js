@@ -3,7 +3,7 @@ import React from 'react'
 function Experience() {
   return (
     <section id='experience'>
-      <div className="sec_wrapper">Hero</div>
+      <div className="sec_wrapper">My Experience</div>
     </section>
   )
 }

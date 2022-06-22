@@ -56,7 +56,7 @@ function Portfolio() {
           {portfolioData.map(data=>{
             return(
               // <PortfolioItem data={data} />
-              <PortfolioItem {...data} />
+              <PortfolioItem key={data.id} {...data} />
               )
             })}
           </div>
