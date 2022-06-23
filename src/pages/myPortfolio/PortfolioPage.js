@@ -1,8 +1,12 @@
 import React from 'react'
-
+import './PortfolioPage.css'
 function PortfolioPage() {
   return (
-    <section>PortfolioPage</section>
+    <section>
+      <div className="sec_wrapper">
+        Portfolio Page
+      </div>
+    </section>
   )
 }
 

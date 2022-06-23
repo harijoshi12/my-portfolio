@@ -1,11 +1,34 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
 
-function Header() {
+function Header({setIsMousein}) {
   const [toggleMenu, setToggleMenu] = useState(false)
+  // const [mousein, setMousein] = useState(false)
+  // const [mouseout, setMouseout] = useState(true)
 
   const progress = useRef()
+  const link1 = useRef()
+  const link2 = useRef()
+  const link3 = useRef()
+  const link4 = useRef()
+  const link5 = useRef()
+  useEffect(() => {
+    const navlinks = [link1, link2, link3, link4, link5]
+    navlinks.forEach(link =>{
+      link.current.addEventListener('mouseleave', ()=>{
+        link.current.classList.remove('hovered-link')
+        setIsMousein(false)
+        console.log("mouse leave")
+      })
+      link.current.addEventListener('mouseover', ()=>{
+        setIsMousein(true)
+        console.log('mouse over')
+          link.current.classList.add('hovered-link')
+      })
+    })
+  },[ setIsMousein])
+
   // Progress Bar
   const progressBar = () => {
     let body = document.body;
@@ -43,16 +66,17 @@ function Header() {
   return (
     <>
       <div  className="nav-overlay"></div>
+      <div className="pseudo_header"></div>
       <header >
         <div ref={progress} className="progress"></div>
         <div className="nav_wrapper">
           <div className='logo'><NavLink to='/' exact>Hari joshi</NavLink></div>
           <nav className={toggleMenu ? "toggle": ""}>
-            <NavLink to='/' activeStyle={{color: "red"}} exact>Home</NavLink>
-            <NavLink to='/my-services' activeStyle={{color: "red"}} exact>Services</NavLink>
-            <NavLink to='/my-portfolio' activeStyle={{color: "red"}} exact>Portfolio</NavLink>
-            <NavLink to='/my-resume' activeStyle={{color: "red"}} exact>My Resume</NavLink>
-            <NavLink to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact>Create your resume</NavLink>
+            <NavLink ref={link1} to='/' activeStyle={{color: "red"}} exact>Home</NavLink>
+            <NavLink ref={link2} to='/my-services' activeStyle={{color: "red"}} exact>Services</NavLink>
+            <NavLink ref={link3} to='/my-portfolio' activeStyle={{color: "red"}} exact>Portfolio</NavLink>
+            <NavLink ref={link4} to='/my-resume' activeStyle={{color: "red"}} exact>My Resume</NavLink>
+            <NavLink ref={link5} to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact>Create your resume</NavLink>
           </nav>
           <div className={toggleMenu ? "burger toggle": "burger"} onClick={()=>setToggleMenu(!toggleMenu)} >
             <div className="line line1"></div>

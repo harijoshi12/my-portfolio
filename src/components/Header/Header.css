@@ -1,5 +1,14 @@
+.pseudo_header {
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+}
+
 header {
-  z-index: 200;
+  z-index: 300;
   padding: 5px;
   width: 100%;
   position: fixed;
@@ -7,14 +16,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: dodgerblue;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid;
 }
 
 header .progress {
@@ -30,7 +37,6 @@ header .progress {
 }
 
 header .nav_wrapper {
-  border: 2px solid black;
   max-width: 1200px;
   width: 100%;
   height: 70px;
@@ -53,9 +59,11 @@ header .nav_wrapper .logo {
   font-weight: bold;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 400;
 }
 
 header nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,20 +77,29 @@ header nav {
 
 header nav #nav_resumeMaker {
   border: 2px solid orangered;
-  background-color: #2bd2ff;
+  background-color: #ff602b;
   -webkit-box-shadow: 5px 9px 27px 0px orangered;
           box-shadow: 5px 9px 27px 0px orangered;
   padding: 7px 15px;
   border-radius: 20px;
+  color: white;
+}
+
+header nav a.hovered-link {
+  color: white;
 }
 
 header nav a {
+  color: black;
   white-space: nowrap;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
   padding: 5px;
   margin: 5px;
+  z-index: 400;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 header .burger {

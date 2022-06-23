@@ -1,14 +1,21 @@
+.pseudo_header{
+    position: fixed;
+    top: 0;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+}
 header{
-    z-index: 200;
+    z-index: 300;
     padding: 5px;
     width: 100%;
     position: fixed;
     top: 0;
     display: flex;
-    background-color: dodgerblue;
+    // background-color: dodgerblue;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
     .progress{
         position: absolute;
         bottom: 1px;
@@ -25,7 +32,6 @@ header{
       transition: width 0.2s ease;
     }
     .nav_wrapper{
-        border: 2px solid black;
         max-width: 1200px;
         width: 100%;
         height: 70px;
@@ -39,30 +45,38 @@ header{
             font-size: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
+            z-index: 400;
             a{
-
             }
         }
     }
     nav{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 60%;
         #nav_resumeMaker{
             border: 2px solid orangered;
-            background-color: #2bd2ff;
+            background-color: #ff602b;
             box-shadow: 5px 9px 27px 0px orangered;
             padding: 7px 15px;
             border-radius: 20px;
+            color: white;
+        }
+        a.hovered-link{
+            color: white;
         }
         a{
+            color: black;
             white-space: nowrap;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 1px;
             padding: 5px;
             margin: 5px;
+            z-index: 400;
+            transition: all 0.2s ease;
             span{
                 
             }

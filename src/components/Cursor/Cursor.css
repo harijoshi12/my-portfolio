@@ -1,0 +1,38 @@
+body{
+    cursor: none;
+    overflow-x: hidden;
+}
+.cursor{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin: 150% 150%;
+    transition: all 0.4s ease-out;
+    /* background-color: transparent; */
+    z-index: 299;
+    backdrop-filter: blur(3px);
+}
+.cursor-point{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 301;
+    background: blue;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+}
+.link-grow{
+    transform: scale(1.5);
+    background: black;
+}
+.hovered-link{
+    color: white;
+}

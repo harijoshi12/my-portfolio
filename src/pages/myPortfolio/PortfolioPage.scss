@@ -1,0 +1,14 @@
+section{
+    background-color: red;
+    border-bottom: 1px solid white;
+    .sec_wrapper{
+        background-color: purple;
+        max-width: 1400px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: auto;
+    }
+}
