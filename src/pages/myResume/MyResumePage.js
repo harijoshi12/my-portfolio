@@ -1,26 +1,9 @@
 import React from 'react'
 import styles from './MyResumePage.module.css'
-import { projectData, myJourneyData } from './data'
+import { contactDetails, techSkills, progLangs, projectData, langs, myJourneyData, interests } from './data'
 
+import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, ProjectItem, MyJourneyItem, Interest,  } from './components'
 
-function ProjectItem({title, desc}){
-  return(
-    <div className={styles.projectItem}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.desc}>{desc}</p>
-    </div>
-  )
-}
-function MyJourneyItem(props){
-  const {time, jobTitle, companyName, desc } = props.data
-  return(
-      <div className={styles.myJourneyItem}>
-        <span className={styles.time}>{time}</span>
-        <h1 className={styles.title}><span>{jobTitle}</span> | <span>{companyName}</span></h1>
-        <p className={styles.desc}>{desc}</p>
-      </div>
-    )
-}
 
 function MyResumePage() {
   return (
@@ -28,42 +11,56 @@ function MyResumePage() {
         <div className={styles.myResume}>
           {/* top section */}
           <div className={styles.top}>
-            <h1>Are we good fit?</h1>
-            <div className={styles.imgboxOuter}>
-              <div className={styles.imgboxInner}>
-                <div className={styles.imagebox}></div>
-                <h1>Hari Joshi</h1>
-                <h2>FullStack Developer</h2>
-              </div>
-            </div>
-            <h2>"The Best Developer on Planet"</h2>
+            <PersonalInfo/>
           </div>
+
           {/* left section */}
           <div className={styles.left}>
 
+            {/* technical skills */}
+            <div className={styles.technicalSkills}>
+              <h1 className={styles.secTitle}>Technical Skills</h1>
+              {techSkills.map(data => <TechnicalSkill key={data.id} {...data}/>)}
+            </div>
+
+            {/* programming languages */}
+            <div className={styles.progLangs}>
+              <h1 className={styles.secTitle}>Programming Languages</h1>
+              {progLangs.map(data => <ProgLang key={data.id} {...data}/>)}
+            </div>
+
+            {/* languages */}
+            <div className={styles.langs}>
+            <h1 className={styles.secTitle}>Languages</h1>
+              {langs.map(data => <Lang key={data.id} {...data}/>)}
+            </div>
           </div>
+
           {/* right section */}
           <div className={styles.right}>
+
             {/* contact details */}
-            <div className={styles.contact}>
-              <a href="mailto:mr.hariprasdjoshi@gmail.com" rel="noopener noreferrer" target="_blank"><span>Email:</span> mr.hariprasdjoshi@gmail.com</a>
-              <a href="tel:+9634090498" rel="noopener noreferrer"><span>Phone:</span> 9634090498</a>
-              <a href="https://goo.gl/maps/pvYsfgd7Kv9RYVut9" rel="noopener noreferrer" target="_blank"><span>location:</span> Dehradun, India</a>
-              <a href="https://www.harijoshi.info/" rel="noopener noreferrer" target="_blank"><span>My Website:</span> www.harijoshi.info</a>
-              <a href="https://www.linkedin.com/in/harijoshi123/" rel="noopener noreferrer" target="_blank"><span>Linkedin:</span> www.linkedin.com/in/harijoshi123</a>
+            <div className={styles.contactDetails}>
+              {contactDetails.map(data =><ContactDetail key={data.id} {...data}/>)}
             </div>
 
             {/* projects */}
             <div className={styles.projects}>
-              <h1>Projects</h1>
+              <h1 className={styles.secTitle}>Projects</h1>
               {projectData.map(data=>{return(<ProjectItem key={data.id} {...data}/>)})}
             </div>
 
             {/* my journey */}
             <div className={styles.myJourney}>
+              <h1 className={styles.secTitle}>My Journey</h1>
               {myJourneyData.map(data=><MyJourneyItem key={data.id} data = {data} />)}
             </div>
 
+            {/* interests */}
+            <div className={styles.interests}>
+              <h1 className={styles.secTitle}>Interests</h1>
+              {interests.map(data => <Interest key={data.id} {...data}/>)}
+            </div>
           </div>
         </div>
     </section>
