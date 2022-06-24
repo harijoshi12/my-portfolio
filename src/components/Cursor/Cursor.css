@@ -12,7 +12,7 @@ body{
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: 150% 150%;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s linear;
     /* background-color: transparent; */
     z-index: 299;
     backdrop-filter: blur(3px);

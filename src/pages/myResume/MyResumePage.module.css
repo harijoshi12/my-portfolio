@@ -1,0 +1,106 @@
+#myResumePage {
+  background-color: red;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0;
+}
+
+#myResumePage .myResume {
+  font-size: 30px;
+  width: 900px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin: auto;
+  border: 2px solid white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1.5fr;
+      grid-template-columns: 2fr 1.5fr;
+}
+
+#myResumePage .myResume .top {
+  border: 2px solid white;
+  width: 100%;
+  height: 300px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#myResumePage .myResume .left {
+  border: 2px solid white;
+  height: 900px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#myResumePage .myResume .right {
+  padding: 20px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  height: 1200px;
+  background-color: #606b56;
+}
+
+#myResumePage .myResume .right .contact {
+  height: 300px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+#myResumePage .myResume .right .contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 45px;
+  color: white;
+}
+
+#myResumePage .myResume .right .contact a span {
+  word-wrap: nowrap;
+  width: 100px;
+}
+
+#myResumePage .myResume .right .projects h1 {
+  width: 100%;
+  font-size: 20px;
+  background-color: #741313;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  padding: 4px;
+  letter-spacing: 2px;
+}
+
+#myResumePage .myResume .right .projects .projectItem {
+  margin-bottom: 10px;
+}
+
+#myResumePage .myResume .right .projects .projectItem .title {
+  color: black;
+  font-size: 18px;
+}
+
+#myResumePage .myResume .right .projects .projectItem .desc {
+  color: white;
+  background-color: #485140;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 25px;
+}
+/*# sourceMappingURL=MyResumePage.module.css.map */
