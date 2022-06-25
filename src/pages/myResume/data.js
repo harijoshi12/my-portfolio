@@ -1,32 +1,38 @@
+import { GrMail } from "react-icons/gr"
+import { BsFillTelephoneFill } from "react-icons/bs"
+import { IoLocationSharp } from "react-icons/io5"
+import { GrLinkedin } from "react-icons/gr"
+import { CgWebsite } from "react-icons/cg"
+
 
 export const contactDetails =[
     {
         id: 1,
-        icon: "Email:",
+        icon: <GrMail/>,
         info: "mr.hariprasdjoshi@gmail.com",
         link: "mailto:mr.hariprasdjoshi@gmail.com"
     },
     {
         id: 2,
-        icon: "Phone:",
+        icon: <BsFillTelephoneFill/>,
         info: "9634090498",
         link: "tel:+9634090498"
     },
     {
         id: 3,
-        icon: "Location:",
+        icon: <IoLocationSharp/>,
         info: "Dehradun, India",
         link: "https://goo.gl/maps/pvYsfgd7Kv9RYVut9"
     },
     {
         id: 4,
-        icon: "Linkedin:",
+        icon: <GrLinkedin/>,
         info: "linkedin.com/in/harijoshi123",
         link: "https://www.linkedin.com/in/harijoshi123/"
     },
     {
         id: 5,
-        icon: "My Website:",
+        icon: <CgWebsite/>,
         info: "harijoshi.info",
         link: "https://www.harijoshi.info/"
     }

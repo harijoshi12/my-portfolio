@@ -1,16 +1,26 @@
+#myResumePage .secWrapper {
+  max-width: 1400px;
+  width: 100%;
+  padding: 30px 60px;
+}
+
 #myResumePage .secTitle {
   width: 100%;
   font-size: 25px;
   background-color: #741313;
   color: white;
-  margin: 10px auto;
+  margin: 20px auto;
   text-align: center;
   padding: 4px;
   letter-spacing: 2px;
 }
 
+#myResumePage .resumeSec {
+  padding: 25px;
+}
+
 #myResumePage {
-  background-color: red;
+  background-color: #989696;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,34 +36,109 @@
 
 #myResumePage .myResume {
   font-size: 30px;
-  max-width: 1400px;
-  min-width: 1000px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
   margin: auto;
-  border: 2px solid white;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 57% 43%;
-      grid-template-columns: 57% 43%;
-}
-
-#myResumePage .myResume .top {
-  border: 2px solid white;
-  width: 100%;
-  height: 300px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  background-color: #efefef;
 }
 
 #myResumePage .myResume .left {
-  border: 2px solid white;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  padding: 20px;
+  background-color: white;
+  width: 57%;
+}
+
+#myResumePage .myResume .left .personalInfo {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #dedede;
+  padding-bottom: 10px;
+}
+
+#myResumePage .myResume .left .personalInfo .resumeTitle {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter {
+  width: 90%;
+  background-color: #606b56;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner {
+  width: 89%;
+  background-color: #404739;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 30px;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .imgbox {
+  width: 170px;
+  height: 170px;
+  background-color: #656f5c;
+  overflow: hidden;
+  background-image: url(../../media/images/hero.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .imgbox img {
+  width: 300px;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo {
+  text-align: center;
+  padding-left: 20px;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .myName {
+  color: #b9b9b9;
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+#myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
+  padding: 10px;
+  color: #f0f0f0;
+  font-size: 30px;
+}
+
+#myResumePage .myResume .left .personalInfo .tagline {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #31332a;
+  text-align: center;
+  margin-right: 60px;
 }
 
 #myResumePage .myResume .left .technicalSkills .technicalSkill {
@@ -69,34 +154,27 @@
 }
 
 #myResumePage .myResume .right {
-  padding: 20px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  width: 43%;
   background-color: #606b56;
 }
 
 #myResumePage .myResume .right .contactDetails {
   height: 300px;
-  font-size: 17px;
+  font-size: 25px;
   font-weight: 600;
-  padding-top: 30px;
+  padding: 30px;
 }
 
 #myResumePage .myResume .right .contactDetails a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  line-height: 45px;
+  line-height: 55px;
   color: white;
 }
 
 #myResumePage .myResume .right .contactDetails a span {
-  word-wrap: nowrap;
-  width: 100px;
+  width: 50px;
 }
 
 #myResumePage .myResume .right .projects .projectItem {

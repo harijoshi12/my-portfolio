@@ -3,15 +3,19 @@ import styles from './MyResumePage.module.css'
 export const PersonalInfo = () => {
     return (
         <>
-            <h1>Are we good fit?</h1>
+            <h1 className={styles.resumeTitle}>Are we a good fit?</h1>
             <div className={styles.imgboxOuter}>
                 <div className={styles.imgboxInner}>
-                    <div className={styles.imagebox}></div>
-                    <h1>Hari Joshi</h1>
-                    <h2>FullStack Developer</h2>
+                    <div className={styles.imgbox}>
+                        {/* <img src={pic} alt="" /> */}
+                    </div>
+                    <div className={styles.myinfo}>
+                        <h1 className={styles.myName}>Hari Joshi</h1>
+                        <h2 className={styles.profession}>FullStack Developer</h2>
+                    </div>
                 </div>
             </div>
-            <h2>"The Best Developer on Planet"</h2>
+            <h2 className={styles.tagline}>"I am a <span>quick learner</span> , my <span>strength</span>  is my <span>learning ability</span> . I follow <span>practical</span>  as well as new <span>unconventional imaginative</span>  approach for finding <span>solution</span>  to a problem."</h2>
         </>
     )
 }
