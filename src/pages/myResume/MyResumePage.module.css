@@ -9,14 +9,14 @@
   font-size: 25px;
   background-color: #741313;
   color: white;
-  margin: 20px auto;
+  margin: 25px auto;
   text-align: center;
   padding: 4px;
   letter-spacing: 2px;
 }
 
 #myResumePage .resumeSec {
-  padding: 25px;
+  padding: 30px;
 }
 
 #myResumePage {
@@ -62,12 +62,12 @@
 }
 
 #myResumePage .myResume .left .personalInfo .resumeTitle {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   color: black;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 20px 0;
+  padding: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -87,7 +87,7 @@
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner {
   width: 89%;
-  background-color: #404739;
+  background-color: #44483f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +118,7 @@
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo {
   text-align: center;
   padding-left: 20px;
+  white-space: nowrap;
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .myName {
@@ -127,9 +128,8 @@
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
-  padding: 10px;
   color: #f0f0f0;
-  font-size: 30px;
+  font-size: 27px;
 }
 
 #myResumePage .myResume .left .personalInfo .tagline {

@@ -10,13 +10,13 @@
         font-size: 25px;
         background-color: rgb(116, 19, 19);
         color: white;
-        margin: 20px auto;
+        margin: 25px auto;
         text-align: center;
         padding: 4px;
         letter-spacing: 2px;
     }
     .resumeSec{
-        padding: 25px;
+        padding: 30px;
     }
 }
 #myResumePage{
@@ -43,12 +43,12 @@
                 background-color: rgb(222, 222, 222);
                 padding-bottom: 10px;
                 .resumeTitle{
-                    font-size: 2.5rem;
+                    font-size: 2.7rem;
                     color: black;
                     text-align: center;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    padding: 20px 0;
+                    padding: 20px;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
                 .imgboxOuter{
@@ -59,7 +59,7 @@
                     align-items: center;
                     .imgboxInner{
                         width: 89%;
-                        background-color: rgb(64, 71, 57);
+                        background-color: rgb(68, 72, 63);
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -80,15 +80,15 @@
                         .myinfo{
                             text-align: center;
                             padding-left: 20px;
+                            white-space: nowrap;
                             .myName{
                                 color: rgb(185, 185, 185);
                                 font-size: 50px;
                                 padding-bottom: 15px;
                             }
                             .profession{
-                                padding: 10px;
                                 color: rgb(240, 240, 240);
-                                font-size: 30px;
+                                font-size: 27px;
                             }
                         }
                     }
