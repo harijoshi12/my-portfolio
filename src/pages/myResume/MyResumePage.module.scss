@@ -1,6 +1,7 @@
 // light
 $lightLeft: rgb(255, 255, 255);
 $lightRight: rgb(101, 111, 92);
+$lightTextBg: rgb(72, 81, 64);
 $lightSecTitle: rgb(72, 66, 53);
 $lightResumeTitle: rgb(0, 0, 0);
 $lightName: rgb(131, 126, 115);
@@ -12,7 +13,7 @@ $lightName: rgb(131, 126, 115);
         max-width: 1400px;
         width: 100%;
         // background-color: blue;
-        padding: 30px 60px;
+        padding: 30px 4%;
     }
     .secTitle{
         width: 100%;
@@ -31,7 +32,7 @@ $lightName: rgb(131, 126, 115);
     }
     .left{
         .resumeSec{
-            padding: 10px 60px;
+            padding: 10px 6%;
         }
     }
 }
@@ -56,7 +57,7 @@ $lightName: rgb(131, 126, 115);
                 width: 100%;
                 height: fit-content;
                 padding-bottom: 10px;
-                padding-right: 60px;
+                padding-right: 6%;
                 .resumeTitle{
                     font-size: 2rem;
                     margin-left: 60px;
@@ -69,7 +70,8 @@ $lightName: rgb(131, 126, 115);
                 }
                 .imgboxOuter{
                     width: 100%;
-                    padding-left: 60px;
+                    min-width: fit-content;
+                    padding-left: 6.4%;
                     background-color: $lightRight;
                     display: flex;
                     justify-content: flex-end;
@@ -78,12 +80,13 @@ $lightName: rgb(131, 126, 115);
                         width: 100%;
                         background-color: $lightSecTitle;
                         display: flex;
-                        justify-content: flex-start;
+                        justify-content: space-between;
                         align-items: center;
                         padding: 25px 30px;
+                        padding-right: 5px;
                         .imgbox{
-                            width: 170px;
-                            height: 170px;
+                            min-width: 170px;
+                            min-height: 170px;
                             background-color: rgb(101, 111, 92);
                             overflow: hidden;
                             background-image: url(../../media/images/hero.png);
@@ -96,7 +99,8 @@ $lightName: rgb(131, 126, 115);
                         }
                         .myinfo{
                             text-align: center;
-                            padding-left: 20px;
+                            margin: auto;
+                            padding: 5px;
                             white-space: nowrap;
                             .myName{
                                 color: rgb(185, 185, 185);
@@ -127,7 +131,7 @@ $lightName: rgb(131, 126, 115);
                 .technicalSkill{
                     display: inline-flex;
                     border: 1px solid white;
-                    background-color: $lightRight; 
+                    background-color: $lightTextBg; 
                     color: white;
                     padding: 5px 13px;  
                     margin: 5px;
@@ -156,12 +160,13 @@ $lightName: rgb(131, 126, 115);
 
                     }
                     .progressBarInner{
-                        background-color: $lightRight;
+                        background-color: $lightTextBg;
                         height: 15px;
                         width: 100%;
                     }
                 }
             }
+
         }
         .right{
             width: 43%;
