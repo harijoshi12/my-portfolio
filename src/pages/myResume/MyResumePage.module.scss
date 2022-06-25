@@ -1,3 +1,12 @@
+// light
+$lightLeft: rgb(255, 255, 255);
+$lightRight: rgb(101, 111, 92);
+$lightSecTitle: rgb(72, 66, 53);
+$lightResumeTitle: rgb(0, 0, 0);
+$lightName: rgb(131, 126, 115);
+
+// dark
+
 #myResumePage{
     .secWrapper{
         max-width: 1400px;
@@ -8,15 +17,22 @@
     .secTitle{
         width: 100%;
         font-size: 25px;
-        background-color: rgb(116, 19, 19);
+        background-color: $lightSecTitle;
         color: white;
-        margin: 25px auto;
+        margin-bottom: 20px;
         text-align: center;
         padding: 4px;
         letter-spacing: 2px;
     }
     .resumeSec{
-        padding: 30px;
+        padding: 10px 30px ;
+        padding-bottom: 20px;
+        // border: 2px solid black;
+    }
+    .left{
+        .resumeSec{
+            padding: 10px 60px;
+        }
     }
 }
 #myResumePage{
@@ -32,18 +48,18 @@
         display: flex;
         justify-content: center;
         padding: 20px;
-        background-color: rgb(239, 239, 239);
+        background-color: rgb(201, 201, 201);
         .left{
-            background-color: white;
+            background-color: $lightLeft;
             width: 57%;
-            // height: 1700px;
             .personalInfo{
                 width: 100%;
                 height: fit-content;
-                background-color: rgb(222, 222, 222);
                 padding-bottom: 10px;
+                padding-right: 60px;
                 .resumeTitle{
-                    font-size: 2.7rem;
+                    font-size: 2rem;
+                    margin-left: 60px;
                     color: black;
                     text-align: center;
                     text-transform: uppercase;
@@ -52,14 +68,15 @@
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
                 .imgboxOuter{
-                    width: 90%;
-                    background-color: rgb(96,107,86);
+                    width: 100%;
+                    padding-left: 60px;
+                    background-color: $lightRight;
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
                     .imgboxInner{
-                        width: 89%;
-                        background-color: rgb(68, 72, 63);
+                        width: 100%;
+                        background-color: $lightSecTitle;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -94,12 +111,12 @@
                     }
                 }
                 .tagline{
-                    padding: 15px;
+                    padding: 15px 0;
                     font-size: 20px;
+                    margin-left: 60px;
                     font-weight: 400;
                     color: rgb(49, 51, 42);
                     text-align: center;
-                    margin-right: 60px;
                     // span{
                     //     font-weight: 500;
                     // }
@@ -110,23 +127,49 @@
                 .technicalSkill{
                     display: inline-flex;
                     border: 1px solid white;
-                    background-color: rgb(23, 23, 23); 
+                    background-color: $lightRight; 
                     color: white;
-                    padding: 5px 10px;  
+                    padding: 5px 13px;  
                     margin: 5px;
-                    font-size: 20px;
+                    font-size: 18px;
                    }
+            }
+
+            .progLangs{
+                span{
+                    display: inline-flex;
+                }
+                .progLang{
+                    padding: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .title{
+                        font-size: 20px;
+                        font-weight: 500;
+                        width: 30%;
+                    }
+                    .progressBarOuter{
+                        padding: 2px 1px;
+                        border: 2px solid black;
+                        width: 70%;
+
+                    }
+                    .progressBarInner{
+                        background-color: $lightRight;
+                        height: 15px;
+                        width: 100%;
+                    }
+                }
             }
         }
         .right{
             width: 43%;
-            // height: 100%;
-            background-color: rgb(96,107,86);
+            background-color: $lightRight;
             .contactDetails{
-                height: 300px;
-                // border: 2px solid white;
-                font-size: 25px;
+                font-size: 22px;
                 font-weight: 600;
+                color: rgb(230, 230, 230);
                 padding: 30px;
                 a{
                     display:flex;
@@ -135,6 +178,13 @@
                     span{
                         width: 50px;
                     }
+                }
+                .bottomBorder{
+                    width: 80%;
+                    height: 2px;
+                    background-color: rgb(190, 190, 190);
+                    margin: auto;
+                    margin-top: 20px;
                 }
             }
             .projects{

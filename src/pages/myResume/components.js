@@ -39,7 +39,7 @@ export const ProgLang = ({title, level})=>{
         <div className={styles.progLang}>
             <span className={styles.title}>{title}</span>
             <span className={styles.progressBarOuter}>
-                <span className={styles.progressBarInner}></span>
+                <span className={styles.progressBarInner} style={{width: `${level*10}%`}} ></span>
             </span>
         </div>
     )

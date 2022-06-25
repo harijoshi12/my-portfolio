@@ -92,12 +92,12 @@ export const techSkills = [
         title: "DSA"
     },
     {
-        id: 14,
-        title: "Blockchain Development"
+        id: 18,
+        title: "AWS"
     },
     {
-        id: 15,
-        title: "Wordpress Theme & Plugin Development"
+        id: 14,
+        title: "Blockchain Development"
     },
     {
         id: 16,
@@ -108,8 +108,8 @@ export const techSkills = [
         title: "Computer Networking"
     },
     {
-        id: 18,
-        title: "AWS"
+        id: 15,
+        title: "Wordpress Theme & Plugin Development"
     },
     {
         id: 19,

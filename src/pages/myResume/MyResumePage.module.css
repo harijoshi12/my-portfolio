@@ -7,16 +7,21 @@
 #myResumePage .secTitle {
   width: 100%;
   font-size: 25px;
-  background-color: #741313;
+  background-color: #484235;
   color: white;
-  margin: 25px auto;
+  margin-bottom: 20px;
   text-align: center;
   padding: 4px;
   letter-spacing: 2px;
 }
 
 #myResumePage .resumeSec {
-  padding: 30px;
+  padding: 10px 30px;
+  padding-bottom: 20px;
+}
+
+#myResumePage .left .resumeSec {
+  padding: 10px 60px;
 }
 
 #myResumePage {
@@ -44,7 +49,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-  background-color: #efefef;
+  background-color: #c9c9c9;
 }
 
 #myResumePage .myResume .left {
@@ -57,12 +62,13 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #dedede;
   padding-bottom: 10px;
+  padding-right: 60px;
 }
 
 #myResumePage .myResume .left .personalInfo .resumeTitle {
-  font-size: 2.7rem;
+  font-size: 2rem;
+  margin-left: 60px;
   color: black;
   text-align: center;
   text-transform: uppercase;
@@ -72,8 +78,9 @@
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter {
-  width: 90%;
-  background-color: #606b56;
+  width: 100%;
+  padding-left: 60px;
+  background-color: #656f5c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,8 +93,8 @@
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner {
-  width: 89%;
-  background-color: #44483f;
+  width: 100%;
+  background-color: #484235;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,12 +140,12 @@
 }
 
 #myResumePage .myResume .left .personalInfo .tagline {
-  padding: 15px;
+  padding: 15px 0;
   font-size: 20px;
+  margin-left: 60px;
   font-weight: 400;
   color: #31332a;
   text-align: center;
-  margin-right: 60px;
 }
 
 #myResumePage .myResume .left .technicalSkills .technicalSkill {
@@ -146,22 +153,59 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid white;
-  background-color: #171717;
+  background-color: #656f5c;
   color: white;
-  padding: 5px 10px;
+  padding: 5px 13px;
   margin: 5px;
+  font-size: 18px;
+}
+
+#myResumePage .myResume .left .progLangs span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#myResumePage .myResume .left .progLangs .progLang {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#myResumePage .myResume .left .progLangs .progLang .title {
   font-size: 20px;
+  font-weight: 500;
+  width: 30%;
+}
+
+#myResumePage .myResume .left .progLangs .progLang .progressBarOuter {
+  padding: 2px 1px;
+  border: 2px solid black;
+  width: 70%;
+}
+
+#myResumePage .myResume .left .progLangs .progLang .progressBarInner {
+  background-color: #656f5c;
+  height: 15px;
+  width: 100%;
 }
 
 #myResumePage .myResume .right {
   width: 43%;
-  background-color: #606b56;
+  background-color: #656f5c;
 }
 
 #myResumePage .myResume .right .contactDetails {
-  height: 300px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
+  color: #e6e6e6;
   padding: 30px;
 }
 
@@ -175,6 +219,14 @@
 
 #myResumePage .myResume .right .contactDetails a span {
   width: 50px;
+}
+
+#myResumePage .myResume .right .contactDetails .bottomBorder {
+  width: 80%;
+  height: 2px;
+  background-color: #bebebe;
+  margin: auto;
+  margin-top: 20px;
 }
 
 #myResumePage .myResume .right .projects .projectItem {

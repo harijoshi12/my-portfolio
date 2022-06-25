@@ -43,6 +43,7 @@ function MyResumePage() {
             {/* contact details */}
             <div className={styles.contactDetails}>
               {contactDetails.map(data =><ContactDetail key={data.id} {...data}/>)}
+              <div className={styles.bottomBorder}></div>
             </div>
 
             {/* projects */}
