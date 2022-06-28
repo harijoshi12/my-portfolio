@@ -51,12 +51,12 @@ $textfontFamily: 'Quicksand', sans-serif;
         display: flex;
         justify-content: center;
         padding: 20px;
-        background-color: rgb(201, 201, 201);
+        background-color: rgb(242, 242, 242);
         width: 1260px;
         height: 1782px;
         .left{
             background-color: $lightLeft;
-            width: 57%;
+            width: 56%;
             .personalInfo{
                 width: 100%;
                 height: fit-content;
@@ -115,8 +115,9 @@ $textfontFamily: 'Quicksand', sans-serif;
                             }
                             .profession{
                                 color: rgb(240, 240, 240);
-                                font-size: 27px;
-                                font-family: 'Quicksand', sans-serif;
+                                font-size: 30px;
+                                font-weight: 500;
+                                font-family: $textfontFamily;
                             }
                         }
                     }
@@ -200,6 +201,7 @@ $textfontFamily: 'Quicksand', sans-serif;
                     .title{
                         font-size: 22px;
                         font-weight: 700;
+                        color: $lightTextColor;
                     }
                     .level{
                         padding: 1px 4px;
@@ -217,7 +219,7 @@ $textfontFamily: 'Quicksand', sans-serif;
 
         }
         .right{
-            width: 43%;
+            width: 44%;
             background-color: $lightRight;
             .contactDetails{
                 font-size: 24px;
@@ -233,7 +235,10 @@ $textfontFamily: 'Quicksand', sans-serif;
                     &:hover{
                         span:last-child{
                             transform: translateY(-3px);
-                            color: rgb(156, 156, 255);
+                            color: rgb(45, 230, 254);
+                        }
+                        span:first-child{
+                            color: rgb(45, 230, 254);
                         }
                     }
                     span:first-child{
@@ -252,37 +257,70 @@ $textfontFamily: 'Quicksand', sans-serif;
             }
             .projects{
                 .projectItem{
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                     font-family: $textfontFamily;
                     .title{
                         color: rgb(255, 255, 255);
                         font-size: 20px;
-                        margin: 5px 2px;
-                        margin-bottom: 2px;
+                        margin: 6px 0;
+                        margin-bottom: 8px;
                         font-weight: 700;
+                        span{
+                            padding: 3px 5px;
+                        }
+                        span:first-child{
+                            padding: 0 5px;
+                            color: $lightTextColor;
+                            background-color: rgb(200, 200, 200);
+                        }
+                        span:nth-child(2){
+                            margin-left: 7px;
+                        }
                     }
                     .desc{
                         color: $lightTextColor;
                         background-color: white;
-                        font-size: 16px;
-                        padding: 5px;
+                        font-size: 18px;
+                        padding: 10px;
                         margin-left: 25px;
                     }
                 }
             }
             .myJourney{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
                 .myJourneyItem{
+                    position: relative;
+                    width: 83%;
+                    border-left: 8px solid white;
+                    color: white;
+                    padding: 10px;
+                    padding-bottom: 25px;
+                    font-family: $textfontFamily;
+                    // *{
+                    //     margin: 4px;
+                    //     border: 1px solid white;
+                    // }
                     .time{
-
-                        font-size: 20px;
+                        font-size: 18px;
+                        position: absolute;
+                        left: -115px;
+                        width: 100px;
+                        text-align: right;
                     }
                     .title{
                         font-size: 20px;
-                        span{
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                        span:first-child{
+                            color: $lightTextColor;
+                            padding: 0 5px;
+                            background-color: rgb(200, 200, 200);
                         }
                     }
                     .desc{
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }

@@ -34,7 +34,7 @@ export const contactDetails =[
     {
         id: 5,
         icon: <FaGithub/>,
-        info: "https://github.com/harijoshi12",
+        info: "github.com/harijoshi12",
         link: "https://github.com/harijoshi12"
     },
     {
@@ -206,42 +206,54 @@ export const projectData = [
     {
         id: 1,
         title: "Portfolio Website",
-        desc: "a firebase project"
+        tech: "React, Firebase",
+        desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
     },
     {
         id: 2,
         title: "Resume Maker",
-        desc: "a firebase project"
+        tech: "React, Firebase",
+        desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
     },
-    {
-        id: 3,
-        title: "Django based E-Commerce",
-        desc: "a firebase project"
-    },
+    // {
+    //     id: 3,
+    //     title: "E-Commerce",
+    //     tech: "React, Django, PostgreSQL",
+    //     desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
+    // },
     {
         id: 4,
-        title: "Node based Social Networking Website",
-        desc: "a firebase project"
+        title: "Social Networking Website",
+        tech: "MERN stack",
+        desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
     },
     {
         id: 5,
         title: "Blockchain Project",
-        desc: "a firebase project"
+        tech: "Etherium, Solidity",
+        desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
     },
-    {
-        id: 6,
-        title: "Artificial Intelligence",
-        desc: "a firebase project"
-    }
+    // {
+    //     id: 6,
+    //     title: "Artificial Intelligence",
+    //     tech: "Tensorflow",
+    //     desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
+    // },
+    // {
+    //     id: 7,
+    //     title: "Android App",
+    //     tech: "React Native, Firebase",
+    //     desc: "Lorem ipsum dolor sit, amet consectetur  corrupti officiis eaque."
+    // }
 ]
 
 export const myJourneyData = [
     {
-        id:1,
-        time:"2016-2017",
-        jobTitle: "Mechanical Engineer",
-        companyName: "keihnfie",
-        desc: "worked as CNC programer & operator"
+        id:3,
+        time: "2020-present",
+        jobTitle: "Self-Taught Developer",
+        companyName: "Freelancer",
+        desc: "i learned coding from 0 to intermediate & advance level by watching tutorials, reading books & taking some paid courses"
     },
     {
         id:2,
@@ -251,11 +263,11 @@ export const myJourneyData = [
         desc: "Opened my own coaching institute where i taught Physics & Maths to B.Sc. students"
     },
     {
-        id:3,
-        time: "2020-present",
-        jobTitle: "A Self Taught Developer",
-        companyName: "Freelancer",
-        desc: "i learned coding from 0 to intermediate & advance level by watching tutorials, reading books & taking some paid courses"
+        id:1,
+        time:"2016-2017",
+        jobTitle: "Mechanical Engineer",
+        companyName: "keihnfie",
+        desc: "worked as CNC programer & operator"
     }
 ]
 

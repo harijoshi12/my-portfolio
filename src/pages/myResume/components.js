@@ -57,7 +57,7 @@ export const Lang = ({title, level}) => {
 export function ProjectItem({ title,tech, desc }) {
     return (
         <div className={styles.projectItem}>
-            <h2 className={styles.title}><span>{title}</span> | <span>{tech}</span></h2>
+            <h2 className={styles.title}><span>{title}</span><span>|</span><span>{tech}</span></h2>
             <p className={styles.desc}>{desc}</p>
         </div>
     )
@@ -68,7 +68,7 @@ export function MyJourneyItem(props) {
     return (
         <div className={styles.myJourneyItem}>
             <span className={styles.time}>{time}</span>
-            <h1 className={styles.title}><span>{jobTitle}</span> | <span>{companyName}</span></h1>
+            <h1 className={styles.title}><span>{jobTitle}</span>   | <span>{companyName}</span></h1>
             <p className={styles.desc}>{desc}</p>
         </div>
     )

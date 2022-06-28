@@ -50,14 +50,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-  background-color: #c9c9c9;
+  background-color: #f2f2f2;
   width: 1260px;
   height: 1782px;
 }
 
 #myResumePage .myResume .left {
   background-color: white;
-  width: 57%;
+  width: 56%;
 }
 
 #myResumePage .myResume .left .personalInfo {
@@ -147,8 +147,9 @@
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
   color: #f0f0f0;
-  font-size: 27px;
-  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
 }
 
 #myResumePage .myResume .left .personalInfo .tagline {
@@ -249,6 +250,7 @@
 #myResumePage .myResume .left .langs .lang .title {
   font-size: 22px;
   font-weight: 700;
+  color: #31332a;
 }
 
 #myResumePage .myResume .left .langs .lang .level {
@@ -265,7 +267,7 @@
 }
 
 #myResumePage .myResume .right {
-  width: 43%;
+  width: 44%;
   background-color: #5a5a5a;
 }
 
@@ -290,7 +292,11 @@
 #myResumePage .myResume .right .contactDetails a:hover span:last-child {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  color: #9c9cff;
+  color: #2de6fe;
+}
+
+#myResumePage .myResume .right .contactDetails a:hover span:first-child {
+  color: #2de6fe;
 }
 
 #myResumePage .myResume .right .contactDetails a span:first-child {
@@ -308,36 +314,85 @@
 }
 
 #myResumePage .myResume .right .projects .projectItem {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Quicksand", sans-serif;
 }
 
 #myResumePage .myResume .right .projects .projectItem .title {
   color: white;
   font-size: 20px;
-  margin: 5px 2px;
-  margin-bottom: 2px;
+  margin: 6px 0;
+  margin-bottom: 8px;
   font-weight: 700;
+}
+
+#myResumePage .myResume .right .projects .projectItem .title span {
+  padding: 3px 5px;
+}
+
+#myResumePage .myResume .right .projects .projectItem .title span:first-child {
+  padding: 0 5px;
+  color: #31332a;
+  background-color: #c8c8c8;
+}
+
+#myResumePage .myResume .right .projects .projectItem .title span:nth-child(2) {
+  margin-left: 7px;
 }
 
 #myResumePage .myResume .right .projects .projectItem .desc {
   color: #31332a;
   background-color: white;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 18px;
+  padding: 10px;
   margin-left: 25px;
 }
 
+#myResumePage .myResume .right .myJourney {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#myResumePage .myResume .right .myJourney .myJourneyItem {
+  position: relative;
+  width: 83%;
+  border-left: 8px solid white;
+  color: white;
+  padding: 10px;
+  padding-bottom: 25px;
+  font-family: "Quicksand", sans-serif;
+}
+
 #myResumePage .myResume .right .myJourney .myJourneyItem .time {
-  font-size: 20px;
+  font-size: 18px;
+  position: absolute;
+  left: -115px;
+  width: 100px;
+  text-align: right;
 }
 
 #myResumePage .myResume .right .myJourney .myJourneyItem .title {
   font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#myResumePage .myResume .right .myJourney .myJourneyItem .title span:first-child {
+  color: #31332a;
+  padding: 0 5px;
+  background-color: #c8c8c8;
 }
 
 #myResumePage .myResume .right .myJourney .myJourneyItem .desc {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #myResumePage .myResume .right .interests .interest {
