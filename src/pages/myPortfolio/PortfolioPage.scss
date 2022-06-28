@@ -1,8 +1,9 @@
-section{
+
+#portfolioPage{
     background-color: red;
     border-bottom: 1px solid white;
     .sec_wrapper{
-        background-color: purple;
+        background-color: rgb(21, 128, 0);
         max-width: 1400px;
         height: 100vh;
         display: flex;
@@ -10,5 +11,11 @@ section{
         align-items: center;
         color: white;
         margin: auto;
+        .imgbox{
+            background-image: url(../../media/images/sc.png);
+            width: 1000px;
+            height: 800px;
+            background-size: 270%;
+        }
     }
 }

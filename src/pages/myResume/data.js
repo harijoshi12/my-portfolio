@@ -1,21 +1,22 @@
-import { GrMail } from "react-icons/gr"
+import { IoIosMail } from "react-icons/io"
 import { BsFillTelephoneFill } from "react-icons/bs"
 import { IoLocationSharp } from "react-icons/io5"
 import { GrLinkedin } from "react-icons/gr"
+import { FaGithub } from "react-icons/fa"
 import { CgWebsite } from "react-icons/cg"
 
 
 export const contactDetails =[
     {
         id: 1,
-        icon: <GrMail/>,
+        icon: <IoIosMail/>,
         info: "mr.hariprasdjoshi@gmail.com",
         link: "mailto:mr.hariprasdjoshi@gmail.com"
     },
     {
         id: 2,
         icon: <BsFillTelephoneFill/>,
-        info: "9634090498",
+        info: "9634090498, 7906519104",
         link: "tel:+9634090498"
     },
     {
@@ -32,6 +33,12 @@ export const contactDetails =[
     },
     {
         id: 5,
+        icon: <FaGithub/>,
+        info: "https://github.com/harijoshi12",
+        link: "https://github.com/harijoshi12"
+    },
+    {
+        id: 6,
         icon: <CgWebsite/>,
         info: "harijoshi.info",
         link: "https://www.harijoshi.info/"
@@ -146,6 +153,11 @@ export const progLangs = [
        level:  8
     },
     {
+       id: 6,
+       title: "Java",
+       level:  8
+    },
+    {
        id: 4,
        title: "SQL",
        level:  8
@@ -156,10 +168,10 @@ export const progLangs = [
        level:  7
     },
     {
-       id: 6,
-       title: "Java",
-       level:  7
-    },
+        id: 10,
+        title: "TypeScript",
+        level:  7
+     },
     {
        id: 7,
        title: "GoLang",
@@ -174,11 +186,6 @@ export const progLangs = [
        id: 9,
        title: "Php",
        level:  6
-    },
-    {
-       id: 10,
-       title: "TypeScript",
-       level:  6
     }
 ]
 
@@ -191,7 +198,7 @@ export const langs = [
     {
         id: 2,
         title: "English",
-        level: "Progessional Working Proficiency"
+        level: "Professional Working Proficiency"
     }
 ]
 

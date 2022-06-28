@@ -22,7 +22,7 @@ export const PersonalInfo = () => {
 
 export const ContactDetail = (props) =>{
     return(
-        <a href={props.link} rel="noopener noreferrer" target="_blank"><span>{props.icon}</span> {props.info}</a>
+        <a href={props.link} rel="noopener noreferrer" target="_blank"><span>{props.icon}</span> <span>{props.info}</span></a>
     )
 }
 
@@ -54,10 +54,10 @@ export const Lang = ({title, level}) => {
     )
 }
 
-export function ProjectItem({ title, desc }) {
+export function ProjectItem({ title,tech, desc }) {
     return (
         <div className={styles.projectItem}>
-            <h2 className={styles.title}>{title}</h2>
+            <h2 className={styles.title}><span>{title}</span> | <span>{tech}</span></h2>
             <p className={styles.desc}>{desc}</p>
         </div>
     )

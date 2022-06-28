@@ -1,18 +1,20 @@
 #myResumePage .secWrapper {
   max-width: 1400px;
   width: 100%;
-  padding: 30px 4%;
+  background-color: blue;
+  padding: 30px 0;
 }
 
 #myResumePage .secTitle {
   width: 100%;
   font-size: 25px;
-  background-color: #484235;
+  background-color: #282828;
   color: white;
   margin-bottom: 20px;
   text-align: center;
   padding: 4px;
   letter-spacing: 2px;
+  font-family: 'Merriweather', serif;
 }
 
 #myResumePage .resumeSec {
@@ -40,7 +42,6 @@
 }
 
 #myResumePage .myResume {
-  font-size: 30px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +51,8 @@
           justify-content: center;
   padding: 20px;
   background-color: #c9c9c9;
+  width: 1260px;
+  height: 1782px;
 }
 
 #myResumePage .myResume .left {
@@ -74,7 +77,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter {
@@ -83,7 +87,7 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
   padding-left: 6.4%;
-  background-color: #656f5c;
+  background-color: #5a5a5a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +101,7 @@
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner {
   width: 100%;
-  background-color: #484235;
+  background-color: #282828;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,7 +118,8 @@
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .imgbox {
   min-width: 170px;
   min-height: 170px;
-  background-color: #656f5c;
+  background-color: #d0d0d0;
+  border: 1px solid white;
   overflow: hidden;
   background-image: url(../../media/images/hero.png);
   background-position: top;
@@ -137,20 +142,23 @@
   color: #b9b9b9;
   font-size: 50px;
   padding-bottom: 15px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
   color: #f0f0f0;
   font-size: 27px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #myResumePage .myResume .left .personalInfo .tagline {
   padding: 15px 0;
   font-size: 20px;
   margin-left: 60px;
-  font-weight: 400;
+  font-weight: 500;
   color: #31332a;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 #myResumePage .myResume .left .technicalSkills .technicalSkill {
@@ -158,11 +166,18 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid white;
-  background-color: #485140;
+  background-color: #2b343d;
   color: white;
   padding: 5px 13px;
-  margin: 5px;
+  margin: 4px;
   font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#myResumePage .myResume .left .technicalSkills .technicalSkill:hover {
+  background-color: #151a1e;
 }
 
 #myResumePage .myResume .left .progLangs span {
@@ -186,8 +201,12 @@
 
 #myResumePage .myResume .left .progLangs .progLang .title {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
+  color: #31332a;
   width: 30%;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 2px;
 }
 
 #myResumePage .myResume .left .progLangs .progLang .progressBarOuter {
@@ -197,20 +216,64 @@
 }
 
 #myResumePage .myResume .left .progLangs .progLang .progressBarInner {
-  background-color: #485140;
-  height: 15px;
+  background-color: #181818;
+  height: 13px;
   width: 100%;
+}
+
+#myResumePage .myResume .left .langs .lang {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  width: 50%;
+  margin: 5px 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+#myResumePage .myResume .left .langs .lang span {
+  display: inline;
+  margin: 2px 5px;
+}
+
+#myResumePage .myResume .left .langs .lang .title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#myResumePage .myResume .left .langs .lang .level {
+  padding: 1px 4px;
+  font-size: 17px;
+  margin: 2px 6px;
+  font-weight: 400;
+  background-color: #5a5a5a;
+  color: white;
+}
+
+#myResumePage .myResume .left .langs .lang .level:hover {
+  background-color: #717171;
 }
 
 #myResumePage .myResume .right {
   width: 43%;
-  background-color: #656f5c;
+  background-color: #5a5a5a;
 }
 
 #myResumePage .myResume .right .contactDetails {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   color: #e6e6e6;
+  font-family: "Quicksand", sans-serif;
   padding: 30px;
 }
 
@@ -218,12 +281,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  line-height: 55px;
+  line-height: 45px;
   color: white;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-#myResumePage .myResume .right .contactDetails a span {
-  width: 50px;
+#myResumePage .myResume .right .contactDetails a:hover span:last-child {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  color: #9c9cff;
+}
+
+#myResumePage .myResume .right .contactDetails a span:first-child {
+  position: relative;
+  margin-top: 5px;
+  width: 55px;
 }
 
 #myResumePage .myResume .right .contactDetails .bottomBorder {
@@ -236,16 +309,20 @@
 
 #myResumePage .myResume .right .projects .projectItem {
   margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
 }
 
 #myResumePage .myResume .right .projects .projectItem .title {
-  color: black;
-  font-size: 18px;
+  color: white;
+  font-size: 20px;
+  margin: 5px 2px;
+  margin-bottom: 2px;
+  font-weight: 700;
 }
 
 #myResumePage .myResume .right .projects .projectItem .desc {
-  color: white;
-  background-color: #485140;
+  color: #31332a;
+  background-color: white;
   font-size: 16px;
   padding: 5px;
   margin-left: 25px;
@@ -268,7 +345,10 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid white;
-  color: white;
+  color: #31332a;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
   padding: 5px 10px;
   font-size: 20px;
   margin: 5px;

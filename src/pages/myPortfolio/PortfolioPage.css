@@ -1,10 +1,10 @@
-section {
+#portfolioPage {
   background-color: red;
   border-bottom: 1px solid white;
 }
 
-section .sec_wrapper {
-  background-color: purple;
+#portfolioPage .sec_wrapper {
+  background-color: #158000;
   max-width: 1400px;
   height: 100vh;
   display: -webkit-box;
@@ -18,5 +18,12 @@ section .sec_wrapper {
           align-items: center;
   color: white;
   margin: auto;
+}
+
+#portfolioPage .sec_wrapper .imgbox {
+  background-image: url(../../media/images/sc.png);
+  width: 1000px;
+  height: 800px;
+  background-size: 270%;
 }
 /*# sourceMappingURL=PortfolioPage.css.map */

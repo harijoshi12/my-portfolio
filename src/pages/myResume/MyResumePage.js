@@ -32,7 +32,7 @@ function MyResumePage() {
 
             {/* languages */}
             <div className={`${styles.langs} ${styles.resumeSec}`}>
-            <h1 className={styles.secTitle}>Languages</h1>
+              <h1 className={styles.secTitle}>Languages</h1>
               {langs.map(data => <Lang key={data.id} {...data}/>)}
             </div>
           </div>
