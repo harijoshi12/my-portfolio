@@ -1,7 +1,6 @@
 #myResumePage .secWrapper {
   max-width: 1400px;
   width: 100%;
-  background-color: blue;
   padding: 30px 0;
 }
 
@@ -27,7 +26,7 @@
 }
 
 #myResumePage {
-  background-color: #989696;
+  background-color: #bebebe;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,6 +50,8 @@
           justify-content: center;
   padding: 20px;
   background-color: #f2f2f2;
+  -webkit-box-shadow: 0px 0px 25px 4px #646464;
+          box-shadow: 0px 0px 25px 4px #646464;
   width: 1260px;
   height: 1782px;
 }
@@ -344,6 +345,7 @@
   color: #31332a;
   background-color: white;
   font-size: 18px;
+  font-weight: 500;
   padding: 10px;
   margin-left: 25px;
 }
@@ -364,7 +366,7 @@
 #myResumePage .myResume .right .myJourney .myJourneyItem {
   position: relative;
   width: 83%;
-  border-left: 8px solid white;
+  border-left: 9px solid white;
   color: white;
   padding: 10px;
   padding-bottom: 25px;
@@ -383,9 +385,23 @@
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+  position: relative;
 }
 
 #myResumePage .myResume .right .myJourney .myJourneyItem .title span:first-child {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  left: -19px;
+  top: 10px;
+  background-color: #31332a;
+}
+
+#myResumePage .myResume .right .myJourney .myJourneyItem .title span:nth-child(2) {
   color: #31332a;
   padding: 0 5px;
   background-color: #c8c8c8;

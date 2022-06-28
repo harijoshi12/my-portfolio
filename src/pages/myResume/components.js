@@ -68,7 +68,7 @@ export function MyJourneyItem(props) {
     return (
         <div className={styles.myJourneyItem}>
             <span className={styles.time}>{time}</span>
-            <h1 className={styles.title}><span>{jobTitle}</span>   | <span>{companyName}</span></h1>
+            <h1 className={styles.title}><span></span><span>{jobTitle}</span>   | <span>{companyName}</span></h1>
             <p className={styles.desc}>{desc}</p>
         </div>
     )
