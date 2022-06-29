@@ -15,7 +15,6 @@ function Cursor({isMousein}) {
       cursor.current.classList.remove('link-grow')
       cursorPoint.current.classList.remove('cp-toggle')
     }
-    console.log("cursor render", isMousein)
 })
 
   function cursorfun(e){

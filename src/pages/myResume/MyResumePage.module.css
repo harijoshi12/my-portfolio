@@ -35,6 +35,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -227,6 +231,14 @@
   width: 100%;
 }
 
+#myResumePage .myResume .left .langs .lang:first-child {
+  width: 49%;
+}
+
+#myResumePage .myResume .left .langs .lang:last-child {
+  width: 51%;
+}
+
 #myResumePage .myResume .left .langs .lang {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -242,7 +254,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  width: 50%;
   margin: 5px 0;
   font-family: "Quicksand", sans-serif;
 }
@@ -259,10 +270,11 @@
 }
 
 #myResumePage .myResume .left .langs .lang .level {
-  padding: 1px 4px;
-  font-size: 17px;
+  padding: 3px 10px;
+  font-size: 18px;
   margin: 2px 6px;
-  font-weight: 400;
+  font-weight: 500;
+  white-space: nowrap;
   background-color: #5a5a5a;
   color: white;
 }
@@ -301,6 +313,7 @@
 #myResumePage .myResume .left .edus .edu .r2 {
   padding: 10px 0;
   font-size: 20px;
+  font-weight: 500;
 }
 
 #myResumePage .myResume .left .edus .edu .r2 .place {
@@ -348,6 +361,11 @@
   position: relative;
   margin-top: 5px;
   width: 55px;
+}
+
+#myResumePage .myResume .right .contactDetails a span:last-child {
+  position: relative;
+  white-space: nowrap;
 }
 
 #myResumePage .myResume .right .contactDetails .bottomBorder {
@@ -484,7 +502,7 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1150px) {
   #myResumePage .resumeWrapper {
     padding: 20px;
   }

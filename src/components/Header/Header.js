@@ -19,11 +19,11 @@ function Header({setIsMousein}) {
       link.current.addEventListener('mouseleave', ()=>{
         link.current.classList.remove('hovered-link')
         setIsMousein(false)
-        console.log("mouse leave")
+        // console.log("mouse leave")
       })
       link.current.addEventListener('mouseover', ()=>{
         setIsMousein(true)
-        console.log('mouse over')
+        // console.log('mouse over')
           link.current.classList.add('hovered-link')
       })
     })

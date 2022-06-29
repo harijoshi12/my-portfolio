@@ -1,15 +1,55 @@
-import React from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import styles from './MyResumePage.module.css'
+import jsPDF from 'jspdf'
+// import html2canvas from 'html2canvas'
+import DomToImage from 'dom-to-image'
 import { contactDetails, techSkills, progLangs, projectData, langs, education, myJourneyData, interests } from './data'
 
 import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, ProjectItem, MyJourneyItem, Interest,  } from './components'
 
 
 function MyResumePage() {
+  const myResume = useRef()
+  const resume = myResume.current
+  const [sbWidth, setSbwidth] = useState(window.innerWidth - document.documentElement.clientWidth)
+
+  useEffect(() => {
+    setSbwidth(window.innerWidth - document.documentElement.clientWidth);
+    window.addEventListener("resize", ()=>{
+      setSbwidth(window.innerWidth - document.documentElement.clientWidth);
+      console.log(resume.scrollWidth, resume.scrollHeight)
+    })
+  },[resume])
+
+  function resumeHandler (){
+
+    console.log(sbWidth)
+    DomToImage.toJpeg(resume, {
+        // windowWidth: resume.scrollWidth,
+        // windowHeight: resume.scrollHeight,
+        // scrollY: -window.pageYOffset,
+        // scrollX: -window.pageXOffset - sbWidth/2,
+        quality: 1,
+        height: resume.scrollHeight,
+        width: resume.scrollWidth
+    }).then(function(canvas){
+        // const imgdata = canvas.toDataURL('image/png')
+        const pdf = new jsPDF("p", "mm", "a4")
+        let width = pdf.internal.pageSize.getWidth()
+        let height = pdf.internal.pageSize.getHeight()
+        pdf.addImage(canvas, 'JPEG', 0, 0, width, height)
+        pdf.save("mycv.pdf")
+    }).catch(function(error){
+        console.log(error)
+    })
+  }
+  
+  
+  
   return (
     <section id={styles.myResumePage}>
       <div className={styles.resumeWrapper}>
-        <div className={styles.myResume}>
+        <div id='myResume' ref={myResume} className={styles.myResume}>
           {/* left section */}
           <div className={styles.left}>
 
@@ -72,6 +112,7 @@ function MyResumePage() {
           </div>
         </div>
       </div>
+      <button onClick={resumeHandler} style={{background:"blue", padidng:"15px", color:"white", fontSize:"25px"}}>Download Resume</button>
     </section>
   )
 }

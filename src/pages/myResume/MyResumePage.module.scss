@@ -46,6 +46,7 @@ $textfontFamily: 'Quicksand', sans-serif;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 100px 0;
     .myResume{
@@ -191,13 +192,18 @@ $textfontFamily: 'Quicksand', sans-serif;
                 }
             }
             .langs{
+                .lang:first-child{
+                    width: 49%;
+                }
+                .lang:last-child{
+                    width: 51%;
+                }
                 .lang{
                     display: inline-flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
                     text-align: left;
-                    width: 50%;
                     margin: 5px 0;
                     font-family: $textfontFamily;
                     span{
@@ -210,10 +216,11 @@ $textfontFamily: 'Quicksand', sans-serif;
                         color: $lightTextColor;
                     }
                     .level{
-                        padding: 1px 4px;
-                        font-size: 17px;
+                        padding: 3px 10px;
+                        font-size: 18px;
                         margin: 2px 6px;
-                        font-weight: 400;
+                        font-weight: 500;
+                        white-space: nowrap;
                         background-color: $lightTextBg;
                         color: white;
                         &:hover{
@@ -248,6 +255,7 @@ $textfontFamily: 'Quicksand', sans-serif;
                     .r2{
                         padding: 10px 0;
                         font-size: 20px;
+                        font-weight: 500;
                         .time{
                         }
                         .place{
@@ -273,7 +281,7 @@ $textfontFamily: 'Quicksand', sans-serif;
                 font-family: $textfontFamily;
                 padding: 30px;
                 a{
-                    display:flex;
+                    display: flex;
                     line-height: 45px;
                     color: white;
                     transition: all 0.2s ease;
@@ -291,7 +299,12 @@ $textfontFamily: 'Quicksand', sans-serif;
                         margin-top: 5px;
                         width: 55px;
                     }
+                    span:last-child{
+                        position: relative;
+                        white-space: nowrap;
+                    }
                 }
+                
                 .bottomBorder{
                     width: 80%;
                     height: 2px;
@@ -413,7 +426,7 @@ $textfontFamily: 'Quicksand', sans-serif;
         }
     }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1150px) {
     #myResumePage{
      
         .resumeWrapper{

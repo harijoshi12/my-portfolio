@@ -62,8 +62,7 @@ export const Edu = ({title, institute, time, place, cgpa}) =>{
                 <span className={styles.institute}>{institute}</span>
             </div>
             <div className={styles.r2}>
-                <span className={styles.time}>{time}</span> / 
-                <span className={styles.place}>{place}</span>
+                <span className={styles.time}>{time}</span> / <span className={styles.place}> {place}</span>
             </div>
             {/* <div className={styles.cgpa}>{cgpa}</div> */}
         </div>
