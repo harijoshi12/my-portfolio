@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './MyResumePage.module.css'
-import { contactDetails, techSkills, progLangs, projectData, langs, myJourneyData, interests } from './data'
+import { contactDetails, techSkills, progLangs, projectData, langs, education, myJourneyData, interests } from './data'
 
-import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, ProjectItem, MyJourneyItem, Interest,  } from './components'
+import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, ProjectItem, MyJourneyItem, Interest,  } from './components'
 
 
 function MyResumePage() {
@@ -34,6 +34,12 @@ function MyResumePage() {
             <div className={`${styles.langs} ${styles.resumeSec}`}>
               <h1 className={styles.secTitle}>Languages</h1>
               {langs.map(data => <Lang key={data.id} {...data}/>)}
+            </div>
+
+            {/* education */}
+            <div className={`${styles.edus} ${styles.resumeSec}`}>
+              <h1 className={styles.secTitle}>Education</h1>
+              {education.map(data => <Edu key={data.id} {...data}/>)}
             </div>
           </div>
 

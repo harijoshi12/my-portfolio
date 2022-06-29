@@ -202,6 +202,17 @@ export const langs = [
     }
 ]
 
+export const education = [
+    {
+        id: 1,
+        title: "Mechanical Engineering",
+        institute: "Govt. Polytechnic Nainital",
+        time: "2012-2015",
+        place: "Nainital, Uttarakhand, India",
+        cgpa: "67%"
+    }
+]
+
 export const projectData = [
     {
         id: 1,

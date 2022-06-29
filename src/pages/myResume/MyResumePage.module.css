@@ -18,11 +18,12 @@
 
 #myResumePage .resumeSec {
   padding: 10px 30px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 #myResumePage .left .resumeSec {
   padding: 10px 6%;
+  padding-bottom: 25px;
 }
 
 #myResumePage {
@@ -175,6 +176,7 @@
   padding: 5px 13px;
   margin: 4px;
   font-size: 18px;
+  font-weight: 500;
   font-family: "Quicksand", sans-serif;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -220,7 +222,7 @@
 }
 
 #myResumePage .myResume .left .progLangs .progLang .progressBarInner {
-  background-color: #181818;
+  background-color: #2b343d;
   height: 13px;
   width: 100%;
 }
@@ -267,6 +269,46 @@
 
 #myResumePage .myResume .left .langs .lang .level:hover {
   background-color: #717171;
+}
+
+#myResumePage .myResume .left .edus .edu {
+  font-family: "Quicksand", sans-serif;
+  color: #31332a;
+}
+
+#myResumePage .myResume .left .edus .edu .r1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#myResumePage .myResume .left .edus .edu .r1 span:nth-child(2) {
+  font-size: 30px;
+}
+
+#myResumePage .myResume .left .edus .edu .r1 .title {
+  background-color: #5a5a5a;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+#myResumePage .myResume .left .edus .edu .r1 .institute {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#myResumePage .myResume .left .edus .edu .r2 {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+#myResumePage .myResume .left .edus .edu .r2 .place {
+  margin: auto;
+}
+
+#myResumePage .myResume .left .edus .edu .cgpa {
+  font-size: 22px;
 }
 
 #myResumePage .myResume .right {

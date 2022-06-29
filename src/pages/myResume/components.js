@@ -54,6 +54,22 @@ export const Lang = ({title, level}) => {
     )
 }
 
+export const Edu = ({title, institute, time, place, cgpa}) =>{
+    return(
+        <div className={styles.edu}>
+            <div className={styles.r1}>
+                <span className={styles.title}>{title}</span> <span> | </span>
+                <span className={styles.institute}>{institute}</span>
+            </div>
+            <div className={styles.r2}>
+                <span className={styles.time}>{time}</span> / 
+                <span className={styles.place}>{place}</span>
+            </div>
+            {/* <div className={styles.cgpa}>{cgpa}</div> */}
+        </div>
+    )
+}
+
 export function ProjectItem({ title,tech, desc }) {
     return (
         <div className={styles.projectItem}>
