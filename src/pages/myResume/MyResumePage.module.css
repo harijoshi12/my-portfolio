@@ -1,7 +1,7 @@
-#myResumePage .secWrapper {
+#myResumePage .resumeWrapper {
   max-width: 1400px;
   width: 100%;
-  padding: 30px 0;
+  padding: 30px;
 }
 
 #myResumePage .secTitle {
@@ -52,8 +52,10 @@
   background-color: #f2f2f2;
   -webkit-box-shadow: 0px 0px 25px 4px #646464;
           box-shadow: 0px 0px 25px 4px #646464;
-  width: 1260px;
-  height: 1782px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
 }
 
 #myResumePage .myResume .left {
@@ -71,8 +73,8 @@
 }
 
 #myResumePage .myResume .left .personalInfo .resumeTitle {
-  font-size: 2rem;
-  margin-left: 60px;
+  font-size: 2.3rem;
+  margin-left: 6%;
   color: black;
   text-align: center;
   text-transform: uppercase;
@@ -156,7 +158,7 @@
 #myResumePage .myResume .left .personalInfo .tagline {
   padding: 15px 0;
   font-size: 20px;
-  margin-left: 60px;
+  margin-left: 6%;
   font-weight: 500;
   color: #31332a;
   text-align: center;
@@ -314,8 +316,12 @@
   margin-top: 20px;
 }
 
+#myResumePage .myResume .right .projects .projectItem:last-child {
+  margin-bottom: 0;
+}
+
 #myResumePage .myResume .right .projects .projectItem {
-  margin-bottom: 15px;
+  margin: 30px 0;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -343,7 +349,7 @@
 
 #myResumePage .myResume .right .projects .projectItem .desc {
   color: #31332a;
-  background-color: white;
+  background-color: #ebebeb;
   font-size: 18px;
   font-weight: 500;
   padding: 10px;
@@ -364,11 +370,13 @@
 }
 
 #myResumePage .myResume .right .myJourney .myJourneyItem {
+  margin-right: -10px;
   position: relative;
   width: 83%;
   border-left: 9px solid white;
   color: white;
   padding: 10px;
+  padding-right: 0;
   padding-bottom: 25px;
   font-family: "Quicksand", sans-serif;
 }
@@ -423,5 +431,32 @@
   padding: 5px 10px;
   font-size: 20px;
   margin: 5px;
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1600px) {
+  #myResumePage .myResume {
+    width: 1260px;
+    height: 1782px;
+    max-height: 1782px;
+    min-height: 1782px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #myResumePage .resumeWrapper {
+    padding: 20px;
+  }
+  #myResumePage .myResume .left .personalInfo .resumeTitle {
+    font-size: 2rem;
+  }
+  #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .myName {
+    font-size: 40px;
+  }
+  #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
+    font-size: 22px;
+  }
+  #myResumePage .myResume .right .contactDetails {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=MyResumePage.module.css.map */

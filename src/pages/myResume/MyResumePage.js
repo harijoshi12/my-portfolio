@@ -8,7 +8,7 @@ import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, ProjectIte
 function MyResumePage() {
   return (
     <section id={styles.myResumePage}>
-      <div className={styles.secWrapper}>
+      <div className={styles.resumeWrapper}>
         <div className={styles.myResume}>
           {/* left section */}
           <div className={styles.left}>
