@@ -1,8 +1,8 @@
-import React, {useRef, useEffect, useState} from 'react'
+import React, {useRef } from 'react'
 import styles from './MyResumePage.module.css'
 import jsPDF from 'jspdf'
 // import html2canvas from 'html2canvas'
-import DomToImage from 'dom-to-image'
+// import DomToImage from 'dom-to-image'
 import { contactDetails, techSkills, progLangs, projectData, langs, education, myJourneyData, interests } from './data'
 
 import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, ProjectItem, MyJourneyItem, Interest,  } from './components'
@@ -11,38 +11,58 @@ import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, Proje
 function MyResumePage() {
   const myResume = useRef()
   const resume = myResume.current
-  const [sbWidth, setSbwidth] = useState(window.innerWidth - document.documentElement.clientWidth)
-
-  useEffect(() => {
-    setSbwidth(window.innerWidth - document.documentElement.clientWidth);
-    window.addEventListener("resize", ()=>{
-      setSbwidth(window.innerWidth - document.documentElement.clientWidth);
-      console.log(resume.scrollWidth, resume.scrollHeight)
-    })
-  },[resume])
-
-  function resumeHandler (){
-
-    console.log(sbWidth)
-    DomToImage.toJpeg(resume, {
-        // windowWidth: resume.scrollWidth,
-        // windowHeight: resume.scrollHeight,
-        // scrollY: -window.pageYOffset,
-        // scrollX: -window.pageXOffset - sbWidth/2,
-        quality: 1,
-        height: resume.scrollHeight,
-        width: resume.scrollWidth
-    }).then(function(canvas){
-        // const imgdata = canvas.toDataURL('image/png')
-        const pdf = new jsPDF("p", "mm", "a4")
-        let width = pdf.internal.pageSize.getWidth()
-        let height = pdf.internal.pageSize.getHeight()
-        pdf.addImage(canvas, 'JPEG', 0, 0, width, height)
-        pdf.save("mycv.pdf")
-    }).catch(function(error){
-        console.log(error)
-    })
+  const doc = new jsPDF(
+    {
+      orientation: 'p',
+      unit: 'pt',
+      format: 'a3',
+      hotfixes: ["px_scaling"]
+     }
+  )
+  function resumeHandler(){
+    doc.html(resume, {
+      callback: function (doc) {
+        let pageCount = doc.internal.getNumberOfPages()
+        doc.deletePage(pageCount)
+        doc.save("resume.pdf");
+      },
+      x: 0,
+      y: 0,
+    });
   }
+  // const [sbWidth, setSbwidth] = useState(window.innerWidth - document.documentElement.clientWidth)
+
+  // useEffect(() => {
+  //   setSbwidth(window.innerWidth - document.documentElement.clientWidth);
+  //   window.addEventListener("resize", ()=>{
+  //     setSbwidth(window.innerWidth - document.documentElement.clientWidth);
+  //     console.log(resume.scrollWidth, resume.scrollHeight)
+  //   })
+  // },[resume])
+
+
+  // function resumeHandler (){
+
+  //   console.log(sbWidth)
+  //   DomToImage.toJpeg(resume, {
+  //       // windowWidth: resume.scrollWidth,
+  //       // windowHeight: resume.scrollHeight,
+  //       // scrollY: -window.pageYOffset,
+  //       // scrollX: -window.pageXOffset - sbWidth/2,
+  //       quality: 1,
+  //       height: resume.scrollHeight,
+  //       width: resume.scrollWidth
+  //   }).then(function(canvas){
+  //       // const imgdata = canvas.toDataURL('image/png')
+  //       const pdf = new jsPDF("p", "mm", "a4")
+  //       let width = pdf.internal.pageSize.getWidth()
+  //       let height = pdf.internal.pageSize.getHeight()
+  //       pdf.addImage(canvas, 'JPEG', 0, 0, width, height)
+  //       pdf.save("mycv.pdf")
+  //   }).catch(function(error){
+  //       console.log(error)
+  //   })
+  // }
   
   
   

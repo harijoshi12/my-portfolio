@@ -4,30 +4,89 @@ import { NavLink } from 'react-router-dom'
 
 function Header({setIsMousein}) {
   const [toggleMenu, setToggleMenu] = useState(false)
-  // const [mousein, setMousein] = useState(false)
-  // const [mouseout, setMouseout] = useState(true)
 
   const progress = useRef()
+  const nav = useRef()
   const link1 = useRef()
   const link2 = useRef()
   const link3 = useRef()
   const link4 = useRef()
   const link5 = useRef()
+  const burger = useRef()
+
+  // cursor link animaition
   useEffect(() => {
     const navlinks = [link1, link2, link3, link4, link5]
     navlinks.forEach(link =>{
       link.current.addEventListener('mouseleave', ()=>{
         link.current.classList.remove('hovered-link')
         setIsMousein(false)
-        // console.log("mouse leave")
       })
       link.current.addEventListener('mouseover', ()=>{
         setIsMousein(true)
-        // console.log('mouse over')
           link.current.classList.add('hovered-link')
       })
     })
   },[ setIsMousein])
+
+
+  // Responsive Navabar
+  useEffect(()=>{
+    const navlinks = [ link1, link2, link3, link4, link5]
+
+    // initial navlinks opacity 0
+    let siteWidth = window.innerWidth
+    if(siteWidth <= 992){
+      navlinks.forEach((link)=>{
+        link.current.style.opacity = 0
+      })
+      nav.current.style.transition = `transform 0.3s linear`
+    } else{
+      nav.current.style.transition = ``
+    }
+
+    // nav links onclick reset toggle
+    navlinks.forEach((link, index)=>{
+      link.current.addEventListener('click', ()=>{
+        setToggleMenu(false)
+        navlinks.forEach((link, index)=>{
+          link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12}s`;
+        })
+      })
+    })
+
+    // navlinks animation
+    burger.current.addEventListener('click',()=>{
+      console.log("click");
+      navlinks.forEach((link, index) =>{
+        if(!nav.current.classList.contains("toggle")){
+          link.current.style.opacity = 0
+          link.current.style.animation = `navlinkFadeOpen 0.3s ease forwards ${(index + 1) / 8 + 0.1}s`;
+        } else{
+          link.current.style.opacity = 1
+          link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 15}s`;
+        }
+      })
+    })
+
+    // nav animation with window resize
+    window.addEventListener("resize", ()=>{
+      siteWidth = window.innerWidth
+      if(siteWidth >= 992){
+        setToggleMenu(false)
+        nav.current.style.transition = ``
+        navlinks.forEach((link, index) => {
+          link.current.style.animation = ``;
+          link.current.style.opacity = 1;
+        });
+      } else{
+        nav.current.style.transition = `transform 0.3s linear`
+        navlinks.forEach((link, index) => {
+          link.current.style.opacity = 0;
+        });
+      }
+    })
+  },[])
 
   // Progress Bar
   const progressBar = () => {
@@ -65,20 +124,24 @@ function Header({setIsMousein}) {
 
   return (
     <>
-      <div  className="nav-overlay"></div>
+      <div className={toggleMenu ? "nav-overlay toggle": "nav-overlay"}></div>
       <div className="pseudo_header"></div>
-      <header >
-        <div ref={progress} className="progress"></div>
+      <header className={toggleMenu ? "toggle": ""} >
+        <div className="progress_wrapper">
+          <div ref={progress} className="progress"></div>
+        </div>
         <div className="nav_wrapper">
-          <div className='logo'><NavLink to='/' exact>Hari joshi</NavLink></div>
-          <nav className={toggleMenu ? "toggle": ""}>
-            <NavLink ref={link1} to='/' activeStyle={{color: "red"}} exact>Home</NavLink>
-            <NavLink ref={link2} to='/my-services' activeStyle={{color: "red"}} exact>Services</NavLink>
-            <NavLink ref={link3} to='/my-portfolio' activeStyle={{color: "red"}} exact>Portfolio</NavLink>
-            <NavLink ref={link4} to='/my-resume' activeStyle={{color: "red"}} exact>My Resume</NavLink>
-            <NavLink ref={link5} to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact>Create your resume</NavLink>
+          <div className='logo'><NavLink to='/' exact>Hari <span>Joshi</span></NavLink></div>
+          <nav ref={nav} className={toggleMenu ? "toggle": ""}>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link1} to='/' activeStyle={{color: "red"}} exact> <span>Home</span> </NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/my-services' activeStyle={{color: "red"}} exact><span>Services</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-portfolio' activeStyle={{color: "red"}} exact><span>Portfolio</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/my-resume' activeStyle={{color: "red"}} exact><span>My Resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact><span>Create your resume</span></NavLink>
           </nav>
-          <div className={toggleMenu ? "burger toggle": "burger"} onClick={()=>setToggleMenu(!toggleMenu)} >
+          <div ref={burger} className={toggleMenu ? "burger toggle": "burger"} onClick={()=>{
+            setToggleMenu(!toggleMenu)
+          }} >
             <div className="line line1"></div>
             <div className="line line2"></div>
             <div className="line line3"></div>
