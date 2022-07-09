@@ -36,24 +36,52 @@ function Header({setIsMousein}) {
 
     // initial navlinks opacity 0
     let siteWidth = window.innerWidth
+    window.addEventListener("resize", ()=>{
+      siteWidth = window.innerWidth
+      console.log(siteWidth);
+      if(siteWidth <= 992){
+        // nav links onclick reset toggle
+        navlinks.forEach((link, index)=>{
+          link.current.style.opacity = 0
+          link.current.addEventListener('click', ()=>{
+            setToggleMenu(false)
+            navlinks.forEach((link, index)=>{
+              link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12}s`;
+            })
+          })
+        })
+        nav.current.style.transition = `transform 0.3s linear`
+      } else{
+        nav.current.style.transition = ``
+        navlinks.forEach((link, index)=>{
+          link.current.style.opacity = 1
+          link.current.addEventListener('click', ()=>{
+            // setToggleMenu(false)
+            navlinks.forEach((link, index)=>{
+              link.current.style.animation = ``;
+            })
+          })
+        })
+      }
+    })
     if(siteWidth <= 992){
-      navlinks.forEach((link)=>{
+      // nav links onclick reset toggle
+      navlinks.forEach((link, index)=>{
         link.current.style.opacity = 0
+        link.current.addEventListener('click', ()=>{
+          setToggleMenu(false)
+          navlinks.forEach((link, index)=>{
+            link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12}s`;
+          })
+        })
       })
       nav.current.style.transition = `transform 0.3s linear`
     } else{
       nav.current.style.transition = ``
+      
     }
 
-    // nav links onclick reset toggle
-    navlinks.forEach((link, index)=>{
-      link.current.addEventListener('click', ()=>{
-        setToggleMenu(false)
-        navlinks.forEach((link, index)=>{
-          link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12}s`;
-        })
-      })
-    })
+    
 
     // navlinks animation
     burger.current.addEventListener('click',()=>{
