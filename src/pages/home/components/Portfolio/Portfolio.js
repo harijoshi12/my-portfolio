@@ -1,5 +1,6 @@
 import React from 'react'
 import PortfolioItem from './PortfolioItem'
+import styles from '../../HomePage.module.css'
 import portfoioItem_img1 from '../../../../media/images/portfolio/crypto.webp'
 import portfoioItem_img2 from '../../../../media/images/portfolio/socialMedia.jpg'
 import portfoioItem_img3 from '../../../../media/images/portfolio/ecom.jpg'
@@ -49,10 +50,10 @@ function Portfolio() {
     }
   ]
   return (
-    <section id='portfolio'>
-       <div className="sec_wrapper">
+    <section className={`${styles.sec} ${styles.portfolio}`}>
+       <div className={styles.content_wrapper}>
         <h1>My Recent Work <br /> <span>Portfolio</span></h1>
-        <div className="item_wrapper">
+        <div className={styles.content}>
           {portfolioData.map(data=>{
             return(
               // <PortfolioItem data={data} />
@@ -60,7 +61,7 @@ function Portfolio() {
               )
             })}
           </div>
-          <a className='viewall_btn' href="https://github.com/">View all <span>&rarr;</span></a>
+          <a className={styles.btn} href="https://github.com/">View all <span>&rarr;</span></a>
        </div>
     </section>
   )

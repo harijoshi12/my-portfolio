@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 function Header({setIsMousein}) {
   const [toggleMenu, setToggleMenu] = useState(false)
 
+  const activeColor = `rgb(4, 226, 226)`
   const progress = useRef()
   const nav = useRef()
   const link1 = useRef()
@@ -158,11 +159,11 @@ function Header({setIsMousein}) {
         <div className="nav_wrapper">
           <div className='logo'><NavLink to='/' exact>Hari <span>Joshi</span></NavLink></div>
           <nav ref={nav} className={toggleMenu ? "toggle": ""}>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link1} to='/' activeStyle={{color: "red"}} exact> <span>Home</span> </NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/my-services' activeStyle={{color: "red"}} exact><span>Services</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-portfolio' activeStyle={{color: "red"}} exact><span>Portfolio</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/my-resume' activeStyle={{color: "red"}} exact><span>My Resume</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/resume-builder' activeStyle={{color: "red"}} id='nav_resumeMaker' exact><span>Create your resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link1} to='/' activeStyle={{color: activeColor}} exact> <span>Home</span> </NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/my-services' activeStyle={{color: activeColor}} exact><span>Services</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-portfolio' activeStyle={{color: activeColor}} exact><span>Portfolio</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/my-resume' activeStyle={{color: activeColor}} exact><span>My Resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/resume-builder' activeStyle={{color: activeColor}} id='nav_resumeMaker' exact><span>Create your resume</span></NavLink>
           </nav>
           <div ref={burger} className={toggleMenu ? "burger toggle": "burger"} onClick={()=>{
             setToggleMenu(!toggleMenu)

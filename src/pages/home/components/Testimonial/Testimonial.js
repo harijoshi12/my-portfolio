@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from '../../HomePage.module.css'
 
-function Testimonial() {
+const Testimonial = () => {
   return (
-    <section id='testimonial'>
-        <div className="sec_wrapper">Love from my Clients</div>
-    </section>
+    <section className={styles.sec}>
+        <div className={styles.content_wrapper}>Testimonials</div>
+    </section >
   )
 }
 

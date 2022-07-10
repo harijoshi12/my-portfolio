@@ -1,43 +1,61 @@
-section{
-    background-color: red;
+.sec{
+    background-color: rgb(25, 25, 25);
     border-bottom: 1px solid white;
     overflow: hidden;
-    .sec_wrapper{
-        background-color: purple;
+    padding: 5px;
+    .content_wrapper{
+        *{
+            border: 2px solid white;
+            padding: 5px;
+        }
+    }
+    .title{
+        background-color: white;
+        color: black;
+        text-align: center;
+        margin: auto;
+        width: 300px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .content_wrapper{
+        border: 2px solid white;
         max-width: 1400px;
-        height: 100vh;
+        height: fit-content;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         color: white;
         margin: auto;
+        padding: 30px 5px;
+        .content{
+        }
     }
 }
-#top{
-    margin-top: 71px;
-    margin-bottom: 1px;
-    .sec_wrapper{
+.sec:nth-child(even){
+    background-color: rgb(36, 36, 36);
+}
+
+.intro{
+    padding-top: 80px;
+    .content_wrapper{
         position: relative;
         overflow: hidden;
         height: fit-content;
-        background-color: purple;
     }
-    .sec_left{
+    .content_left{
         left: 20%;
         width: 470px;
         h1{
             font-size: 4rem;
-            span{
-                font-size: 5rem;
-                color: blue;
-            }
+            
         }
         h2{
             margin: 15px 0;
             border: 1px solid;
             padding: 20px 5px;
         }
-        .hero_btns{
+        .btn{
             button{
                 display: inline-flex;
                 justify-content: center;
@@ -64,7 +82,7 @@ section{
             }
         }
     }
-    .sec_right{
+    .content_right{
         overflow: hidden;
         position: relative;
         bottom: -50px;
@@ -73,8 +91,59 @@ section{
         }
     }
 }
-#portfolio{
-    .sec_wrapper{
+.about{
+    .content_left{
+        width: 47%;
+        .imgbox{
+            margin-left: auto;
+            width: 300px;
+            height: 450px;
+            background-color: grey;
+        }
+    }
+    .content_right{
+        width: 43%;
+        h1{
+            span{
+
+            }
+        }
+        h2{
+
+        }
+        p{
+
+        }
+    }
+}
+.skills{
+    .content_left{
+        width: 52%;
+        height: 500px;
+    }
+    .content_right{
+        width: 42%;
+        height: 500px;
+    }
+}
+.services{
+    .service{
+        margin: 0 10px;
+        padding: 5px 15px;
+        .imgbox{
+            height: 200px;
+            width: 250px;
+        }
+        h2{
+            padding: 15px 0;
+        }
+        p{
+            padding: 5px 0;
+        }
+    }
+}
+.portfolio{
+    .content_wrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -87,31 +156,31 @@ section{
             text-align: center;
             font-size: 30px;
             span{
-                color: blue;
+                color: rgb(113, 113, 113);
                 font-size: 37px;
             }
         }
-        .viewall_btn{
+        .btn{
             margin: 40px;
             padding: 10px 40px;
             font-size: 25px;
-            background-color: blue;
+            background-color: rgb(148, 148, 148);
             color: white;
             border-radius: 10px;
         }
     }
-    .item_wrapper{
+    .content{
         width: fit-content;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap:30px 50px;
+        gap:30px;
     }
     .portfolio_item{
         height: 400px;
         width: 300px;
         padding: 10px;
         border-radius: 25px;
-        background-color: rgb(47, 8, 116);
+        background-color: rgb(95, 95, 95);
         .imgbox{
             height: 230px;
             width: 100%;
@@ -124,7 +193,7 @@ section{
         h2{
             padding: 10px 0;
         }
-        .item_btns{
+        .btn_container{
             margin-top: 10px;
             height: fit-content;
             a{

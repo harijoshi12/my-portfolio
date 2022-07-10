@@ -1,61 +1,76 @@
-section {
-  background-color: red;
+.sec {
+  background-color: #191919;
   border-bottom: 1px solid white;
   overflow: hidden;
+  padding: 5px;
 }
 
-section .sec_wrapper {
-  background-color: purple;
+.sec .content_wrapper * {
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.sec .title {
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin: auto;
+  width: 300px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.sec .content_wrapper {
+  border: 2px solid white;
   max-width: 1400px;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
   margin: auto;
+  padding: 30px 5px;
 }
 
-#top {
-  margin-top: 71px;
-  margin-bottom: 1px;
+.sec:nth-child(even) {
+  background-color: #242424;
 }
 
-#top .sec_wrapper {
+.intro {
+  padding-top: 80px;
+}
+
+.intro .content_wrapper {
   position: relative;
   overflow: hidden;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: purple;
 }
 
-#top .sec_left {
+.intro .content_left {
   left: 20%;
   width: 470px;
 }
 
-#top .sec_left h1 {
+.intro .content_left h1 {
   font-size: 4rem;
 }
 
-#top .sec_left h1 span {
-  font-size: 5rem;
-  color: blue;
-}
-
-#top .sec_left h2 {
+.intro .content_left h2 {
   margin: 15px 0;
   border: 1px solid;
   padding: 20px 5px;
 }
 
-#top .sec_left .hero_btns button {
+.intro .content_left .btn button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -70,7 +85,7 @@ section .sec_wrapper {
   font-size: 20px;
 }
 
-#top .sec_left .hero_btns button:first-child {
+.intro .content_left .btn button:first-child {
   border: 2px solid white;
   background-color: transparent;
   color: white;
@@ -81,7 +96,7 @@ section .sec_wrapper {
   min-width: fit-content;
 }
 
-#top .sec_left .hero_btns button:last-child {
+.intro .content_left .btn button:last-child {
   margin-left: 10px;
   background: white;
   color: blue;
@@ -91,17 +106,60 @@ section .sec_wrapper {
   min-width: fit-content;
 }
 
-#top .sec_right {
+.intro .content_right {
   overflow: hidden;
   position: relative;
   bottom: -50px;
 }
 
-#top .sec_right img {
+.intro .content_right img {
   height: 650px;
 }
 
-#portfolio .sec_wrapper {
+.about .content_left {
+  width: 47%;
+}
+
+.about .content_left .imgbox {
+  margin-left: auto;
+  width: 300px;
+  height: 450px;
+  background-color: grey;
+}
+
+.about .content_right {
+  width: 43%;
+}
+
+.skills .content_left {
+  width: 52%;
+  height: 500px;
+}
+
+.skills .content_right {
+  width: 42%;
+  height: 500px;
+}
+
+.services .service {
+  margin: 0 10px;
+  padding: 5px 15px;
+}
+
+.services .service .imgbox {
+  height: 200px;
+  width: 250px;
+}
+
+.services .service h2 {
+  padding: 15px 0;
+}
+
+.services .service p {
+  padding: 5px 0;
+}
+
+.portfolio .content_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,28 +179,28 @@ section .sec_wrapper {
   padding-bottom: 30px;
 }
 
-#portfolio .sec_wrapper h1 {
+.portfolio .content_wrapper h1 {
   margin: 35px;
   padding: 10px;
   text-align: center;
   font-size: 30px;
 }
 
-#portfolio .sec_wrapper h1 span {
-  color: blue;
+.portfolio .content_wrapper h1 span {
+  color: #717171;
   font-size: 37px;
 }
 
-#portfolio .sec_wrapper .viewall_btn {
+.portfolio .content_wrapper .btn {
   margin: 40px;
   padding: 10px 40px;
   font-size: 25px;
-  background-color: blue;
+  background-color: #949494;
   color: white;
   border-radius: 10px;
 }
 
-#portfolio .item_wrapper {
+.portfolio .content {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -150,40 +208,40 @@ section .sec_wrapper {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  gap: 30px 50px;
+  gap: 30px;
 }
 
-#portfolio .portfolio_item {
+.portfolio .portfolio_item {
   height: 400px;
   width: 300px;
   padding: 10px;
   border-radius: 25px;
-  background-color: #2f0874;
+  background-color: #5f5f5f;
 }
 
-#portfolio .portfolio_item .imgbox {
+.portfolio .portfolio_item .imgbox {
   height: 230px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
 
-#portfolio .portfolio_item .imgbox img {
+.portfolio .portfolio_item .imgbox img {
   height: 230px;
 }
 
-#portfolio .portfolio_item h2 {
+.portfolio .portfolio_item h2 {
   padding: 10px 0;
 }
 
-#portfolio .portfolio_item .item_btns {
+.portfolio .portfolio_item .btn_container {
   margin-top: 10px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-#portfolio .portfolio_item .item_btns a {
+.portfolio .portfolio_item .btn_container a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -191,14 +249,14 @@ section .sec_wrapper {
   padding: 10px 20px;
 }
 
-#portfolio .portfolio_item .item_btns a:first-child {
+.portfolio .portfolio_item .btn_container a:first-child {
   border: 2px solid white;
   background-color: transparent;
   color: white;
   margin-right: 10px;
 }
 
-#portfolio .portfolio_item .item_btns a:last-child {
+.portfolio .portfolio_item .btn_container a:last-child {
   margin-left: 10px;
   background: white;
   color: blue;
@@ -283,4 +341,4 @@ section .sec_wrapper {
             align-items: center;
   }
 }
-/*# sourceMappingURL=HomePage.css.map */
+/*# sourceMappingURL=HomePage.module.css.map */

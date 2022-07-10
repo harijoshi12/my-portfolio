@@ -1,10 +1,32 @@
 import React from 'react'
+import styles from '../../HomePage.module.css'
 
-function Services() {
+const services = [
+  {id:1},
+  {id:2},
+  {id:3},
+  {id:4}
+]
+const Service = ()=>{
+  return(
+    <div className={styles.service}>
+      <div className={styles.imgbox}>
+      </div>
+      <h2>Web Development</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla animi modi, atque blanditiis ratione doloribus.</p>
+    </div>
+  )
+}
+const Services = () => {
   return (
-    <section id='services'>
-        <div className="sec_wrapper">My Awesome Services</div>
-    </section>
+    <section className={`${styles.sec} ${styles.services}`}>
+      <h1 className={styles.title}>My services</h1>
+      <div className={styles.content_wrapper}>
+        {services.map((service)=>{
+          return(<Service key={service.id}/>)
+        })}
+      </div>
+    </section >
   )
 }
 
