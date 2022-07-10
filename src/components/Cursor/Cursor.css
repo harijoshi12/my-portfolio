@@ -3,10 +3,10 @@ body{
     overflow-x: hidden;
 }
 .cursor{
-    width: 35px;
-    height: 35px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(136, 136, 136, 0.5);
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
@@ -14,24 +14,29 @@ body{
     transform-origin: 150% 150%;
     transition: all 0.1s linear;
     z-index: 299;
-    backdrop-filter: invert();
+    /* backdrop-filter: invert(); */
 }
 .cursor-point{
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
     pointer-events: none;
     z-index: 301;
-    background: blue;
+    background: rgb(0, 0, 0);
+    border: 1px solid white;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
     transition-property: background, transform;
 }
 .link-grow{
     transform: scale(1.5);
-    background: rgb(255, 255, 255);
+    width: 60px;
+    height: 20px;
+    border-radius: 0;
+    border: 0;
+    background: rgb(238, 255, 0);
 }
 .hovered-link{
-    color: rgb(0, 0, 0);
+    color: rgb(0, 51, 255);
 }

@@ -115,11 +115,10 @@ header nav #nav_resumeMaker span {
 }
 
 header nav a.hovered-link {
-  color: white;
+  color: #3700ff;
 }
 
 header nav a {
-  position: relative;
   color: white;
   white-space: nowrap;
   font-size: 16px;

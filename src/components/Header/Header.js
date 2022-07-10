@@ -38,7 +38,6 @@ function Header({setIsMousein}) {
     let siteWidth = window.innerWidth
     window.addEventListener("resize", ()=>{
       siteWidth = window.innerWidth
-      console.log(siteWidth);
       if(siteWidth <= 992){
         // nav links onclick reset toggle
         navlinks.forEach((link, index)=>{
@@ -56,7 +55,6 @@ function Header({setIsMousein}) {
         navlinks.forEach((link, index)=>{
           link.current.style.opacity = 1
           link.current.addEventListener('click', ()=>{
-            // setToggleMenu(false)
             navlinks.forEach((link, index)=>{
               link.current.style.animation = ``;
             })
@@ -85,7 +83,6 @@ function Header({setIsMousein}) {
 
     // navlinks animation
     burger.current.addEventListener('click',()=>{
-      console.log("click");
       navlinks.forEach((link, index) =>{
         if(!nav.current.classList.contains("toggle")){
           link.current.style.opacity = 0
