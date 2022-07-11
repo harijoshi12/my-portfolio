@@ -39,10 +39,6 @@
   padding: 30px 5px;
 }
 
-.sec:nth-child(even) {
-  background-color: #242424;
-}
-
 .intro {
   padding-top: 80px;
 }
