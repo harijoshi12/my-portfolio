@@ -39,6 +39,7 @@ function Cursor({isMousein}) {
       mobileCursor.current.style.left = e.touches[0].clientX + 'px'
     }
     function funTouchstart(e){
+      console.log("touch start");
       mobileCursor.current.style.top = e.touches[0].pageY + 'px'
       mobileCursor.current.style.left = e.touches[0].clientX + 'px'
     }
@@ -47,11 +48,13 @@ function Cursor({isMousein}) {
     window.addEventListener('touchstart', funTouchstart)
     window.addEventListener('touchmove', funTouchmove)
 
-    // cursor animation on link hover 
+    
     if(!isTouchScreen){
       // for no touch devices
       window.addEventListener("mousemove", funMousemove)
       window.addEventListener("scroll", funOnScroll);
+
+      // cursor animation on link hover 
       if(isMousein){
         cursor.current.classList.add('link-grow')
         cursorPoint.current.classList.add('cp-toggle')
@@ -66,7 +69,7 @@ function Cursor({isMousein}) {
       window.removeEventListener('touchstart', funTouchstart)
       window.removeEventListener('touchmove', funTouchmove)
     })
-  }, [isTouch, isTouchScreen, isMousein])
+  }, [isTouchScreen, isMousein])
   
   // Render cursor acc. to device
   if (isTouchScreen){

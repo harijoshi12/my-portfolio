@@ -6,6 +6,8 @@ body{
     z-index: 1000;
     width: 35px;
     height: 35px;
+    top: -100px;
+    left: -100px;
     transform: translate(-50%, -50%);
     position: absolute;
     border-radius: 50%;
