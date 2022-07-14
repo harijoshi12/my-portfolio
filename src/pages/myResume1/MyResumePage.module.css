@@ -1,4 +1,5 @@
 #myResumePage .resumeWrapper {
+  overflow-x: auto;
   max-width: 1400px;
   width: 100%;
   padding: 30px;
@@ -494,26 +495,14 @@
   background-color: white;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
-  padding: 5px 10px;
-  font-size: 20px;
+  padding: 5px 9px;
+  font-size: 19px;
   margin: 5px;
 }
 
 @media only screen and (max-width: 1150px) {
   #myResumePage .resumeWrapper {
     padding: 20px;
-  }
-  #myResumePage .myResume .left .personalInfo .resumeTitle {
-    font-size: 2rem;
-  }
-  #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .myName {
-    font-size: 40px;
-  }
-  #myResumePage .myResume .left .personalInfo .imgboxOuter .imgboxInner .myinfo .profession {
-    font-size: 22px;
-  }
-  #myResumePage .myResume .right .contactDetails {
-    font-size: 20px;
   }
 }
 /*# sourceMappingURL=MyResumePage.module.css.map */

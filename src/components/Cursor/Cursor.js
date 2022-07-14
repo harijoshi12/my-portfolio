@@ -39,7 +39,6 @@ function Cursor({isMousein}) {
       mobileCursor.current.style.left = e.touches[0].clientX + 'px'
     }
     function funTouchstart(e){
-      console.log("touch start");
       mobileCursor.current.style.top = e.touches[0].pageY + 'px'
       mobileCursor.current.style.left = e.touches[0].clientX + 'px'
     }
