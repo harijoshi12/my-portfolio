@@ -50,7 +50,7 @@ function Portfolio() {
     }
   ]
   return (
-    <section className={`${styles.sec} ${styles.portfolio}`}>
+    <section id='portfolio' className={`${styles.sec} ${styles.portfolio}`}>
        <div className={styles.content_wrapper}>
         <h1>My Recent Work <br /> <span>Portfolio</span></h1>
         <div className={styles.content}>

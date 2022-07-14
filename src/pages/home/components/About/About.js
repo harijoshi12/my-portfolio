@@ -3,7 +3,7 @@ import styles from '../../HomePage.module.css'
 
 const About = () => {
   return (
-    <section className={`${styles.sec} ${styles.about}`}>
+    <section id="about" className={`${styles.sec} ${styles.about}`}>
         <div className={styles.content_wrapper}>
             <div className={styles.content_left}>
                 <div className={styles.imgbox}></div>

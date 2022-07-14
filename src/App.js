@@ -7,7 +7,8 @@ import './App.css'
 import HomePage from './pages/home/HomePage'
 import ServicesPage from './pages/myServices/ServicesPage';
 import PortfolioPage from './pages/myPortfolio/PortfolioPage';
-import MyResumePage from "./pages/myResume/MyResumePage"
+// import MyResumePage from "./pages/myResume/MyResumePage"
+import MyResumePage from './pages/myResume1/MyResumePage';
 import ResumeBuilderPage from './pages/ResumeBuilder/ResumeBuilderPage';
 import Footer from './components/Footer/Footer';
 import SocialLinks from './components/SocialLinks/SocialLinks';

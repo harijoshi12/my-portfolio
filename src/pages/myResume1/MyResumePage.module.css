@@ -63,7 +63,7 @@
 
 #myResumePage .myResume .left {
   background-color: white;
-  width: 56%;
+  width: 55%;
 }
 
 #myResumePage .myResume .left .personalInfo {
@@ -127,8 +127,8 @@
   background-color: #d0d0d0;
   border: 1px solid white;
   overflow: hidden;
-  background-image: url(../../media/images/hero.png);
-  background-position: top;
+  background-image: url(../../media/images/dp.png);
+  background-position: 44% 32%;
   background-repeat: no-repeat;
   background-size: 170%;
 }
@@ -230,101 +230,72 @@
   width: 100%;
 }
 
-#myResumePage .myResume .left .langs .lang:first-child {
-  width: 49%;
-}
-
-#myResumePage .myResume .left .langs .lang:last-child {
-  width: 51%;
-}
-
-#myResumePage .myResume .left .langs .lang {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+#myResumePage .myResume .left .myJourney {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: left;
-  margin: 5px 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#myResumePage .myResume .left .myJourney .myJourneyItem {
+  margin-right: -10px;
+  position: relative;
+  width: 80%;
+  border-left: 5px solid #2b343d;
+  color: #31332a;
+  padding: 10px;
+  padding-right: 0;
+  padding-bottom: 25px;
   font-family: "Merriweather Sans", sans-serif;
 }
 
-#myResumePage .myResume .left .langs .lang span {
-  display: inline;
-  margin: 2px 5px;
+#myResumePage .myResume .left .myJourney .myJourneyItem .time {
+  font-size: 18px;
+  position: absolute;
+  left: -146px;
+  width: 130px;
+  text-align: right;
 }
 
-#myResumePage .myResume .left .langs .lang .title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #31332a;
-}
-
-#myResumePage .myResume .left .langs .lang .level {
-  padding: 3px 10px;
-  font-size: 16px;
-  margin: 2px 6px;
-  font-weight: 500;
-  white-space: nowrap;
-  background-color: #5a5a5a;
-  color: white;
-}
-
-#myResumePage .myResume .left .langs .lang .level:hover {
-  background-color: #717171;
-}
-
-#myResumePage .myResume .left .edus .edu {
-  font-family: "Merriweather Sans", sans-serif;
-  color: #31332a;
-}
-
-#myResumePage .myResume .left .edus .edu .r1 {
-  margin: 0;
+#myResumePage .myResume .left .myJourney .myJourneyItem .title {
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-#myResumePage .myResume .left .edus .edu .r1 span:nth-child(2) {
-  font-size: 30px;
+#myResumePage .myResume .left .myJourney .myJourneyItem .title span:first-child {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  left: -19px;
+  top: 7px;
+  border: 1px solid white;
+  background-color: #2b343d;
 }
 
-#myResumePage .myResume .left .edus .edu .r1 .title {
-  background-color: #5a5a5a;
+#myResumePage .myResume .left .myJourney .myJourneyItem .title span:nth-child(2) {
   color: white;
-  padding: 5px 10px;
-  margin-right: 10px;
+  padding: 3px 5px;
+  background-color: #2b343d;
 }
 
-#myResumePage .myResume .left .edus .edu .r1 .institute {
-  margin-left: 10px;
-  font-size: 20px;
-}
-
-#myResumePage .myResume .left .edus .edu .r2 {
-  padding: 10px 0;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-#myResumePage .myResume .left .edus .edu .r2 .place {
-  margin: auto;
-}
-
-#myResumePage .myResume .left .edus .edu .cgpa {
-  font-size: 22px;
+#myResumePage .myResume .left .myJourney .myJourneyItem .desc {
+  font-size: 18px;
 }
 
 #myResumePage .myResume .right {
-  width: 44%;
+  width: 45%;
   background-color: #5a5a5a;
 }
 
@@ -415,67 +386,103 @@
   margin-left: 25px;
 }
 
-#myResumePage .myResume .right .myJourney {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#myResumePage .myResume .right .langs .lang {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#myResumePage .myResume .right .myJourney .myJourneyItem {
-  margin-right: -10px;
-  position: relative;
-  width: 83%;
-  border-left: 9px solid white;
-  color: white;
-  padding: 10px;
-  padding-right: 0;
-  padding-bottom: 25px;
+  text-align: left;
+  margin: 5px 0;
+  width: 49%;
   font-family: "Merriweather Sans", sans-serif;
 }
 
-#myResumePage .myResume .right .myJourney .myJourneyItem .time {
-  font-size: 18px;
-  position: absolute;
-  left: -115px;
-  width: 100px;
-  text-align: right;
+#myResumePage .myResume .right .langs .lang span {
+  display: inline;
+  margin: 2px 5px;
 }
 
-#myResumePage .myResume .right .myJourney .myJourneyItem .title {
+#myResumePage .myResume .right .langs .lang .title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+#myResumePage .myResume .right .langs .lang .level {
+  padding: 3px 10px;
+  font-size: 16px;
+  margin: 2px 6px;
+  font-weight: 500;
+  color: #31332a;
+  background-color: white;
+}
+
+#myResumePage .myResume .right .langs .lang .level:hover {
+  background-color: #dddddd;
+}
+
+#myResumePage .myResume .right .langs .lang:last-child {
+  margin-left: 5px;
+}
+
+#myResumePage .myResume .right .edus .edu {
+  font-family: "Merriweather Sans", sans-serif;
+  color: white;
+}
+
+#myResumePage .myResume .right .edus .edu .r1 {
+  margin: 0;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
 }
 
-#myResumePage .myResume .right .myJourney .myJourneyItem .title span:first-child {
-  position: absolute;
+#myResumePage .myResume .right .edus .edu .r1 span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 9px;
-  width: 9px;
-  border-radius: 50%;
-  left: -19px;
-  top: 10px;
-  background-color: #31332a;
 }
 
-#myResumePage .myResume .right .myJourney .myJourneyItem .title span:nth-child(2) {
+#myResumePage .myResume .right .edus .edu .r1 span:nth-child(2) {
+  font-size: 25px;
+}
+
+#myResumePage .myResume .right .edus .edu .r1 .title {
+  width: 55%;
+  background-color: white;
   color: #31332a;
-  padding: 0 5px;
-  background-color: #c8c8c8;
+  padding: 5px;
+  margin-right: 10px;
 }
 
-#myResumePage .myResume .right .myJourney .myJourneyItem .desc {
+#myResumePage .myResume .right .edus .edu .r1 .institute {
+  position: relative;
+  width: 35%;
+  top: -10px;
+  margin-left: 10px;
   font-size: 18px;
+}
+
+#myResumePage .myResume .right .edus .edu .r2 {
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#myResumePage .myResume .right .edus .edu .r2 .place {
+  margin: auto;
+}
+
+#myResumePage .myResume .right .edus .edu .cgpa {
+  font-size: 22px;
 }
 
 #myResumePage .myResume .right .interests .interest {

@@ -9,7 +9,7 @@ const services = [
 ]
 const Service = ()=>{
   return(
-    <div className={styles.service}>
+    <div id='services' className={styles.service}>
       <div className={styles.imgbox}>
       </div>
       <h2>Web Development</h2>

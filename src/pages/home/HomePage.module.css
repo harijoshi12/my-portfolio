@@ -5,6 +5,10 @@
   padding: 5px;
 }
 
+.sec .content_wrapper {
+  min-height: 100vh;
+}
+
 .sec .content_wrapper * {
   border: 2px solid white;
   padding: 5px;

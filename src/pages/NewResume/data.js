@@ -62,14 +62,14 @@ export const techSkills = [
         id: 4,
         title: "SASS"
     },
-    // {
-    //     id: 5,
-    //     title: "Bootstrap"
-    // },
-    // {
-    //     id: 6,
-    //     title: "TailWind"
-    // },
+    {
+        id: 5,
+        title: "Bootstrap"
+    },
+    {
+        id: 6,
+        title: "TailWind"
+    },
     {
         id: 7,
         title: "Git & Github"
@@ -98,10 +98,10 @@ export const techSkills = [
         id: 13,
         title: "DSA"
     },
-    // {
-    //     id: 18,
-    //     title: "AWS"
-    // },
+    {
+        id: 18,
+        title: "AWS"
+    },
     {
         id: 14,
         title: "Blockchain Development"
@@ -110,30 +110,30 @@ export const techSkills = [
         id: 16,
         title: "Linux"
     },
-    // {
-    //     id: 17,
-    //     title: "Computer Networking"
-    // },
+    {
+        id: 17,
+        title: "Computer Networking"
+    },
     {
         id: 15,
         title: "Wordpress Theme & Plugin Development"
     },
-    // {
-    //     id: 19,
-    //     title:"Cyber Security"
-    // },
-    // {
-    //     id: 20,
-    //     title:"Unity"
-    // },
-    // {
-    //     id: 21,
-    //     title:"Blender"
-    // },
-    // {
-    //     id: 22,
-    //     title:"IOT"
-    // }
+    {
+        id: 19,
+        title:"Cyber Security"
+    },
+    {
+        id: 20,
+        title:"Unity"
+    },
+    {
+        id: 21,
+        title:"Blender"
+    },
+    {
+        id: 22,
+        title:"IOT"
+    }
 ]
 
 export const progLangs = [
@@ -182,11 +182,11 @@ export const progLangs = [
        title: "Solidity",
        level:  6
     },
-    // {
-    //    id: 9,
-    //    title: "Php",
-    //    level:  6
-    // }
+    {
+       id: 9,
+       title: "Php",
+       level:  6
+    }
 ]
 
 export const langs = [
@@ -283,18 +283,13 @@ export const myJourneyData = [
 ]
 
 export const interests = [
-    // {
-    //     id:1,
-    //     title: "Coding"
-    // },
-
+    {
+        id:1,
+        title: "Coding"
+    },
     {
         id:2,
         title: "Solving Puzzles"
-    },
-    {
-        id:5,
-        title: "Listning Audio Books"
     },
     {
         id:3,
@@ -304,7 +299,10 @@ export const interests = [
         id:4,
         title: "Watching Ted Talks & Documentries"
     },
-    
+    {
+        id:5,
+        title: "Listning Audio Books"
+    },
     {
         id:6,
         title: "Exercising"

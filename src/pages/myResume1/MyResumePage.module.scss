@@ -62,7 +62,7 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
         height: 1697px;
         .left{
             background-color: $lightLeft;
-            width: 56%;
+            width: 55%;
             .personalInfo{
                 width: 100%;
                 height: fit-content;
@@ -101,8 +101,8 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
                             background-color: rgb(208, 208, 208);
                             border: 1px solid white;
                             overflow: hidden;
-                            background-image: url(../../media/images/hero.png);
-                            background-position: top;
+                            background-image: url(../../media/images/dp.png);
+                            background-position: 44% 32%;
                             background-repeat: no-repeat;
                             background-size: 170%;
                             img{
@@ -135,7 +135,7 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
                     font-size: 20px;
                     margin-left: 6%;
                     font-weight: 500;
-                    color: rgb(49, 51, 42);
+                    color: $lightTextColor;
                     text-align: center;
                     font-family: $textfontFamily;
                     // span{
@@ -193,88 +193,65 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
                     }
                 }
             }
-            .langs{
-                .lang:first-child{
-                    width: 49%;
-                }
-                .lang:last-child{
-                    width: 51%;
-                }
-                .lang{
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    flex-direction: column;
-                    text-align: left;
-                    margin: 5px 0;
+
+            .myJourney{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                
+                .myJourneyItem{
+                    margin-right: -10px;
+                    position: relative;
+                    width: 80%;
+                    border-left: 5px solid $lightTextBg1;
+                    color: $lightTextColor;
+                    padding: 10px;
+                    padding-right: 0;
+                    padding-bottom: 25px;
                     font-family: $textfontFamily;
-                    span{
-                        display: inline;
-                        margin: 2px 5px;
+                    // *{
+                    //     margin: 4px;
+                    //     border: 1px solid white;
+                    // }
+                    .time{
+                        font-size: 18px;
+                        position: absolute;
+                        left: -146px;
+                        width: 130px;
+                        text-align: right;
                     }
                     .title{
-                        font-size: 22px;
-                        font-weight: 700;
-                        color: $lightTextColor;
-                    }
-                    .level{
-                        padding: 3px 10px;
-                        font-size: 16px;
-                        margin: 2px 6px;
-                        font-weight: 500;
-                        white-space: nowrap;
-                        background-color: $lightTextBg;
-                        color: white;
-                        &:hover{
-                            background-color: rgb(113, 113, 113);
-                        }
-                    }
-                }
-            }
-            .edus{
-             
-                .edu{
-                    font-family: $textfontFamily;
-                    color: $lightTextColor;
-                    .r1{
-                        margin: 0;
                         font-size: 20px;
                         font-weight: 700;
+                        margin-bottom: 10px;
+                        position: relative;
+                        span:first-child{
+                            position: absolute;
+                            display: inline-flex;
+                            height: 13px;
+                            width: 13px;
+                            border-radius: 50%;
+                            left: -19px;
+                            top: 7px;
+                            border: 1px solid rgb(255, 255, 255);
+                            background-color: $lightTextBg1;
+                        }
                         span:nth-child(2){
-                            font-size: 30px;
-                        }
-                        .title{
-                            background-color: $lightTextBg;
                             color: white;
-                            padding: 5px 10px;
-                            margin-right: 10px;
-                        }
-                        .institute{
-                            margin-left: 10px;
-                            font-size: 20px;
+                            padding: 3px 5px;
+                            background-color: $lightTextBg1;
                         }
                     }
-                    .r2{
-                        padding: 10px 0;
-                        font-size: 20px;
-                        font-weight: 500;
-                        .time{
-                        }
-                        .place{
-                            margin: auto
-                        }
-                    }
-                    .cgpa{
-                        font-size: 22px;
-                        // font-weight: bold;
+                    .desc{
+                        font-size: 18px;
                     }
                 }
-                
             }
+            
 
         }
         .right{
-            width: 44%;
+            width: 45%;
             background-color: $lightRight;
             .contactDetails{
                 font-size: 24px;
@@ -316,6 +293,7 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
                     margin-top: 20px;
                 }
             }
+
             .projects{
                 .projectItem:last-child{
                     margin-bottom: 0;
@@ -352,57 +330,96 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
                     }
                 }
             }
-            .myJourney{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                .myJourneyItem{
-                    margin-right: -10px;
-                    position: relative;
-                    width: 83%;
-                    border-left: 9px solid white;
-                    color: white;
-                    padding: 10px;
-                    padding-right: 0;
-                    padding-bottom: 25px;
+            
+            .langs{
+                
+                .lang{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    text-align: left;
+                    margin: 5px 0;
+                    width: 49%;
                     font-family: $textfontFamily;
-                    // *{
-                    //     margin: 4px;
-                    //     border: 1px solid white;
-                    // }
-                    .time{
-                        font-size: 18px;
-                        position: absolute;
-                        left: -115px;
-                        width: 100px;
-                        text-align: right;
+                    span{
+                        display: inline;
+                        margin: 2px 5px;
                     }
                     .title{
-                        font-size: 20px;
+                        font-size: 22px;
                         font-weight: 700;
-                        margin-bottom: 10px;
-                        position: relative;
-                        span:first-child{
-                            position: absolute;
-                            display: inline-flex;
-                            height: 9px;
-                            width:9px;
-                            border-radius: 50%;
-                            left: -19px;
-                            top: 10px;
-                            background-color: $lightTextColor;
-                        }
-                        span:nth-child(2){
-                            color: $lightTextColor;
-                            padding: 0 5px;
-                            background-color: rgb(200, 200, 200);
-                        }
+                        color: white;
                     }
-                    .desc{
-                        font-size: 18px;
+                    .level{
+                        padding: 3px 10px;
+                        font-size: 16px;
+                        margin: 2px 6px;
+                        font-weight: 500;
+                        // white-space: nowrap;
+                        color: $lightTextColor;
+                        background-color: white;
+                        &:hover{
+                            background-color: rgb(221, 221, 221);
+                        }
                     }
                 }
+                .lang:last-child{
+                    margin-left: 5px;
+                }
             }
+
+            .edus{
+                
+                .edu{
+                    font-family: $textfontFamily;
+                    color: white;
+                    // *{
+                    //     border: 1px solid white;
+                    // }
+                    .r1{
+                        margin: 0;
+                        font-size: 20px;
+                        font-weight: 700;
+                        span{
+                            display: inline-flex;
+                        }
+                        span:nth-child(2){
+                            font-size: 25px;
+                        }
+                        .title{
+                            width: 55%;
+                            background-color: white;
+                            color: $lightTextColor;
+                            padding: 5px ;
+                            margin-right: 10px;
+                        }
+                        .institute{
+                            position: relative;
+                            width: 35%;
+                            top: -10px;
+                            margin-left: 10px;
+                            font-size: 18px;
+                        }
+                    }
+                    .r2{
+                        padding: 10px 0;
+                        font-size: 20px;
+                        font-weight: 500;
+                        .time{
+                        }
+                        .place{
+                            margin: auto
+                        }
+                    }
+                    .cgpa{
+                        font-size: 22px;
+                        // font-weight: bold;
+                    }
+                }
+                
+            }
+
             .interests{
                 .interest{
                  display: inline-flex;
