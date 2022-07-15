@@ -13,6 +13,7 @@ function Header({setIsMousein}) {
   const link3 = useRef()
   const link4 = useRef()
   const link5 = useRef()
+  // const link6 = useRef()
   const burger = useRef()
 
   // cursor link animaition
@@ -77,10 +78,7 @@ function Header({setIsMousein}) {
       nav.current.style.transition = `transform 0.3s linear`
     } else{
       nav.current.style.transition = ``
-      
     }
-
-    
 
     // navlinks animation
     burger.current.addEventListener('click',()=>{
@@ -163,6 +161,7 @@ function Header({setIsMousein}) {
             <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/my-services' activeStyle={{color: activeColor}} exact><span>Services</span></NavLink>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-portfolio' activeStyle={{color: activeColor}} exact><span>Portfolio</span></NavLink>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/my-resume' activeStyle={{color: activeColor}} exact><span>My Resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/resume-builder' activeStyle={{color: activeColor}} id='nav_resumeMaker' exact><span>Create your resume</span></NavLink>
           </nav>
           <div ref={burger} className={toggleMenu ? "burger toggle": "burger"} onClick={()=>{

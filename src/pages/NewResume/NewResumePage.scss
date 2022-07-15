@@ -1,0 +1,21 @@
+.newResume{
+    min-height: 100vh;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button{
+        margin: 20px;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}

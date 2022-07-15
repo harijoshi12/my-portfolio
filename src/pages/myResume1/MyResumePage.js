@@ -1,4 +1,4 @@
-import React, {useRef, useEffect } from 'react'
+import React, {useRef } from 'react'
 import styles from './MyResumePage.module.css'
 import jsPDF from 'jspdf'
 // import html2canvas from 'html2canvas'
@@ -40,12 +40,12 @@ function MyResumePage() {
   //     console.log(resume.scrollWidth, resume.scrollHeight)
   //   })
   // },[resume])
-  let height = useRef(1697)
-  let width = useRef(1200)
-  useEffect(()=>{
-    height.current  = myResume.current.scrollHeight;
-    width.current = myResume.current.scrollWidth
-  })
+  // let height = useRef(1697)
+  // let width = useRef(1200)
+  // useEffect(()=>{
+  //   height.current  = myResume.current.scrollHeight;
+  //   width.current = myResume.current.scrollWidth
+  // })
 
   function resumeHandler (){
 
@@ -56,8 +56,8 @@ function MyResumePage() {
         // scrollY: -window.pageYOffset,
         // scrollX: -window.pageXOffset - sbWidth/2,
         quality: 1,
-        height: height.current,
-        width: width.current
+        // height: height.current,
+        // width: width.current
     }).then(function(canvas){
         // const imgdata = canvas.toDataURL('image/png')
         const pdf = new jsPDF("p", "mm", "a4")
