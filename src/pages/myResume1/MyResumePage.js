@@ -79,7 +79,7 @@ function MyResumePage() {
           </div>
         </div>
       </div>
-      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume.pdf")}} rel="noopener noreferrer" target='_blank' className={styles.downloadResumeBtn}>
+      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
           Download Resume
         </button>
     </section>
