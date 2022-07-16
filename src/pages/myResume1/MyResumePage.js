@@ -10,7 +10,7 @@ import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, Proje
 
 function MyResumePage() {
 
-  const url = "http://localhost:3000/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
+  const url = "http://harijoshi.tech/static/media/Hari's_resume.pdf"
 
   return (
     <section id={styles.myResumePage}>
@@ -79,7 +79,7 @@ function MyResumePage() {
           </div>
         </div>
       </div>
-      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume")}} rel="noopener noreferrer" target='_blank' className={styles.downloadResumeBtn}>
+      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume.pdf")}} rel="noopener noreferrer" target='_blank' className={styles.downloadResumeBtn}>
           Download Resume
         </button>
     </section>
