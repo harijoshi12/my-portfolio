@@ -2,7 +2,7 @@ import React from 'react'
 import { saveAs } from 'file-saver'
 
 import styles from './MyResumePage.module.css'
-import CV from "../../media/pdfs/Hari's_resume.pdf"
+// import CV from "../../media/pdfs/Hari's_resume.pdf"
 import { contactDetails, techSkills, progLangs, projectData, langs, education, myJourneyData, interests } from './data'
 
 import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, ProjectItem, MyJourneyItem, Interest,  } from './components'
@@ -79,7 +79,7 @@ function MyResumePage() {
           </div>
         </div>
       </div>
-      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
+      <button onClick={()=>{saveAs(url, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
           Download Resume
         </button>
     </section>
