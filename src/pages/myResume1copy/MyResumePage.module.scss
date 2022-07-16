@@ -7,7 +7,6 @@ $lightTextColor: rgb(49, 51, 42);
 $lightSecTitle: rgb(40, 40, 40);
 $lightResumeTitle: rgb(0, 0, 0);
 $lightName: rgb(205,203,204);
-$col2: rgb(4, 226, 226);
 $textfontFamily: 'Merriweather Sans', sans-serif;
 // dark
 
@@ -40,13 +39,6 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
             padding: 10px 6%;
             padding-bottom: 25px;
         }
-    }
-    .downloadResumeBtn{
-        font-size: 25px;
-        color: white;
-        background-color: black;
-        padding: 12px 30px;
-        margin-top: 15px;
     }
 }
 #myResumePage{
@@ -462,13 +454,15 @@ $textfontFamily: 'Merriweather Sans', sans-serif;
 }
 @media only screen and (max-width: 768px)  {
     #myResumePage{
+        // height: 1200px;
         .resumeWrapper{
-            // background-color: blue;
+            background-color: blue;
             transform-origin: 50% 0;
             height: fit-content;
             transform:scale(0.6) ;
             width: 168%;
-            margin-bottom: -670px;
+            margin-bottom: -600px;
+            // height: 500px;
         }
         .myResume{
         }

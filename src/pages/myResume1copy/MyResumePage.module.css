@@ -27,14 +27,6 @@
   padding-bottom: 25px;
 }
 
-#myResumePage .downloadResumeBtn {
-  font-size: 25px;
-  color: white;
-  background-color: black;
-  padding: 12px 30px;
-  margin-top: 15px;
-}
-
 #myResumePage {
   background-color: #bebebe;
   overflow: hidden;
@@ -516,6 +508,7 @@
 
 @media only screen and (max-width: 768px) {
   #myResumePage .resumeWrapper {
+    background-color: blue;
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
     height: -webkit-fit-content;
@@ -524,7 +517,7 @@
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     width: 168%;
-    margin-bottom: -670px;
+    margin-bottom: -600px;
   }
 }
 /*# sourceMappingURL=MyResumePage.module.css.map */

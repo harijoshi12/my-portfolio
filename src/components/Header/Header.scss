@@ -1,5 +1,6 @@
 $navBlack: rgba(10, 10, 10, 0.7);
-
+$col2: rgb(4, 226, 226);
+$col3: rgb(0,255,187);
 .pseudo_header{
     position: fixed;
     top: 0;
@@ -39,7 +40,7 @@ header{
         .progress{
           width: 0%;
           height: 7px;
-          background-color: rgb(4, 226, 226);
+          background-color: $col2;
           transition: width 0.2s ease;
         }
     }
@@ -80,9 +81,7 @@ header{
             border: 2px solid rgb(255, 255, 255);
             padding: 6px 10px; 
         }
-        a.hovered-link{
-            color: rgb(55, 0, 255);
-        }
+
         a{
             // position: relative;
             color: rgb(255, 255, 255);
@@ -95,7 +94,7 @@ header{
             // z-index: 400;
             transition: color 0.2s ease;
             &:hover{
-                color: rgb(0,255,187);
+                color: $col3;
             }
             span{
                 

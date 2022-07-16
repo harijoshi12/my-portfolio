@@ -1,81 +1,21 @@
-import React, {useRef } from 'react'
+import React from 'react'
+import { saveAs } from 'file-saver'
+
 import styles from './MyResumePage.module.css'
-import jsPDF from 'jspdf'
-// import html2canvas from 'html2canvas'
-import DomToImage from 'dom-to-image'
+import CV from "../../media/pdfs/Hari's_resume.pdf"
 import { contactDetails, techSkills, progLangs, projectData, langs, education, myJourneyData, interests } from './data'
 
 import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, ProjectItem, MyJourneyItem, Interest,  } from './components'
 
 
 function MyResumePage() {
-  const myResume = useRef()
-  // const resume = myResume.current
 
-  // const doc = new jsPDF(
-  //   {
-  //     orientation: 'p',
-  //     unit: 'pt',
-  //     format: 'a3',
-  //     hotfixes: ["px_scaling"]
-  //    }
-  // )
-  // function resumeHandler(){
-  //   doc.html(resume, {
-  //     callback: function (doc) {
-  //       let pageCount = doc.internal.getNumberOfPages()
-  //       doc.deletePage(pageCount)
-  //       doc.save("resume.pdf");
-  //     },
-  //     x: 0,
-  //     y: 0,
-  //   });
-  // }
-  // const [sbWidth, setSbwidth] = useState(window.innerWidth - document.documentElement.clientWidth)
+  const url = "http://localhost:3000/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
 
-  // useEffect(() => {
-  //   setSbwidth(window.innerWidth - document.documentElement.clientWidth);
-  //   window.addEventListener("resize", ()=>{
-  //     setSbwidth(window.innerWidth - document.documentElement.clientWidth);
-  //     console.log(resume.scrollWidth, resume.scrollHeight)
-  //   })
-  // },[resume])
-  // let height = useRef(1697)
-  // let width = useRef(1200)
-  // useEffect(()=>{
-  //   height.current  = myResume.current.scrollHeight;
-  //   width.current = myResume.current.scrollWidth
-  // })
-
-  function resumeHandler (){
-
-    // console.log(sbWidth)
-    DomToImage.toJpeg(myResume.current, {
-        // windowWidth: resume.scrollWidth,
-        // windowHeight: resume.scrollHeight,
-        // scrollY: -window.pageYOffset,
-        // scrollX: -window.pageXOffset - sbWidth/2,
-        quality: 1,
-        // height: height.current,
-        // width: width.current
-    }).then(function(canvas){
-        // const imgdata = canvas.toDataURL('image/png')
-        const pdf = new jsPDF("p", "mm", "a4")
-        let width = pdf.internal.pageSize.getWidth()
-        let height = pdf.internal.pageSize.getHeight()
-        pdf.addImage(canvas, 'JPEG', 0, 0, width, height)
-        pdf.save("Hari's Resume.pdf")
-    }).catch(function(error){
-        console.log(error)
-    })
-  }
-  
-  
-  
   return (
     <section id={styles.myResumePage}>
       <div className={styles.resumeWrapper}>
-        <div id='myResume' ref={myResume} className={styles.myResume}>
+        <div id='myResume' className={styles.myResume}>
           {/* left section */}
           <div className={styles.left}>
 
@@ -139,7 +79,9 @@ function MyResumePage() {
           </div>
         </div>
       </div>
-      <button onClick={resumeHandler} style={{background:"blue", padidng:"15px", color:"white", fontSize:"25px"}}>Download Resume</button>
+      <button href={CV} onClick={()=>{saveAs(url, "Hari's resume")}} rel="noopener noreferrer" target='_blank' className={styles.downloadResumeBtn}>
+          Download Resume
+        </button>
     </section>
   )
 }
