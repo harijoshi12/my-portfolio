@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
 import { saveAs } from 'file-saver'
 
 import styles from './MyResumePage.module.css'
@@ -84,6 +86,8 @@ function MyResumePage() {
           Download Resume
       </button>
       <a href={url1} className={styles.downloadResumeBtn}>View online</a>
+      <NavLink className={styles.downloadResumeBtn}  to={url1} exact><span>View resume</span></NavLink>
+
     </section>
   )
 }
