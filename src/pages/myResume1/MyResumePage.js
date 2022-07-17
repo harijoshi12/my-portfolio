@@ -1,6 +1,4 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-
 import { saveAs } from 'file-saver'
 
 import styles from './MyResumePage.module.css'
@@ -12,8 +10,9 @@ import { PersonalInfo, ContactDetail, TechnicalSkill, ProgLang, Lang, Edu, Proje
 
 function MyResumePage() {
 
-  const url1 = "http://harijoshi.tech/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
+  // const url1 = "http://harijoshi.tech/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
   // const url2 = "http://localhost:3000/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
+  const url3 = "https://drive.google.com/file/d/1z7Y0oBXV2m-Y4x1B_4Hr9oIIzCJWLdYB/view?usp=sharing"
 
   return (
     <section id={styles.myResumePage}>
@@ -82,12 +81,9 @@ function MyResumePage() {
           </div>
         </div>
       </div>
-      <button onClick={()=>{saveAs(url1, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
+      <button onClick={()=>{saveAs(url3, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
           Download Resume
       </button>
-      <a href={url1} className={styles.downloadResumeBtn}>View online</a>
-      <NavLink className={styles.downloadResumeBtn}  to={url1} exact><span>View resume</span></NavLink>
-
     </section>
   )
 }
