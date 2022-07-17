@@ -83,7 +83,7 @@ function MyResumePage() {
       <button onClick={()=>{saveAs(url1, "Hari's resume.pdf")}} className={styles.downloadResumeBtn}>
           Download Resume
       </button>
-
+      <a href={url1} className={styles.downloadResumeBtn}>View online</a>
     </section>
   )
 }
