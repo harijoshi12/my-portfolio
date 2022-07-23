@@ -7,9 +7,8 @@ import './App.css'
 import HomePage from './pages/home/HomePage'
 import ServicesPage from './pages/myServices/ServicesPage';
 import PortfolioPage from './pages/myPortfolio/PortfolioPage';
-import DownloadResume from './pages/myResume2/MyResumePage'
+import DownloadResume from './pages/DownloadResume/DownloadResume'
 import MyResumePage from './pages/myResume1/MyResumePage';
-// import NewResumePage from './pages/NewResume/NewResumePage';
 import ResumeBuilderPage from './pages/ResumeBuilder/ResumeBuilderPage';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 

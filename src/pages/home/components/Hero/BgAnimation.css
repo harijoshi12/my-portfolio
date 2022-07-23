@@ -1,0 +1,27 @@
+.heroBg .first{
+    animation: anim 60s infinite linear alternate-reverse;
+}
+.heroBg svg{
+    z-index: -1;
+}
+
+.heroBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+@keyframes anim {
+    
+    20%{
+        d: path("M0 0H1440C1440 0 1477.5 685 1196.5 498C915.5 311 776.5 777.5 464.5 582.5C243 444.062 0 777.5 0 777.5V0Z")
+    }
+    55%{
+        d: path("M0 0H1440C1440 0 1672 1171.5 1164.5 728.5C657 285.5 770 793 478 459.5C305.934 262.979 0 480 0 480V0Z")
+    }
+    80%{
+        d: path("M0 0H1440C1440 0 1440 516 1035.5 316C631 116 625.5 400.5 392 590.5C189.396 755.36 0 480 0 480V0Z" )
+    }
+
+}

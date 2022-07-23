@@ -1,14 +1,16 @@
+
+#homePage{
+    background-color: rgb(16, 16, 16);
+}
+
 .sec{
-    background-color: rgb(25, 25, 25);
     border-bottom: 1px solid white;
     overflow: hidden;
     padding: 5px;
     .content_wrapper{
         *{
             border: 2px solid white;
-            padding: 5px;
         }
-        min-height: 100vh;
     }
     .title{
         background-color: white;
@@ -22,200 +24,27 @@
     .content_wrapper{
         border: 2px solid white;
         max-width: 1400px;
-        height: fit-content;
         display: flex;
         justify-content: space-around;
         align-items: center;
         color: white;
         margin: auto;
         padding: 30px 5px;
+        height: fit-content;
         .content{
         }
     }
 }
-// .sec:nth-child(even){
-//     background-color: rgb(36, 36, 36);
-// }
 
-.intro{
-    padding-top: 80px;
-    .content_wrapper{
-        position: relative;
-        overflow: hidden;
-        height: fit-content;
-    }
-    .content_left{
-        left: 20%;
-        width: 470px;
-        h1{
-            font-size: 4rem;
-            
-        }
-        h2{
-            margin: 15px 0;
-            border: 1px solid;
-            padding: 20px 5px;
-        }
-        .btn{
-            button{
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
-                padding: 10px;
-                font-size: 20px;
-            }
-            
-            button:first-child{
-                border: 2px solid rgb(255, 255, 255);
-                background-color: transparent;
-                color: white;
-                margin-right: 10px;
-                width: 50%;
-                min-width: fit-content;
-            }
-            button:last-child{
-                margin-left: 10px;
-                background: rgb(255, 255, 255);
-                color: blue;
-                width: 30%;
-                min-width: fit-content;
-            }
-        }
-    }
-    .content_right{
-        overflow: hidden;
-        position: relative;
-        bottom: -50px;
-        img{
-            height: 650px;
-        }
-    }
-}
-.about{
-    .content_left{
-        width: 47%;
-        .imgbox{
-            margin-left: auto;
-            width: 300px;
-            height: 450px;
-            background-color: grey;
-        }
-    }
-    .content_right{
-        width: 43%;
-        h1{
-            span{
 
-            }
-        }
-        h2{
-
-        }
-        p{
-
-        }
-    }
-}
-.skills{
-    .content_left{
-        width: 52%;
-        height: 500px;
-    }
-    .content_right{
-        width: 42%;
-        height: 500px;
-    }
-}
-.services{
-    .service{
-        margin: 0 10px;
-        padding: 5px 15px;
-        .imgbox{
-            height: 200px;
-            width: 250px;
-        }
-        h2{
-            padding: 15px 0;
-        }
-        p{
-            padding: 5px 0;
-        }
-    }
-}
-.portfolio{
-    .content_wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: fit-content;
-        padding-bottom: 30px;
-        h1{
-            margin: 35px;
-            padding: 10px;
-            text-align: center;
-            font-size: 30px;
-            span{
-                color: rgb(113, 113, 113);
-                font-size: 37px;
-            }
-        }
-        .btn{
-            margin: 40px;
-            padding: 10px 40px;
-            font-size: 25px;
-            background-color: rgb(148, 148, 148);
-            color: white;
-            border-radius: 10px;
-        }
-    }
-    .content{
-        width: fit-content;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap:30px;
-    }
-    .portfolio_item{
-        height: 400px;
-        width: 300px;
-        padding: 10px;
-        border-radius: 25px;
-        background-color: rgb(95, 95, 95);
-        .imgbox{
-            height: 230px;
-            width: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            img{
-                height: 230px;
-            }
-        }
-        h2{
-            padding: 10px 0;
-        }
-        .btn_container{
-            margin-top: 10px;
-            height: fit-content;
-            a{
-                display: inline-flex;
-                border-radius: 10px;
-                padding: 10px 20px;
-            }
-            a:first-child{
-                border: 2px solid rgb(255, 255, 255);
-                background-color: transparent;
-                color: white;
-                margin-right: 10px;
-            }
-            a:last-child{
-                margin-left: 10px;
-                background: rgb(255, 255, 255);
-                color: blue;
-            }
-        }
-    }
-}
+@import "./components/Hero/Hero";
+@import "./components/About/About";
+@import "./components/Skills/Skills";
+@import "./components/Services/Services";
+@import "./components/Portfolio/Portfoio";
+@import "./components/UpcommigProjects/UpcommingProjects";
+@import "./components/Testimonial/Testimonial";
+@import "./components/Contact/Contact";
 
 @media only screen and (max-width: 1100px){
     #top{

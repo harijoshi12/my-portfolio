@@ -8,11 +8,11 @@ import Portfolio from './components/Portfolio/Portfolio'
 import UpcommingProjects from './components/UpcommigProjects/UpcommingProjects'
 import Testimonial from './components/Testimonial/Testimonial'
 import Contact from './components/Contact/Contact'
-// import styles from './HomePage.module.css'
+import styles from './HomePage.module.css'
 
 function HomePage() {
   return (
-    <>
+    <div id={styles.homePage}>
       <SideNavigation/>
       <Hero/>
       <About/>
@@ -22,7 +22,7 @@ function HomePage() {
       <UpcommingProjects/>
       <Testimonial/>
       <Contact/>
-    </>
+    </div>
   )
 }
 
