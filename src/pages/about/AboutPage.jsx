@@ -3,7 +3,7 @@ import styles from './AboutPage.module.css'
 const AboutPage = () => {
   return (
     <div id={styles.aboutPage}>
-        <h1>aboutPage</h1>    
+        <h1>aboutPage new</h1>    
     </div>
 
   )
