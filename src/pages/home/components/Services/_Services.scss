@@ -15,14 +15,10 @@ $apple: silver;
             // padding: 10px;
         }
         .content{
-            // border: 2px solid red;
-            width: 100%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            grid-gap: 20px;
-            grid-row-gap: 30px;
-            grid-auto-rows: 1fr;
-            // padding: 20px;
+            grid-gap: 30px;
+            grid-row-gap: 50px;
         }
     }
     .services_item:nth-child(1){
@@ -50,7 +46,7 @@ $apple: silver;
                 color: $django;
                 background-color: rgba(41, 163, 114, 0.4);
             }
-            .separator{
+            span:nth-child(2){
                 color: #2aa45f;
             }
             span:last-child{
@@ -84,7 +80,7 @@ $apple: silver;
                 color: $android;
                 background-color: rgba(165, 198, 57, 0.4);
             }
-            .separator{
+            span:nth-child(2){
                 color: rgb(162, 177, 111);
             }
             span:last-child{
@@ -105,8 +101,7 @@ $apple: silver;
         box-shadow: 0px 0px 17px -5px rgba(255, 255, 255, 0.6);
         border-bottom: 10px solid blue;
         &:hover{
-            color: black;
-            background-color: #00b786;
+            background-color: rgb(58, 0, 92);
         }
         .iconbox{
             white-space: nowrap;
@@ -114,6 +109,7 @@ $apple: silver;
             display: flex;
             justify-content: center;
             align-items: center;
+            
             span{
                 font-size: 60px;
                 color: blue;
@@ -127,11 +123,12 @@ $apple: silver;
                     z-index: 10;
                 }
             }
-            .separator{
+            span:nth-child(2){
                 z-index: 10;
                 background-color: transparent;
                 padding: 0;
                 margin: 0 -23px;
+
             }
         }
         h2{
@@ -139,8 +136,10 @@ $apple: silver;
             padding: 15px 10px;
         }
         p{
-            font-size: 18px;
+            font-size: 17px;
             padding: 5px 10px;
+            font-weight: 100;
+            color: rgb(240, 240, 240);
         }
     }
 }
@@ -155,40 +154,8 @@ $apple: silver;
             }
         }
         .services_item{
-            margin: 0 10px;
-            padding: 20px;
-            background-color: rgb(34, 34, 34);
-            // height: fit-content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .iconbox{
-                white-space: nowrap;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                span{
-                    font-size: 60px;
-                    color: blue;
-                    background-color: rgba(165, 42, 42, 0.7);
-                    font-weight: bold;
-                    padding: 20px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: flex-end;
-                    svg{
-                        z-index: 10;
-                    }
-                }
-                .separator{
-                    z-index: 10;
-                    background-color: transparent;
-                    padding: 0;
-                    margin: 0 -23px;
-                }
-            }
+         
+            
             h2{
                 text-align: center;
                 padding: 15px 0;

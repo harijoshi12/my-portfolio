@@ -13,37 +13,37 @@ import ServiceItem from './ServiceItem'
 const servicesData = [
   {
     id:1,
-    icon: [<MdDesignServices/>],
+    icons: [{id:1,icon:<MdDesignServices/>}],
     title: "UI/UX",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:2,
-    icon: [<RiReactjsLine/>],
+    icons: [{id:1,icon:<RiReactjsLine/>}],
     title: "Frontend Development",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:3,
-    icon: [<SiDjango/>, <GrNode/>],
+    icons: [{id:1, icon:<SiDjango/>},{id:2,icon: `/`}, {id:3, icon:<GrNode/>}],
     title: "Backend Development",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:4,
-    icon: [<SiWordpress/>],
+    icons: [{id:1,icon:<SiWordpress/>}],
     title: "Wordpress Development",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:5,
-    icon: [<SiHiveBlockchain/>],
+    icons: [{id:1, icon:<SiHiveBlockchain/>}],
     title: "Blockchain Development",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:6,
-    icon: [<GrAndroid/>, <BsApple/>],
+    icons: [{id:1, icon: <GrAndroid/>}, {id:2,icon: `/`}, {id:3, icon:<BsApple/>}],
     title: "App Development",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
   },

@@ -19,6 +19,7 @@
   font-style: italic;
 }
 .sec .content_wrapper {
+  border: 2px solid white;
   width: 100%;
   max-width: 1400px;
   display: flex;
@@ -34,7 +35,9 @@
   height: fit-content;
 }
 .sec .content_wrapper .content {
+  border: 2px solid yellow;
   max-width: 1200px;
+  width: 100%;
 }
 
 .hero {
@@ -51,7 +54,6 @@
   left: 0;
 }
 .hero .content_wrapper {
-  border: 0;
   padding-top: 160px;
   padding-bottom: 80px;
   position: relative;
@@ -118,8 +120,6 @@
 
 @media only screen and (max-width: 768px) {
   .hero .content_wrapper {
-    padding-top: 160px;
-    padding-bottom: 80px;
     width: 100%;
   }
   .hero .content_wrapper h4 {
@@ -132,7 +132,7 @@
   .hero .content_wrapper h3 {
     margin: 15px 0;
     font-size: 22px;
-    padding: 40px 0;
+    padding: 40px 10px;
   }
   .hero .content_wrapper .btns {
     width: 100%;
@@ -253,12 +253,10 @@
 }
 
 .services .content_wrapper .content {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  grid-gap: 20px;
-  grid-row-gap: 30px;
-  grid-auto-rows: 1fr;
+  grid-gap: 30px;
+  grid-row-gap: 50px;
 }
 .services .services_item:nth-child(1) {
   border-color: rgb(252, 0, 200);
@@ -281,7 +279,7 @@
   color: #2aa473;
   background-color: rgba(41, 163, 114, 0.4);
 }
-.services .services_item:nth-child(3) .iconbox .separator {
+.services .services_item:nth-child(3) .iconbox span:nth-child(2) {
   color: #2aa45f;
 }
 .services .services_item:nth-child(3) .iconbox span:last-child {
@@ -309,7 +307,7 @@
   color: #a4c639;
   background-color: rgba(165, 198, 57, 0.4);
 }
-.services .services_item:nth-child(6) .iconbox .separator {
+.services .services_item:nth-child(6) .iconbox span:nth-child(2) {
   color: rgb(162, 177, 111);
 }
 .services .services_item:nth-child(6) .iconbox span:last-child {
@@ -329,8 +327,7 @@
   border-bottom: 10px solid blue;
 }
 .services .services_item:hover {
-  color: black;
-  background-color: #00b786;
+  background-color: rgb(58, 0, 92);
 }
 .services .services_item .iconbox {
   white-space: nowrap;
@@ -352,7 +349,7 @@
 .services .services_item .iconbox span svg {
   z-index: 10;
 }
-.services .services_item .iconbox .separator {
+.services .services_item .iconbox span:nth-child(2) {
   z-index: 10;
   background-color: transparent;
   padding: 0;
@@ -363,48 +360,15 @@
   padding: 15px 10px;
 }
 .services .services_item p {
-  font-size: 18px;
+  font-size: 17px;
   padding: 5px 10px;
+  font-weight: 100;
+  color: rgb(240, 240, 240);
 }
 
 @media only screen and (max-width: 576px) {
   .services .content_wrapper .content {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .services .services_item {
-    margin: 0 10px;
-    padding: 20px;
-    background-color: rgb(34, 34, 34);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .services .services_item .iconbox {
-    white-space: nowrap;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .services .services_item .iconbox span {
-    font-size: 60px;
-    color: blue;
-    background-color: rgba(165, 42, 42, 0.7);
-    font-weight: bold;
-    padding: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: flex-end;
-  }
-  .services .services_item .iconbox span svg {
-    z-index: 10;
-  }
-  .services .services_item .iconbox .separator {
-    z-index: 10;
-    background-color: transparent;
-    padding: 0;
-    margin: 0 -23px;
   }
   .services .services_item h2 {
     text-align: center;
@@ -437,29 +401,28 @@
   border-radius: 10px;
 }
 .portfolio .content, .upCommingProjects .content {
-  width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-gap: 30px;
+  grid-row-gap: 50px;
 }
 .portfolio .portfolio_item, .upCommingProjects .portfolio_item {
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-width: 340px;
-  width: 27%;
-  min-width: 300px;
-  padding: 10px;
-  padding-bottom: 20px;
-  margin: 20px;
-  background-color: brown;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .portfolio .portfolio_item .imgbox, .upCommingProjects .portfolio_item .imgbox {
   height: 230px;
   width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
   overflow: hidden;
+  border-radius: 10px;
 }
 .portfolio .portfolio_item .imgbox img, .upCommingProjects .portfolio_item .imgbox img {
   height: 230px;
@@ -492,9 +455,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .portfolio .content, .upCommingProjects .content {
-    width: 100%;
-  }
   .portfolio .portfolio_item .imgbox, .upCommingProjects .portfolio_item .imgbox {
     height: 210px;
   }
@@ -514,6 +474,6 @@
     max-width: 100%;
   }
   .sec .content_wrapper .content {
-    padding: 5px;
+    padding: 7px;
   }
 }/*# sourceMappingURL=HomePage.module.css.map */

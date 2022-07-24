@@ -13,7 +13,6 @@ $col3: rgb(0,255,187);
         left: 0;
     }
     .content_wrapper{
-        border: 0;
         padding-top: 160px;
         padding-bottom: 80px;
         position: relative;
@@ -84,9 +83,7 @@ $col3: rgb(0,255,187);
 @media only screen and (max-width: 768px) {
     .hero{
         .content_wrapper{
-            // border: 2px solid white;
-            padding-top: 160px;
-            padding-bottom: 80px;
+         
             width: 100%;
             h4{
                 font-size: 30px;
@@ -99,7 +96,7 @@ $col3: rgb(0,255,187);
                 margin: 15px 0;
                 // border: 1px solid;
                 font-size: 22px;
-                padding: 40px 0;
+                padding: 40px 10px;
             }
             .btns{
                 width: 100%;

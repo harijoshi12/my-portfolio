@@ -27,7 +27,7 @@ const UpcommingProjects = () => {
       id:3,
       img:portfoioItem_img3, 
       title:"Social media app for rational minded people", 
-      desc: "Node.js, MongoDB, Express, React.js, Next.js", 
+      desc: "I feel an strong need to unite all the rational people for the betterment of the society", 
       git_link:"https://github.com/", 
       live_demo_link:"https://harijoshi.in/"
     },

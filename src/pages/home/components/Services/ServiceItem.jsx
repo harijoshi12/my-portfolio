@@ -1,15 +1,10 @@
 import React from 'react'
 import styles from '../../HomePage.module.css'
 
-const ServiceItem = ({icon, title, desc}) => {
+const ServiceItem = ({icons, title, desc}) => {
   return (
     <div className={styles.services_item}>
-        <div className={styles.iconbox}>{icon.map((ic , idx)=>{
-        return(<>
-            {idx >0 ? <span className={styles.separator}>/</span>: null}
-            <span>{ic}</span>
-            </>)
-        })}</div>
+        <div className={styles.iconbox}>{icons.map((icon , idx)=>{return(<span key={icon.id}>{icon.icon}</span>)})}</div>
         <h2>{title}</h2>
         <p>{desc}</p>
     </div>
@@ -17,3 +12,4 @@ const ServiceItem = ({icon, title, desc}) => {
 }
 
 export default ServiceItem
+
