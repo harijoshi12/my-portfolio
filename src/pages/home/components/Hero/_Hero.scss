@@ -22,11 +22,13 @@ $col3: rgb(0,255,187);
         flex-direction: column;
         text-align: center;
         width: 85%;
+        max-width: 800px;
         // *{
         //     border: 2px solid white;
         // }
         h4{
             font-size: 30px;
+            white-space: nowrap;
         }
         h1{
             font-size: 4.5rem;
@@ -39,6 +41,7 @@ $col3: rgb(0,255,187);
             padding: 40px;
         }
         .btns{
+            width: 100%;
             button{
                 display: inline-flex;
                 justify-content: center;
@@ -54,7 +57,7 @@ $col3: rgb(0,255,187);
                 border: 2px solid rgb(255, 255, 255);
                 background-color: transparent;
                 color: white;
-                margin-right: 10px;
+                margin: 0 15px;
                 width: 50%;
                 min-width: fit-content;
                 &:hover{
@@ -63,7 +66,7 @@ $col3: rgb(0,255,187);
                 }
             }
             button:last-child{
-                margin-left: 10px;
+                margin: 0 15px;
                 background: rgb(255, 255, 255);
                 color: black;
                 width: 30%;
@@ -81,7 +84,7 @@ $col3: rgb(0,255,187);
 @media only screen and (max-width: 768px) {
     .hero{
         .content_wrapper{
-            border: 2px solid white;
+            // border: 2px solid white;
             padding-top: 160px;
             padding-bottom: 80px;
             width: 100%;
@@ -99,40 +102,21 @@ $col3: rgb(0,255,187);
                 padding: 40px 0;
             }
             .btns{
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
                 button{
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 10px;
                     padding: 5px 15px;
                     font-size: 20px;
                     font-weight: bold;
-                    transition: all 0.2s ease;
+                    margin-top: 100px;
                 }
                 
                 button:first-child{
-                    border: 2px solid rgb(255, 255, 255);
-                    background-color: transparent;
-                    color: white;
-                    margin-right: 10px;
-                    width: 50%;
-                    min-width: fit-content;
-                    &:hover{
-                        color: black;
-                        background-color: white;
-                    }
+                   
                 }
                 button:last-child{
-                    margin-left: 10px;
-                    background: rgb(255, 255, 255);
-                    color: black;
-                    width: 30%;
-                    min-width: fit-content;
-                    &:hover{
-                        color: white;
-                        background-color: black;
-                        border: 2px solid white;
-                    }
+                    margin-top: 15px;
                 }
             }
         }

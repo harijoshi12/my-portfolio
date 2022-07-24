@@ -14,16 +14,19 @@
         // }
     }
     .title{
-        background-color: white;
-        color: black;
+        color: rgb(30, 255, 143);
         text-align: center;
         margin: auto;
         width: 300px;
         padding: 15px;
         margin-top: 20px;
+        font-size: 35px;
+        font-weight: bold;
+        font-style: italic;
     }
     .content_wrapper{
         // border: 2px solid white;
+        width: 100%;
         max-width: 1400px;
         display: flex;
         justify-content: space-around;
@@ -31,9 +34,11 @@
         flex-wrap: wrap;
         color: white;
         margin: auto;
-        padding: 90px 50px;
+        padding: 30px;
+        padding-bottom: 90px;
         height: fit-content;
         .content{
+            max-width: 1200px
         }
     }
 }
@@ -57,14 +62,21 @@
             //     border: 2px solid white;
             // }
         }
+        
+    }
+    
+}
+@media only screen and (max-width: 576px) {
+    .sec{
+        padding: 0;
         .content_wrapper{
             // border: 2px solid white;
-            padding-left: 0;
-            padding-right: 0;
-            max-width: 320px;
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 100%;
             .content{
+                padding: 5px;
             }
         }
     }
-    
 }

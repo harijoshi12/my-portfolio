@@ -12,8 +12,8 @@
             position: relative;
             // border: 2px solid white;
             margin-left: auto;
-            width: 420px;
-            height: 550px;
+            width: 410px;
+            height: 530px;
             background-image: url(../../media/images/about.png);
             background-position: 50% 100%;
             background-size: 106%;
@@ -34,11 +34,11 @@
         // border: 1px solid white;
         width: 43%;
         min-width: 353px;
+        padding-left: 10px;
         margin: 10px 15px;
         .sm_content_wrapper{
             max-width: 400px;
             h1{
-                padding: 3px;
                 font-size: 35px;
                 color: brown;
                 span{
@@ -55,7 +55,12 @@
             }
             p{
                 font-size: 20px;
-                padding: 10px 5px;
+                padding: 10px 0;
+            }
+            button{
+                margin-top: 26px;
+                font-size: 20px;
+                padding: 10px 20px;
             }
         }
     }
