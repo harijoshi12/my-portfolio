@@ -1,26 +1,103 @@
 .about{
-    background-color: red;
+    .content_wrapper{
+        align-items: flex-start;
+    }
     .content_left{
-        width: 47%;
+        width: 43%;
+        min-width: fit-content;
+        position: relative;
+        margin: 10px 15px;
+        // border: 1px solid white;
         .imgbox{
+            position: relative;
+            // border: 2px solid white;
             margin-left: auto;
-            width: 300px;
-            height: 450px;
-            background-color: grey;
+            width: 420px;
+            height: 550px;
+            background-image: url(../../media/images/about.png);
+            background-position: 50% 100%;
+            background-size: 106%;
+            background-repeat: no-repeat;
+            .imgboxBorder{
+                position: absolute;
+                width: 102%;
+                height: 102%;
+                top: -22px;
+                left: -22px;
+                // background-color: yellow;
+                border-top: 10px solid brown;
+                border-left: 10px solid brown;
+            }
         }
     }
     .content_right{
+        // border: 1px solid white;
         width: 43%;
-        h1{
-            span{
-
+        min-width: 353px;
+        margin: 10px 15px;
+        .sm_content_wrapper{
+            max-width: 400px;
+            h1{
+                padding: 3px;
+                font-size: 35px;
+                color: brown;
+                span{
+                    display: inline-flex;
+                    margin-bottom: 7px;
+                    margin-left: 4px;
+                    height: 6px;
+                    width: 60px;
+                    background-color: brown;
+                }
+            }
+            h2{
+    
+            }
+            p{
+                font-size: 20px;
+                padding: 10px 5px;
             }
         }
-        h2{
+    }
+}
 
+@media only screen and (max-width: 768px) {
+    .about{
+        .content_left{
+           
+            margin: 8px;
+            .imgbox{
+                width: 270px;
+                height: 350px;
+                .imgboxBorder{
+                    width: 102%;
+                    height: 102%;
+                    top: -18px;
+                    left: -18px;
+                    border-top: 6px solid brown;
+                    border-left: 6px solid brown;
+                }
+            }
+            
         }
-        p{
-
+        .content_right{
+            min-width: 310px;
+            margin: 8px;
+            padding: 3px;
+            text-align: center;
+            .sm_content_wrapper{
+                max-width: 300px;
+                h1{
+                    font-size: 32px;
+                }
+                h2{
+        
+                }
+                p{
+                    font-size: 18px;
+                    padding: 10px 5px;
+                }
+            }
         }
     }
 }

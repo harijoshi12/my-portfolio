@@ -13,6 +13,7 @@ import styles from './HomePage.module.css'
 function HomePage() {
   return (
     <div id={styles.homePage}>
+      <div className={styles.homePageOverlay}></div>
       <SideNavigation/>
       <Hero/>
       <About/>

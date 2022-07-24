@@ -1,15 +1,11 @@
 #homePage {
   background-color: #101010;
+  position: relative;
 }
 
 .sec {
-  border-bottom: 1px solid white;
   overflow: hidden;
   padding: 5px;
-}
-
-.sec .content_wrapper * {
-  border: 2px solid white;
 }
 
 .sec .title {
@@ -23,7 +19,6 @@
 }
 
 .sec .content_wrapper {
-  border: 2px solid white;
   max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,9 +28,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: white;
   margin: auto;
-  padding: 30px 5px;
+  padding: 90px 50px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -58,31 +55,36 @@
 
 .hero .content_wrapper {
   border: 0;
-  padding-top: 80px;
+  padding-top: 160px;
+  padding-bottom: 80px;
   position: relative;
   overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 85%;
 }
 
-.hero .content_left {
-  width: 45%;
-  padding-left: 40px;
-  min-width: 470px;
+.hero .content_wrapper h4 {
+  font-size: 30px;
 }
 
-.hero .content_left h1 {
-  font-size: 4rem;
+.hero .content_wrapper h1 {
+  font-size: 4.5rem;
 }
 
-.hero .content_left h2 {
+.hero .content_wrapper h3 {
   margin: 15px 0;
-  border: 1px solid;
-  padding: 20px 5px;
+  font-size: 30px;
+  padding: 40px;
 }
 
-.hero .content_left .btn button {
+.hero .content_wrapper .btns button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -93,11 +95,14 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.hero .content_left .btn button:first-child {
+.hero .content_wrapper .btns button:first-child {
   border: 2px solid white;
   background-color: transparent;
   color: white;
@@ -108,41 +113,193 @@
   min-width: fit-content;
 }
 
-.hero .content_left .btn button:last-child {
+.hero .content_wrapper .btns button:first-child:hover {
+  color: black;
+  background-color: white;
+}
+
+.hero .content_wrapper .btns button:last-child {
   margin-left: 10px;
   background: white;
-  color: blue;
+  color: black;
   width: 30%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
-.hero .content_right {
-  width: 43%;
+.hero .content_wrapper .btns button:last-child:hover {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
 }
 
-.hero .content_right img {
-  height: 650px;
+@media only screen and (max-width: 768px) {
+  .hero .content_wrapper {
+    border: 2px solid white;
+    padding-top: 160px;
+    padding-bottom: 80px;
+    width: 100%;
+  }
+  .hero .content_wrapper h4 {
+    font-size: 30px;
+    padding: 10px 0;
+  }
+  .hero .content_wrapper h1 {
+    font-size: 3.2rem;
+  }
+  .hero .content_wrapper h3 {
+    margin: 15px 0;
+    font-size: 22px;
+    padding: 40px 0;
+  }
+  .hero .content_wrapper .btns button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .hero .content_wrapper .btns button:first-child {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin-right: 10px;
+    width: 50%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .hero .content_wrapper .btns button:first-child:hover {
+    color: black;
+    background-color: white;
+  }
+  .hero .content_wrapper .btns button:last-child {
+    margin-left: 10px;
+    background: white;
+    color: black;
+    width: 30%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .hero .content_wrapper .btns button:last-child:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+  }
 }
 
-.about {
-  background-color: red;
+.about .content_wrapper {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .about .content_left {
-  width: 47%;
+  width: 43%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  margin: 10px 15px;
 }
 
 .about .content_left .imgbox {
+  position: relative;
   margin-left: auto;
-  width: 300px;
-  height: 450px;
-  background-color: grey;
+  width: 420px;
+  height: 550px;
+  background-image: url(../../media/images/about.png);
+  background-position: 50% 100%;
+  background-size: 106%;
+  background-repeat: no-repeat;
+}
+
+.about .content_left .imgbox .imgboxBorder {
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  top: -22px;
+  left: -22px;
+  border-top: 10px solid brown;
+  border-left: 10px solid brown;
 }
 
 .about .content_right {
   width: 43%;
+  min-width: 353px;
+  margin: 10px 15px;
+}
+
+.about .content_right .sm_content_wrapper {
+  max-width: 400px;
+}
+
+.about .content_right .sm_content_wrapper h1 {
+  padding: 3px;
+  font-size: 35px;
+  color: brown;
+}
+
+.about .content_right .sm_content_wrapper h1 span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 7px;
+  margin-left: 4px;
+  height: 6px;
+  width: 60px;
+  background-color: brown;
+}
+
+.about .content_right .sm_content_wrapper p {
+  font-size: 20px;
+  padding: 10px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .about .content_left {
+    margin: 8px;
+  }
+  .about .content_left .imgbox {
+    width: 270px;
+    height: 350px;
+  }
+  .about .content_left .imgbox .imgboxBorder {
+    width: 102%;
+    height: 102%;
+    top: -18px;
+    left: -18px;
+    border-top: 6px solid brown;
+    border-left: 6px solid brown;
+  }
+  .about .content_right {
+    min-width: 310px;
+    margin: 8px;
+    padding: 3px;
+    text-align: center;
+  }
+  .about .content_right .sm_content_wrapper {
+    max-width: 300px;
+  }
+  .about .content_right .sm_content_wrapper h1 {
+    font-size: 32px;
+  }
+  .about .content_right .sm_content_wrapper p {
+    font-size: 18px;
+    padding: 10px 5px;
+  }
 }
 
 .skills .content_left {
@@ -173,26 +330,6 @@
   padding: 5px 0;
 }
 
-.portfolio .content_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-bottom: 30px;
-}
-
 .portfolio .content_wrapper h1 {
   margin: 35px;
   padding: 10px;
@@ -218,25 +355,29 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio .portfolio_item {
   height: 400px;
-  width: 300px;
+  max-width: 330px;
+  width: 27%;
+  min-width: 280px;
   padding: 10px;
-  border-radius: 25px;
+  margin: 20px;
   background-color: #5f5f5f;
 }
 
 .portfolio .portfolio_item .imgbox {
   height: 230px;
   width: 100%;
-  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -276,83 +417,14 @@
   color: blue;
 }
 
-@media only screen and (max-width: 1100px) {
-  #top .sec_wrapper {
-    padding: 0 30px;
-  }
-  #top .sec_left {
-    position: relative;
-    left: 5%;
-    width: 470px;
-  }
-  #top .sec_left .hero_btns button:first-child {
-    width: 45%;
-  }
-  #portfolio .item_wrapper {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    gap: 30px 60px;
-  }
-}
-
 @media only screen and (max-width: 768px) {
-  #top .sec_wrapper {
-    padding-top: 100px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .sec {
+    padding: 0;
   }
-  #top .sec_left {
-    position: static;
-    width: 300px;
-  }
-  #top .sec_left h1 {
-    text-align: center;
-    font-size: 2.8rem;
-  }
-  #top .sec_left h1 span {
-    font-size: 3.2rem;
-    color: blue;
-  }
-  #top .sec_left h2 {
-    margin: 15px 0;
-    border: 1px solid;
-    padding: 20px 5px;
-  }
-  #top .sec_left .hero_btns button {
-    padding: 10px;
-    font-size: 17px;
-  }
-  #top .sec_right {
-    bottom: -100px;
-    margin-top: -40px;
-  }
-  #portfolio .item_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .sec .content_wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 320px;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

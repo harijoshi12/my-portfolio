@@ -1,8 +1,8 @@
 .heroBg .first{
     animation: anim 60s infinite linear alternate-reverse;
 }
-.heroBg svg{
-    z-index: -1;
+.heroBg{
+    /* z-index: -1; */
 }
 
 .heroBg{

@@ -13,7 +13,7 @@ function Header({setIsMousein}) {
   const link3 = useRef()
   const link4 = useRef()
   const link5 = useRef()
-  const link6 = useRef()
+ 
   const burger = useRef()
 
   // cursor link animaition
@@ -34,7 +34,7 @@ function Header({setIsMousein}) {
 
   // Responsive Navabar
   useEffect(()=>{
-    const navlinks = [ link1, link2, link3, link4, link5, link6]
+    const navlinks = [ link1, link2, link3, link4, link5]
 
     // initial navlinks opacity 0
     let siteWidth = window.innerWidth
@@ -158,11 +158,10 @@ function Header({setIsMousein}) {
           <div className='logo'><NavLink to='/' exact>Hari <span>Joshi</span></NavLink></div>
           <nav ref={nav} className={toggleMenu ? "toggle": ""}>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link1} to='/' activeStyle={{color: activeColor}} exact> <span>Home</span> </NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/my-services' activeStyle={{color: activeColor}} exact><span>Services</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-portfolio' activeStyle={{color: activeColor}} exact><span>Portfolio</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/my-resume' activeStyle={{color: activeColor}} exact><span>My Resume</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link5} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link6} to='/resume-builder' activeStyle={{color: activeColor}} id='nav_resumeMaker' exact><span>Create your resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/about' activeStyle={{color: activeColor}} exact> <span>About Me</span> </NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-resume' activeStyle={{color: activeColor}} exact><span>My Resume</span></NavLink>
+            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink>
+            <a href="https://novoresume.com/" ref={link5} rel="noopener noreferrer" target='_blank' id="nav_resumeMaker">Create Your Resume</a>
           </nav>
           <div ref={burger} className={toggleMenu ? "burger toggle": "burger"} onClick={()=>{
             setToggleMenu(!toggleMenu)

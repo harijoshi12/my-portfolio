@@ -98,6 +98,7 @@
 }
 
 .icon-bar {
+  z-index: 1000;
   position: fixed;
   top: 45%;
   left: 0;

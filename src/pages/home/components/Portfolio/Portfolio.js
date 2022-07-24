@@ -61,7 +61,6 @@ function Portfolio() {
               )
             })}
           </div>
-          <a className={styles.btn} href="https://github.com/">View all <span>&rarr;</span></a>
        </div>
     </section>
   )

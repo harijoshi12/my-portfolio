@@ -58,18 +58,6 @@
 
 @media only screen and (max-width: 768px) {
     .sideNavigation{
-        transform: translateY(-30%);
-        right: 0px;
-        ul{
-            li{
-                margin: 2px 0;
-                a{
-                    padding: 5px 25px 7px 15px;
-                }
-                span{
-                    right: 7px;
-                }
-            }
-        }
+        display: none;
     }
 }
