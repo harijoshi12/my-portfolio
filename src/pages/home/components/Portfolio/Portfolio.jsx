@@ -57,7 +57,7 @@ function Portfolio() {
   ]
   return (
     <section id='portfolio' className={`${styles.sec} ${styles.portfolio}`}>
-        <h1 className={styles.title}>My Recent Work <br /> <span>Portfolio</span></h1>
+        <h1 className={styles.title}>My Recent Work</h1>
        <div className={styles.content_wrapper}>
         <div className={styles.content}>
           {portfolioData.map(data=>{

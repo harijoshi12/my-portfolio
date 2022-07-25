@@ -6,23 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
-            width: 500px;
-            height: 600px;
-            background-color: red;
-            padding: 5px;
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
         }
-        .inner{
-            width: 100%;
-            height: 90%;
+        .container{
+            margin-top: 200px;
+            width: 90%;
+            height: fit-content;
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .item{
+            min-width: 100px;
+            /* flex-basis: 20%; */
+            /* max-width: 200px; */
+            padding: 20px;
+            /* height: 100px; */
+            margin: 5px;
             background-color: blue;
+            font-size: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-grow: 1; */
+            /* flex-basis: 100px; */
+        }
+        .item1{background: orangered; }
+        .item2{background-color: yellowgreen;}
+        .item3{background-color: mediumpurple; flex-grow: 2;}
+        .item4{background-color: hotpink;}
+        .item5{background-color: royalblue; flex-grow: 1;}
+        .parent{
+            width: 80%;
+            margin-top: 100px;
+            max-width: 1200px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .child{
+            margin: 0 20px;
+        }
+        .child1{
+            min-width: 450px;
+            height: 590px;
+            background-color: purple;
+            
+        }
+        .child2{
+            max-width: 450px;
+            /* flex-basis: 300px; */
+            width: 300px;
+            flex-grow: 1;
+            height: fit-content;
+            padding-left: 20px;
+            border: 2px solid black;
+        }
+        h1{
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        p{
+            padding: 20px 0;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="inner">
-
+    <!-- <div class="container">
+        <div class="item item1">one</div>
+        <div class="item item2">two</div>
+        <div class="item item3">three</div>
+        <div class="item item4">four</div>
+        <div class="item item5">five</div>
+    </div> -->
+    <div class="parent">
+        <div class="child child1"></div>
+        <div class="child child2">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad odio incidunt temporibus sit ipsam facere eaque sint illum ex quasi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit officiis natus magnam, ab molestias, nostrum dolore reiciendis omnis necessitatibus voluptas tempore? Optio itaque asperiores iusto harum ad sed impedit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio voluptates libero minus enim a non asperiores impedit aliquam repudiandae!</p>
         </div>
     </div>
 </body>

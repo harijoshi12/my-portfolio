@@ -16,12 +16,14 @@ $col3: rgb(0,255,187);
         padding-top: 160px;
         padding-bottom: 80px;
         position: relative;
-        overflow: hidden;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        width: 85%;
-        max-width: 800px;
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            text-align: center;
+        }
         // *{
         //     border: 2px solid white;
         // }
@@ -40,14 +42,15 @@ $col3: rgb(0,255,187);
             padding: 40px;
         }
         .btns{
-            width: 100%;
+            width: 80%;
+            // border: 2px solid white;
+            display: flex;
+            justify-content: space-evenly;
             button{
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
+                
                 border-radius: 10px;
-                padding: 15px 20px;
-                font-size: 25px;
+                padding: 10px 20px;
+                font-size: 22px;
                 font-weight: bold;
                 transition: all 0.2s ease;
             }
@@ -58,6 +61,7 @@ $col3: rgb(0,255,187);
                 color: white;
                 margin: 0 15px;
                 width: 50%;
+                max-width: 300px;
                 min-width: fit-content;
                 &:hover{
                     color: black;
@@ -69,6 +73,7 @@ $col3: rgb(0,255,187);
                 background: rgb(255, 255, 255);
                 color: black;
                 width: 30%;
+                max-width: 220px;
                 min-width: fit-content;
                 &:hover{
                     color: white;
@@ -80,7 +85,7 @@ $col3: rgb(0,255,187);
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
     .hero{
         .content_wrapper{
          
@@ -102,8 +107,9 @@ $col3: rgb(0,255,187);
                 width: 100%;
                 flex-direction: column;
                 justify-content: center;
+                align-items: center;
                 button{
-                    padding: 5px 15px;
+                    padding: 7px 25px;
                     font-size: 20px;
                     font-weight: bold;
                     margin-top: 100px;
