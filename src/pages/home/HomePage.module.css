@@ -1,5 +1,5 @@
 #homePage {
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(41, 41, 41);
   position: relative;
 }
 
@@ -38,6 +38,31 @@
   width: 100%;
 }
 
+.portfolio .content, .services .content, .upCommingProjects .content {
+  gap: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .card, .services .card, .upCommingProjects .card {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 300px;
+  align-self: stretch;
+  width: 300px;
+  max-width: 450px;
+  flex-grow: 1;
+  background-color: rgb(48, 48, 48);
+  box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 576px) {
+  .portfolio .card, .services .card, .upCommingProjects .card {
+    margin: 0 4px;
+  }
+}
 .hero {
   position: relative;
   padding: 0;
@@ -249,12 +274,6 @@
   height: 500px;
 }
 
-.services .content_wrapper .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  grid-gap: 30px;
-  grid-row-gap: 50px;
-}
 .services .services_item:nth-child(1) {
   border-color: rgb(252, 0, 200);
 }
@@ -312,15 +331,12 @@
   background-color: rgba(192, 192, 192, 0.5);
 }
 .services .services_item {
-  margin: 0 10px;
-  padding: 20px;
-  background-color: rgb(34, 34, 34);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 17px -5px rgba(255, 255, 255, 0.6);
   border-bottom: 10px solid blue;
 }
 .services .services_item:hover {
@@ -364,9 +380,6 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .services .content_wrapper .content {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
   .services .services_item h2 {
     text-align: center;
     padding: 15px 0;
@@ -376,89 +389,109 @@
     padding: 5px;
   }
 }
-.portfolio .content_wrapper h1, .upCommingProjects .content_wrapper h1 {
-  margin-bottom: 30px;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 30px;
-}
-.portfolio .content_wrapper h1 span, .upCommingProjects .content_wrapper h1 span {
-  color: rgb(113, 113, 113);
-  font-size: 37px;
-}
-.portfolio .content_wrapper p, .upCommingProjects .content_wrapper p {
-  font-size: 18px;
-}
-.portfolio .content_wrapper .btn, .upCommingProjects .content_wrapper .btn {
-  margin: 40px;
-  padding: 10px 40px;
-  font-size: 25px;
-  background-color: rgb(148, 148, 148);
-  color: white;
-  border-radius: 10px;
-}
-.portfolio .content, .upCommingProjects .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  grid-gap: 30px;
-  grid-row-gap: 50px;
-}
-.portfolio .portfolio_item, .upCommingProjects .portfolio_item {
-  border-radius: 5px;
-  margin: 0 10px;
-  padding: 20px;
-  background-color: rgb(34, 34, 34);
+.portfolio .portfolio_item {
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
 }
-.portfolio .portfolio_item .imgbox, .upCommingProjects .portfolio_item .imgbox {
+.portfolio .portfolio_item .imgbox {
   height: 230px;
   width: 100%;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
-  border-radius: 10px;
 }
-.portfolio .portfolio_item .imgbox img, .upCommingProjects .portfolio_item .imgbox img {
+.portfolio .portfolio_item .imgbox img {
   height: 230px;
 }
-.portfolio .portfolio_item h2, .upCommingProjects .portfolio_item h2 {
-  padding: 10px 0;
+.portfolio .portfolio_item h2 {
+  padding: 10px 20px;
 }
-.portfolio .portfolio_item .btn_container, .upCommingProjects .portfolio_item .btn_container {
-  margin-top: 20px;
+.portfolio .portfolio_item p {
+  padding: 10px 20px;
+}
+.portfolio .portfolio_item .btn_container {
+  width: 80%;
+  margin: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-.portfolio .portfolio_item .btn_container a, .upCommingProjects .portfolio_item .btn_container a {
+.portfolio .portfolio_item .btn_container a {
   display: inline-flex;
   border-radius: 10px;
   padding: 6px 20px;
 }
-.portfolio .portfolio_item .btn_container a:first-child, .upCommingProjects .portfolio_item .btn_container a:first-child {
+.portfolio .portfolio_item .btn_container a:first-child {
   border: 2px solid rgb(255, 255, 255);
   background-color: transparent;
   color: white;
   margin-right: 10px;
 }
-.portfolio .portfolio_item .btn_container a:last-child, .upCommingProjects .portfolio_item .btn_container a:last-child {
+.portfolio .portfolio_item .btn_container a:last-child {
   border: 2px solid rgb(255, 255, 255);
   margin-left: 10px;
   background: rgb(255, 255, 255);
   color: blue;
 }
 
-@media only screen and (max-width: 768px) {
-  .portfolio .portfolio_item .imgbox, .upCommingProjects .portfolio_item .imgbox {
+@media only screen and (max-width: 576px) {
+  .portfolio .portfolio_item .imgbox {
     height: 210px;
   }
 }
-@media only screen and (max-width: 768px) {
-  .sec {
-    padding: 0;
+.upCommingProjects .upcommingProject_item {
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.upCommingProjects .upcommingProject_item .imgbox {
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.upCommingProjects .upcommingProject_item h2 {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+  color: rgb(226, 130, 255);
+}
+.upCommingProjects .upcommingProject_item h5 {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  color: rgb(226, 226, 226);
+  font-size: 1rem;
+  padding: 10px;
+}
+.upCommingProjects .upcommingProject_item div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.upCommingProjects .upcommingProject_item div * {
+  border: 1px solid white;
+  padding: 2px;
+}
+.upCommingProjects .upcommingProject_item div span {
+  display: inline-flex;
+  justify-content: center;
+  width: 50%;
+}
+
+@media only screen and (max-width: 576px) {
+  .upCommingProjects .portfolio_item .imgbox {
+    height: 210px;
   }
 }
 @media only screen and (max-width: 576px) {

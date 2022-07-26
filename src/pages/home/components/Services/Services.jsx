@@ -8,7 +8,7 @@ import {BsApple} from 'react-icons/bs'
 import {SiDjango} from 'react-icons/si'
 import {GrNode} from 'react-icons/gr'
 import styles from '../../HomePage.module.css'
-import ServiceItem from './ServiceItem'
+import {ServiceItem} from '../Common/Card'
 
 const servicesData = [
   {
@@ -39,7 +39,7 @@ const servicesData = [
     id:5,
     icons: [{id:1, icon:<SiHiveBlockchain/>}],
     title: "Blockchain Development",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus."
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem?  Sed dolorum tempora illo consequuntur cumque, esse minus."
   },
   {
     id:6,

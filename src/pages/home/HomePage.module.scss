@@ -1,6 +1,6 @@
 
 #homePage{
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(41, 41, 41);
     position: relative;
 }
 
@@ -45,7 +45,7 @@
     }
 }
 
-
+@import "./components/Common/Card";
 @import "./components/Hero/Hero";
 @import "./components/About/About";
 @import "./components/Skills/Skills";
@@ -58,7 +58,7 @@
 
 @media only screen and (max-width: 768px) {
     .sec{
-        padding: 0;
+        // padding: 0;
         .content_wrapper{
             // *{
             //     border: 2px solid white;

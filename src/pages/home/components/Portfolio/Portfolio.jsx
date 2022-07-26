@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioItem from './PortfolioItem'
+import {PortfolioItem} from '../Common/Card'
 import styles from '../../HomePage.module.css'
 import portfoioItem_img1 from '../../../../media/images/portfolio/crypto.webp'
 import portfoioItem_img2 from '../../../../media/images/portfolio/socialMedia.jpg'
@@ -62,7 +62,6 @@ function Portfolio() {
         <div className={styles.content}>
           {portfolioData.map(data=>{
             return(
-              // <PortfolioItem data={data} />
               <PortfolioItem key={data.id} {...data} />
               )
             })}

@@ -1,0 +1,67 @@
+.upCommingProjects{
+    
+    .upcommingProject_item{
+        background-color: #130f40;
+        background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        // *{
+        //     border: 1px solid white;
+        //     padding: 2px;
+        // }
+        .imgbox{
+            height: 100px;
+            width: 100px;
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        h2{
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 25px;
+            color: rgb(226, 130, 255);
+        }
+        p{
+
+        }
+        h5{
+            width: 100%;
+            text-align: center;
+            font-style: italic;
+            color: rgb(226, 226, 226);
+            font-size: 1rem;
+            padding: 10px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            *{
+                border: 1px solid white;
+                padding: 2px;
+            }
+            span{
+                display: inline-flex;
+                justify-content: center;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .upCommingProjects{
+        .portfolio_item{
+            .imgbox{
+                height: 210px;
+            }
+        }
+    }
+}
