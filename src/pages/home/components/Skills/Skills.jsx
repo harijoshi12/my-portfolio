@@ -33,7 +33,7 @@ const TechSkill = ({ title, level }) => {
         counter+=1
         setLevelOutput(counter)
       }
-    }, 40);
+    }, 50);
 
     return () => { clearInterval(idTime)}
     // console.log("num", num)

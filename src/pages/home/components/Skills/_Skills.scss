@@ -195,7 +195,7 @@
                         stroke-width: 10px;
                         stroke-dasharray: 330;
                         // stroke-dashoffset: 10;
-                        animation: circleBar 3s linear 2s forwards;
+                        animation: circleBar 4s ease-in-out forwards;
                     }
                 }
             }
@@ -227,7 +227,6 @@
             }
         }
         .content_right{
-            margin: 0;
             .content_container{
 
                 .circle_outer{

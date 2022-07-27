@@ -425,8 +425,8 @@
   fill: none;
   stroke-width: 10px;
   stroke-dasharray: 330;
-  -webkit-animation: circleBar 3s linear 2s forwards;
-          animation: circleBar 3s linear 2s forwards;
+  -webkit-animation: circleBar 4s ease-in-out forwards;
+          animation: circleBar 4s ease-in-out forwards;
 }
 
 @-webkit-keyframes circleBar {
@@ -453,9 +453,6 @@
 @media only screen and (max-width: 994px) {
   .skills .content_left .content_container .progLang .progressBarOuter {
     margin-right: 25px;
-  }
-  .skills .content_right {
-    margin: 0;
   }
   .skills .content_right .content_container .circle_outer .circle_inner .sm_title {
     font-size: 12px;

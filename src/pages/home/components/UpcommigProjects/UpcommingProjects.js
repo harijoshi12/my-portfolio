@@ -5,6 +5,7 @@ import styles from '../../HomePage.module.css'
 import physics from '../../../../media/images/projects/physics.png'
 import dating from '../../../../media/images/projects/dating.png'
 import social_media from '../../../../media/images/projects/social_media.png'
+import blockchain from '../../../../media/images/projects/blockchain.png'
 
 const UpcommingProjects = () => {
   console.log(physics)
@@ -29,6 +30,13 @@ const UpcommingProjects = () => {
       title:"Social media app for rational minded people", 
       desc: "I feel an strong need to unite all the rational people for the betterment of the society", 
       tech: ['A.I/M.L', 'React', 'Next.js', 'React Native', 'Firebase',  'Node.js', 'MongoDb']
+    },
+    {
+      id:4,
+      img: blockchain, 
+      title:"Blockchain based Polling & voting app", 
+      desc: "for resolving different social issues I believe a decentralized polling and voting technogy is neccesory", 
+      tech: ['Blockchian', 'Solidity' ,'React', 'Next.js', 'React Native', 'Firebase',  'Node.js', 'MongoDb']
     },
   ]
   return (
