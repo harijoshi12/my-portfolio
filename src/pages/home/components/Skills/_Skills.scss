@@ -1,10 +1,239 @@
 .skills{
+    *{
+        // border: 1px solid white;
+        // padding: 1px;
+    }
+    .content{
+        gap: 30px 10px;
+        .card{
+            // box-shadow: 0 0 0 0 ;
+            // background-color: transparent;
+        }
+        .content_container{
+            width: 100%;
+            flex-wrap: wrap;
+            height: 100%;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .sub_title{
+            flex-grow: 1;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            margin-bottom: 10;
+            font-style: italic;
+            color: rgb(211, 211, 211);
+            font-size: 20px;
+        }
+    }
     .content_left{
-        width: 52%;
-        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 430px;
+        max-width: 100%;
+        .content_container{
+            flex-direction: column;
+            justify-content: space-evenly;
+            .progLang:nth-child(1){
+                .progressBarInner{
+                    background: rgb(0,220,255);
+                    background: linear-gradient(45deg, rgba(0,220,255,1) 0%, rgba(127,0,255,1) 100%);
+                }
+            }
+            .progLang:nth-child(2){
+                .progressBarInner{
+                    background: rgb(0,220,255);
+                    background: linear-gradient(45deg, rgba(0,220,255,1) 0%, rgba(0,255,84,1) 100%);
+                }
+            }
+            .progLang:nth-child(3){
+                .progressBarInner{
+                    background: rgb(255,230,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgba(255,0,220,1) 100%);
+                }
+            }
+            .progLang:nth-child(4){
+                .progressBarInner{
+                    background: rgb(255,0,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgb(225, 255, 0) 100%);
+                }
+            }
+            .progLang:nth-child(5){
+                .progressBarInner{
+                    background: rgb(6,255,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgb(255, 0, 0) 100%);
+                }
+            }
+            .progLang:nth-child(6){
+                .progressBarInner{
+                    background: rgb(255,136,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgb(255, 145, 0) 100%);
+                }
+            }
+            .progLang:nth-child(7){
+                .progressBarInner{
+                    background: rgb(255,80,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgb(0, 55, 255) 100%);
+                }
+            }
+            .progLang:nth-child(8){
+                .progressBarInner{
+                    background: rgb(255,174,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgba(0,241,255,1) 100%);
+                }
+            }
+            .progLang:nth-child(9){
+                .progressBarInner{
+                    background: rgb(255,174,0);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgb(251, 255, 0) 100%);
+                }
+            }
+           
+            .progLang{
+                margin: 10px;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span{
+                    display: inline-flex;
+                }
+                .sm_title_wrapper{
+                    width: 30%;
+                    padding-right: 5px;
+                    .sm_title{
+                        color: wheat;
+                        font-size: 22px;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        width: 110px;
+                        margin: auto;
+                    }
+                }
+                .progressBarOuter{
+                    width: 70%;
+                    flex-grow: 2;
+                    padding: 1px;
+                    border: 1px solid rgb(0, 0, 0);
+                    box-shadow: inset 0 0 10x black;
+                    border-radius: 10px;
+                    .progressBarInner{
+                        border-radius: 10px;
+                        height: 12px;
+                        background-color: rgb(240, 240, 240);
+                        animation: skillbar 4s ease-in-out  forwards;
+                    }
+                }
+
+            }
+        }
     }
     .content_right{
-        width: 42%;
-        height: 500px;
+        max-width: 100%;
+        width: 440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .content_container{
+            display: flex;
+            justify-content: space-evenly;
+            .circle_outer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 50%;
+                margin: 10px;
+                height: 110px;
+                width: 120px;
+                padding: 5px;
+                box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                            -4px -4px 6px -1px rgba(255, 255, 255, 0.2);
+                // background-color: rgb(0, 0, 0);
+                .circle_inner{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90px;
+                    width: 100px;
+                    border-radius: 50%;
+                    // background-color: red;
+                    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.6),
+                                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.2),
+                                -0.5px -0.5px 0px rgba(0, 0, 0, 0.2),
+                                0px 12px 10px -10px rgba(0, 0, 0, 0.2);
+                    .sm_title{
+                        // font-size: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes skillbar {
+    from{
+        width: 0%;
+    }
+}
+
+@media only screen and (max-width: 994px) {
+    .skills{
+        .content_left{
+            .content_container{
+
+                .progLang{
+                    .progressBarOuter{
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .skills{
+        .content_left{
+            margin: 0;
+            max-width: 100%;
+            .content_container{
+
+                .progLang{
+                    margin: 5px;
+                    .sm_title_wrapper{
+                        width: fit-content;
+                        padding-right: 5px;
+                        .sm_title{
+                            font-size: 16px;
+                            width: 95px;
+                        }
+                    }
+                    .progressBarOuter{
+                        max-width: calc(100% - 100px);
+                        margin: 0;
+                        .progressBarInner{
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        .content_right{
+            margin: 0;
+            .content_container{
+
+                .circle{
+                    .sm_title{
+                        
+                    }
+                }
+            }
+        }
     }
 }

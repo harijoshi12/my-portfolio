@@ -23,7 +23,7 @@ export const UpcommingProjectItem=(props)=> {
         <div className={styles.imgbox} style={{backgroundImage:`url(${img})`}}></div>
         <h2>{title}</h2>
         <p>{desc}</p>
-          <h5>Possible TechStack</h5>
+          <h5>Features</h5>
         <div>
           {tech.map((t, idx)=>{
             return(

@@ -1,11 +1,5 @@
-.portfolio, .services, .upCommingProjects{
-    .content{
-        gap: 50px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
+.common{
+    
     .card{
         overflow: hidden;
         border-radius: 10px;
@@ -17,11 +11,6 @@
         flex-grow: 1;
         background-color: rgb(48, 48, 48);
         box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
-        // *{
-        //     border: 1px solid white;
-        //     padding: 5px;
-        // }
-        
     }
 }
 

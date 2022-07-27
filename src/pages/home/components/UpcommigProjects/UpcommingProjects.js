@@ -32,7 +32,7 @@ const UpcommingProjects = () => {
     },
   ]
   return (
-    <section id='upCommingProjects' className={`${styles.sec} ${styles.upCommingProjects}`}>
+    <section id='upCommingProjects' className={`${styles.sec} ${styles.upCommingProjects} ${styles.common}`}>
      <h1 className={styles.title}>My Upcomming Projects </h1>
     <div className={styles.content_wrapper}>
      <div className={styles.content}>

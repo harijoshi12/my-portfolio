@@ -52,7 +52,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section id='services' className={`${styles.sec} ${styles.services}`}>
+    <section id='services' className={`${styles.sec} ${styles.services} ${styles.common}`}>
         <h1 className={styles.title}>My Services</h1>
        <div className={styles.content_wrapper}>
         <div className={styles.content}>

@@ -38,25 +38,9 @@ function Portfolio() {
       git_link:"https://github.com/", 
       live_demo_link:"https://harijoshi.in/"
     },
-    {
-      id:5,
-      img:portfoioItem_img2, 
-      title:"Crypto Currency exchanger", 
-      desc: "Node.js, MongoDB, Express, React.js, Next.js", 
-      git_link:"https://github.com/", 
-      live_demo_link:"https://harijoshi.in/"
-    },
-    {
-      id:6,
-      img:portfoioItem_img3, 
-      title:"Crypto Currency exchanger",
-      desc: "Node.js, MongoDB, Express, React.js, Next.js", 
-      git_link:"https://github.com/", 
-      live_demo_link:"https://harijoshi.in/"
-    }
   ]
   return (
-    <section id='portfolio' className={`${styles.sec} ${styles.portfolio}`}>
+    <section id='portfolio' className={`${styles.sec} ${styles.portfolio} ${styles.common}`}>
         <h1 className={styles.title}>My Recent Work</h1>
        <div className={styles.content_wrapper}>
         <div className={styles.content}>
