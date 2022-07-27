@@ -292,7 +292,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 430px;
+  width: 440px;
   max-width: 100%;
 }
 .skills .content_left .content_container {
@@ -374,7 +374,7 @@
 }
 .skills .content_right {
   max-width: 100%;
-  width: 440px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,6 +385,7 @@
   justify-content: space-evenly;
 }
 .skills .content_right .content_container .circle_outer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,6 +406,40 @@
   border-radius: 50%;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.6), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.2), -0.5px -0.5px 0px rgba(0, 0, 0, 0.2), 0px 12px 10px -10px rgba(0, 0, 0, 0.2);
 }
+.skills .content_right .content_container .circle_outer .circle_inner .sm_title {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.skills .content_right .content_container .circle_outer .circle_inner .level_percent {
+  position: absolute;
+  font-size: 15px;
+  bottom: 15px;
+}
+.skills .content_right .content_container .circle_outer svg {
+  position: absolute;
+  top: 1;
+  left: 1;
+}
+.skills .content_right .content_container .circle_outer svg path {
+  fill: none;
+  stroke-width: 10px;
+  stroke-dasharray: 330;
+  -webkit-animation: circleBar 3s linear 2s forwards;
+          animation: circleBar 3s linear 2s forwards;
+}
+
+@-webkit-keyframes circleBar {
+  0% {
+    stroke-dashoffset: 330;
+  }
+}
+
+@keyframes circleBar {
+  0% {
+    stroke-dashoffset: 330;
+  }
+}
 @-webkit-keyframes skillbar {
   from {
     width: 0%;
@@ -418,6 +453,12 @@
 @media only screen and (max-width: 994px) {
   .skills .content_left .content_container .progLang .progressBarOuter {
     margin-right: 25px;
+  }
+  .skills .content_right {
+    margin: 0;
+  }
+  .skills .content_right .content_container .circle_outer .circle_inner .sm_title {
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -447,6 +488,9 @@
   }
   .skills .content_right {
     margin: 0;
+  }
+  .skills .content_right .content_container .circle_outer .circle_inner .sm_title {
+    font-size: 12px;
   }
 }
 .services .services_item:nth-child(1) {
