@@ -12,7 +12,7 @@ function MyResumePage() {
 
   // const url1 = "http://harijoshi.tech/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
   // const url2 = "http://localhost:3000/static/media/Hari's_resume.12daf6d4eda4e5bd952f.pdf"
-  const url3 = "https://drive.google.com/file/d/1z7Y0oBXV2m-Y4x1B_4Hr9oIIzCJWLdYB/view?usp=sharing"
+  const url3 = "https://drive.google.com/file/d/1pVtjFdjVFbKbRUWaAQJ3J1Pi-EarsZKO/view?usp=sharing"
 
   return (
     <section id={styles.myResumePage}>

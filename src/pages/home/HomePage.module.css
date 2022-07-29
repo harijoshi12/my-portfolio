@@ -11,7 +11,7 @@
   color: rgb(30, 255, 143);
   text-align: center;
   margin: auto;
-  width: 300px;
+  width: 100%;
   padding: 15px;
   margin-top: 20px;
   font-size: 35px;
@@ -69,14 +69,6 @@
   padding: 0;
   border: 0;
 }
-.hero .overlay {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
 .hero .content_wrapper {
   padding-top: 160px;
   padding-bottom: 80px;
@@ -127,7 +119,7 @@
 }
 .hero .content_wrapper .btns button:first-child:hover {
   color: black;
-  background-color: white;
+  background-color: rgb(142, 24, 0);
 }
 .hero .content_wrapper .btns button:last-child {
   margin: 0 15px;
@@ -605,48 +597,69 @@
     padding: 5px;
   }
 }
-.portfolio .content {
-  gap: 35px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.portfolio .content_wrapper .content {
+  max-width: 980px;
+  justify-content: space-between;
 }
-.portfolio .content .card {
-  min-width: 380px;
-  align-self: stretch;
-  width: 350px;
-  max-width: 450px;
-  flex-grow: 1;
-  background-color: rgb(48, 48, 48);
-  box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
+.portfolio .content_wrapper .content .card {
+  background-color: transparent;
 }
 .portfolio .portfolio_item {
-  padding-bottom: 20px;
+  position: relative;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
 }
 .portfolio .portfolio_item .imgbox {
-  height: 230px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  background-size: cover;
-  background-position: 50% 50%;
-  overflow: hidden;
-}
-.portfolio .portfolio_item .imgbox img {
-  height: 230px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
 }
 .portfolio .portfolio_item h2 {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  position: relative;
   padding: 10px 20px;
 }
-.portfolio .portfolio_item p {
-  padding: 10px 20px;
+.portfolio .portfolio_item > p {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.portfolio .portfolio_item div {
+  position: relative;
+  width: 100%;
+}
+.portfolio .portfolio_item div h3 {
+  padding: 5px;
+  margin-top: 5px;
+  font-style: italic;
+  text-align: center;
+  color: rgb(226, 226, 226);
+}
+.portfolio .portfolio_item div p {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3px;
+}
+.portfolio .portfolio_item div p span:nth-child(2) {
+  margin-left: 3px;
 }
 .portfolio .portfolio_item .btn_container {
-  width: 80%;
-  margin: 20px;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -673,9 +686,16 @@
   .portfolio .content .card {
     min-width: 310px;
   }
-  .portfolio .portfolio_item .imgbox {
-    height: 210px;
+  .portfolio .portfolio_item {
+    padding: 20px 10px;
   }
+}
+.upCommingProjects .content_wrapper .content {
+  max-width: 980px;
+  justify-content: space-between;
+}
+.upCommingProjects .content_wrapper .content .card {
+  background-color: transparent;
 }
 .upCommingProjects .upcommingProject_item {
   background-color: #130f40;

@@ -1,47 +1,72 @@
 .portfolio{
-    .content{
-        gap:35px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        .card{
-            // margin: 30px;
-            min-width: 380px;
-            align-self: stretch;
-            width: 350px;
-            max-width: 450px;
-            flex-grow: 1;
-            background-color: rgb(48, 48, 48);
-            box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
+    .content_wrapper{
+        .content{
+            max-width: 980px;
+            justify-content: space-between;
+            .card{
+                background-color: transparent;
+            }
         }
     }
     .portfolio_item{
-        padding-bottom: 20px;
+        position: relative;
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
+        *{
+            // border: 1px solid white;
+        }
         .imgbox{
-            height: 230px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 100%;
-            background-size: cover;
-            background-position: 50% 50%;
-            overflow: hidden;
-            img{
-                height: 230px;
-            }
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease;
         }
         h2{
+            width: 100%;
+            text-align: center;
+            font-style: italic;
+            position: relative;
             padding:10px 20px;
         }
-        p{
-            padding:10px 20px;
+        >p{
+            width: 100%;
+            position: relative;
+            padding:10px;
+            text-align: center;
+        }
+        div{
+            position: relative;
+            width: 100%;
+            h3{
+                padding: 5px;
+                margin-top: 5px;
+                font-style: italic;
+                text-align: center;
+                color: rgb(226, 226, 226);
+            }
+            p{
+                display: flex;
+                justify-content: flex-start;
+                // text-align: left;
+                padding: 3px;
+                span:nth-child(2){
+                    margin-left: 3px;
+                }
+            }
         }
         .btn_container{
-            width: 80%;
-            // border: 2px solid wheat;
-            margin: 20px;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
             height: fit-content;
             a{
                 display: inline-flex;
@@ -73,9 +98,7 @@
             }
         }
         .portfolio_item{
-            .imgbox{
-                height: 210px;
-            }
+            padding: 20px 10px;
         }
     }
 }

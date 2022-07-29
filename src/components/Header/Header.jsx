@@ -11,14 +11,14 @@ function Header({setIsMousein}) {
   const link1 = useRef()
   const link2 = useRef()
   const link3 = useRef()
-  const link4 = useRef()
+  // const link4 = useRef()
   const link5 = useRef()
  
   const burger = useRef()
 
   // cursor link animaition
   useEffect(() => {
-    const navlinks = [link1, link2, link3, link4, link5]
+    const navlinks = [link1, link2, link3, link5]
     navlinks.forEach(link =>{
       link.current.addEventListener('mouseleave', ()=>{
         link.current.classList.remove('hovered-link')
@@ -34,7 +34,7 @@ function Header({setIsMousein}) {
 
   // Responsive Navabar
   useEffect(()=>{
-    const navlinks = [ link1, link2, link3, link4, link5]
+    const navlinks = [ link1, link2, link3, link5]
 
     // initial navlinks opacity 0
     let siteWidth = window.innerWidth
@@ -160,7 +160,7 @@ function Header({setIsMousein}) {
             <NavLink className={toggleMenu ? "toggle": ""} ref={link1} to='/' activeStyle={{color: activeColor}} exact> <span>Home</span> </NavLink>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link2} to='/about' activeStyle={{color: activeColor}} exact> <span>About Me</span> </NavLink>
             <NavLink className={toggleMenu ? "toggle": ""} ref={link3} to='/my-resume' activeStyle={{color: activeColor}} exact><span>My Resume</span></NavLink>
-            <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink>
+            {/* <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink> */}
             <a href="https://novoresume.com/" ref={link5} rel="noopener noreferrer" target='_blank' id="nav_resumeMaker">Create Your Resume</a>
           </nav>
           <div ref={burger} className={toggleMenu ? "burger toggle": "burger"} onClick={()=>{

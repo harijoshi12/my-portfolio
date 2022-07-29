@@ -1,4 +1,4 @@
-$navBlack: rgba(10, 10, 10, 0.7);
+$navBlack: rgba(10, 10, 10, 0.5);
 $col2: rgb(4, 226, 226);
 $col3: rgb(0,255,187);
 .pseudo_header{
@@ -7,7 +7,7 @@ $col3: rgb(0,255,187);
     background: $navBlack;
     // background-color: transparent;
     width: 100%;
-    height: 80px;
+    height: 75px;
     z-index: 100;
 }
 .nav-overlay{
@@ -49,7 +49,7 @@ header{
     .nav_wrapper{
         max-width: 1200px;
         width: 100%;
-        height: 73px;
+        height: 67px;
         padding: 5px 80px 5px 20px;
         display: flex;
         justify-content: space-between;

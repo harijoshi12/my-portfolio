@@ -2,12 +2,22 @@ import React from 'react'
 import styles from '../../HomePage.module.css'
 
 export const PortfolioItem=(props)=> {
-    const {img, title, desc, git_link, live_demo_link} = props
+    const {img, bg, title, desc, features, git_link, live_demo_link} = props
+    const bgh= {
+      bgGradient: 'background-color: #4158D0',
+      backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)'
+    }
   return (
-    <div className={`${styles.card}  ${styles.portfolio_item}`} >
-        <div className={styles.imgbox} style={{backgroundImage:`url(${img})`}}></div>
+    <div className={`${styles.card}  ${styles.portfolio_item}`} style={bg} >
+        {/* <div className={styles.imgbox} style={{backgroundImage:`url(${img})`}}></div> */}
+        {/* <div className={styles.imgbox} style={bg}></div> */}
+        <div className={styles.imgbox}></div>
         <h2>{title}</h2>
-        <p>{desc}</p>
+        <p>"{desc}"</p>
+        <div>
+          <h3>Features</h3>
+          {features.map((f, idx)=><p key={idx}><span>&#xBB; </span> <span> {f}</span></p>)}
+        </div>
         <div className={styles.btn_container}>
             <a href={git_link}>Github</a>
             <a href={live_demo_link}>Live Demo</a>
