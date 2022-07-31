@@ -2,11 +2,11 @@ import React from 'react'
 import styles from '../../HomePage.module.css'
 
 export const PortfolioItem=(props)=> {
-    const {img, bg, title, desc, features, git_link, live_demo_link} = props
-    const bgh= {
-      bgGradient: 'background-color: #4158D0',
-      backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)'
-    }
+    const { bg, title, desc, features, git_link, live_demo_link} = props
+    // const bgh= {
+    //   bgGradient: 'background-color: #4158D0',
+    //   backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)'
+    // }
   return (
     <div className={`${styles.card}  ${styles.portfolio_item}`} style={bg} >
         {/* <div className={styles.imgbox} style={{backgroundImage:`url(${img})`}}></div> */}
