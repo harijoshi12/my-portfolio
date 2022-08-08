@@ -4,6 +4,7 @@
 }
 
 .sec {
+  border: 1px solid white;
   overflow: hidden;
   padding: 5px;
 }

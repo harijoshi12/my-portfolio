@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import {MdDesignServices} from 'react-icons/md'
 import {RiReactjsLine} from 'react-icons/ri'
 import {SiWordpress} from 'react-icons/si'
@@ -50,9 +50,9 @@ const servicesData = [
   
 ]
 
-const Services = () => {
+const Services = (props, ref) => {
   return (
-    <section id='services' className={`${styles.sec} ${styles.services} ${styles.common}`}>
+    <section id='services' ref={ref} className={`${styles.sec} ${styles.services} ${styles.common}`}>
         <h1 className={styles.title}>My Services</h1>
        <div className={styles.content_wrapper}>
         <div className={styles.content}>
@@ -67,4 +67,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default forwardRef(Services)

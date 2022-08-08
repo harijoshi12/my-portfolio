@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
@@ -76,9 +76,9 @@ const TechSkill = ({ title, level }) => {
   </>)
 }
 
-const Skills = () => {
+const Skills = (props, ref) => {
   return (
-    <section id='skills' className={`${styles.sec} ${styles.skills} ${styles.common}`}>
+    <section id='skills' ref={ref} className={`${styles.sec} ${styles.skills} ${styles.common}`}>
       <h1 className={styles.title}>My Skills</h1>
       <div className={styles.content_wrapper}>
         <div className={styles.content}>
@@ -100,4 +100,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default forwardRef(Skills)

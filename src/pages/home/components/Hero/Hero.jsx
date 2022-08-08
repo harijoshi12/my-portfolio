@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{forwardRef} from 'react'
 import styles from '../../HomePage.module.css'
 // import BgAnimation from './BgAnimation'
-function Hero() {
+function Hero(props, ref) {
   return (
-    <section id='top' className={`${styles.sec} ${styles.hero}`}>
+    <section id='top' ref={ref} className={`${styles.sec} ${styles.hero}`}>
       {/* <BgAnimation/> */}
       <div className={styles.overlay}></div>
       <div className={styles.content_wrapper}>
@@ -21,4 +21,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default forwardRef(Hero)

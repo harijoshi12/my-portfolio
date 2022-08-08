@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 // import aboutPic from '../../../../media/images/about.png'
 import styles from '../../HomePage.module.css'
 
-const About = () => {
+const About = (props , ref) => {
   return (
-    <section id="about" className={`${styles.sec} ${styles.about}`}>
+    <section id="about" ref={ref} className={`${styles.sec} ${styles.about}`}>
         <div className={styles.content_wrapper}>
           <div className={styles.content}>
             <div className={styles.content_left}>
@@ -26,4 +26,4 @@ const About = () => {
   )
 }
 
-export default About
+export default forwardRef(About)

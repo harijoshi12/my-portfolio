@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import {PortfolioItem} from '../Common/Card'
 import styles from '../../HomePage.module.css'
 import portfoioItem_img1 from '../../../../media/images/portfolio/crypto.webp'
 import portfoioItem_img2 from '../../../../media/images/portfolio/socialMedia.jpg'
 import portfoioItem_img3 from '../../../../media/images/portfolio/ecom.jpg'
-function Portfolio() {
+function Portfolio(props,ref) {
   const portfolioData = [
     {
       id:1,
@@ -60,7 +60,7 @@ function Portfolio() {
     },
   ]
   return (
-    <section id='portfolio' className={`${styles.sec} ${styles.portfolio} ${styles.common}`}>
+    <section id='portfolio' ref={ref} className={`${styles.sec} ${styles.portfolio} ${styles.common}`}>
         <h1 className={styles.title}>My Recent Work</h1>
        <div className={styles.content_wrapper}>
         <div className={styles.content}>
@@ -75,4 +75,4 @@ function Portfolio() {
   )
 }
 
-export default Portfolio
+export default forwardRef(Portfolio)

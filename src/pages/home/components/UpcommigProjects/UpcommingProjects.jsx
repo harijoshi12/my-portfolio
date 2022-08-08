@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import {UpcommingProjectItem} from '../Common/Card'
 import styles from '../../HomePage.module.css'
 
@@ -7,7 +7,7 @@ import dating from '../../../../media/images/projects/dating.png'
 import social_media from '../../../../media/images/projects/social_media.png'
 import blockchain from '../../../../media/images/projects/blockchain.png'
 
-const UpcommingProjects = () => {
+const UpcommingProjects = (props, ref) => {
   const UpcommingProjecsData = [
     {
       id:1,
@@ -39,7 +39,7 @@ const UpcommingProjects = () => {
     },
   ]
   return (
-    <section id='upCommingProjects' className={`${styles.sec} ${styles.upCommingProjects} ${styles.common}`}>
+    <section id='upCommingProjects'ref={ref} className={`${styles.sec} ${styles.upCommingProjects} ${styles.common}`}>
      <h1 className={styles.title}>My Upcomming Projects </h1>
     <div className={styles.content_wrapper}>
      <div className={styles.content}>
@@ -55,4 +55,4 @@ const UpcommingProjects = () => {
 }
 
 
-export default UpcommingProjects
+export default forwardRef(UpcommingProjects)

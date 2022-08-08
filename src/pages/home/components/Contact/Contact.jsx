@@ -1,9 +1,9 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import styles from "../../HomePage.module.css";
 
-const Contact = () => {
+const Contact = (props, ref) => {
   const fnameRef =  useRef(null)
   const lnameRef =  useRef(null)
   const emailRef =  useRef(null)
@@ -33,7 +33,7 @@ const Contact = () => {
   })
 
   return (
-    <section id="contact" className={` ${styles.sec} ${styles.contact}`}>
+    <section id="contact" ref={ref} className={` ${styles.sec} ${styles.contact}`}>
       <div className={styles.content_wrapper}>
         <div className={styles.content}>
           <div className={styles.content_left}>
@@ -77,4 +77,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default forwardRef(Contact)
