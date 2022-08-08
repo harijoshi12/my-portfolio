@@ -37,11 +37,11 @@
         padding: 30px;
         padding-bottom: 90px;
         height: fit-content;
-        .content{
-            // border: 2px solid yellow;
-            max-width: 1200px;
-            width: 100%
-        }
+    }
+    .content{
+        // border: 2px solid yellow;
+        max-width: 1200px;
+        width: 100%
     }
 }
 
@@ -77,9 +77,9 @@
             padding-left: 10px;
             padding-right: 10px;
             max-width: 100%;
-            .content{
-                padding: 7px;
-            }
+        }
+        .content{
+            padding: 7px;
         }
         .title{
             font-size: 30px;

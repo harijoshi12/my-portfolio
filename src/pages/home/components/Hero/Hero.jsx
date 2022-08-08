@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '../../HomePage.module.css'
-import BgAnimation from './BgAnimation'
+// import BgAnimation from './BgAnimation'
 function Hero() {
   return (
     <section id='top' className={`${styles.sec} ${styles.hero}`}>
-      <BgAnimation/>
+      {/* <BgAnimation/> */}
       <div className={styles.overlay}></div>
       <div className={styles.content_wrapper}>
         <div className={styles.content}>

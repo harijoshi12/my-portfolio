@@ -8,7 +8,6 @@ import social_media from '../../../../media/images/projects/social_media.png'
 import blockchain from '../../../../media/images/projects/blockchain.png'
 
 const UpcommingProjects = () => {
-  console.log(physics)
   const UpcommingProjecsData = [
     {
       id:1,

@@ -113,38 +113,46 @@ function Header({setIsMousein}) {
   },[])
 
   // Progress Bar
-  const progressBar = () => {
+  useEffect(()=>{
     let body = document.body;
     let html = document.documentElement;
     let winHeight = window.innerHeight;
     let value;
-    window.addEventListener("resize", () => {
-      let a = body.scrollHeight;
-      let b = body.offsetHeight;
-      let d = html.scrollHeight; // includes margin
-      let e = html.offsetHeight; // includes margin
-      var docHeight = Math.max(a, b, d, e);
-      winHeight = window.innerHeight;
-      let scrollHeight = window.scrollY;
-      let scrollableHeight = docHeight - winHeight;
-      value = Math.floor((scrollHeight / scrollableHeight) * 100);
-      progress.current.style.width = value + "%";
-    });
-
-    window.addEventListener("scroll", () => {
-      let a = body.scrollHeight;
-      let b = body.offsetHeight;
-      let d = html.scrollHeight; // includes margin
-      let e = html.offsetHeight; // includes margin
-      winHeight = window.innerHeight;
-      var docHeight = Math.max(a, b, d, e);
-      let scrollHeight = window.scrollY;
-      let scrollableHeight = docHeight - winHeight;
-      value = Math.floor((scrollHeight / scrollableHeight) * 100);
-      progress.current.style.width = value + "%";
-    });
+  function onResizeProgress(){
+    let a = body.scrollHeight;
+    let b = body.offsetHeight;
+    let d = html.scrollHeight; // includes margin
+    let e = html.offsetHeight; // includes margin
+    var docHeight = Math.max(a, b, d, e);
+    winHeight = window.innerHeight;
+    let scrollHeight = window.scrollY;
+    let scrollableHeight = docHeight - winHeight;
+    value = Math.floor((scrollHeight / scrollableHeight) * 100);
+    progress.current.style.width = value + "%";
+  }
+  function onScrollProgress(){
+    // console.log(progress)
+    let a = body.scrollHeight;
+    let b = body.offsetHeight;
+    let d = html.scrollHeight; // includes margin
+    let e = html.offsetHeight; // includes margin
+    winHeight = window.innerHeight;
+    var docHeight = Math.max(a, b, d, e);
+    let scrollHeight = window.scrollY;
+    let scrollableHeight = docHeight - winHeight;
+    value = Math.floor((scrollHeight / scrollableHeight) * 100);
+    progress.current.style.width = value + "%";
+  }
+  const progressBar = () => {
+    window.addEventListener("resize", onResizeProgress);
+    window.addEventListener("scroll", onScrollProgress);
   };
   progressBar();
+  return(()=>{
+    window.removeEventListener("resize", onResizeProgress);
+    window.removeEventListener("scroll", onScrollProgress);
+  })
+ },[])
 
   return (
     <>
