@@ -36,8 +36,6 @@ function HomePage() {
         let secDetails = offset(sec.current)
         let top = secDetails.top
         // let height = secDetails.height
-        // console.log(sec.current.id, top, height)
-        // console.log("**************")
         if(top <  2*window.innerHeight/5){
           sideNavLinks[idx].classList.add('active')
           for (let i = 0; i < sections.length; i++) {
@@ -53,8 +51,16 @@ function HomePage() {
         setShow(false)
       }
     }
+    // without scroll show sidenav
+    if(window.scrollY > 70){
+      setShow(true)
+    } else{
+      setShow(false)
+    }
     window.addEventListener('scroll', getSecPos)
-  })
+    
+    return(()=> window.removeEventListener('scroll', getSecPos))
+  },[])
   return (
     <div id={styles.homePage}>
       <div className={styles.homePageOverlay}></div>

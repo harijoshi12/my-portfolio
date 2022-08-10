@@ -8,7 +8,10 @@ $col3: rgb(0,255,187);
     width: 100%;
     height: 75px;
     z-index: 100;
+    // dark theme
     box-shadow: 0 0 20px 3px black;
+    // light theme
+    // box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
 }
 .nav-overlay{
     transition: all 0.2s ease;

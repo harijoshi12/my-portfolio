@@ -4,7 +4,6 @@ function SideNavigation({show}, ref) {
 
 
   useEffect(()=>{
-  
     // function elPos(el){
     //   let rect = el.getBoundingClientRect()
     //   let scrollLeft = document.documentElement.scrollLeft || window.pageXOffset

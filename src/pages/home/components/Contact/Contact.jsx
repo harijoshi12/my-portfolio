@@ -9,6 +9,9 @@ const Contact = (props, ref) => {
   const emailRef =  useRef(null)
   const messageRef =  useRef(null)
 
+  const dark = `rgb(48, 48, 48)`
+  // const light =  `rgb(209, 209, 209)`
+
   useEffect(()=>{
     const inputs = [fnameRef, lnameRef, emailRef, messageRef]
     inputs.forEach(input=>{
@@ -16,17 +19,18 @@ const Contact = (props, ref) => {
       input.current.addEventListener('focus',()=>{
         label.style.transform = `translateY(-30px)`
         label.style.fontSize = `13px`
-        label.style.color = `blue`
+        label.style.color = `rgb(0,255,187)`
       })
       input.current.addEventListener('blur',()=>{
         if(input.current.value !== ""){
           label.style.transform = `translateY(-30px)`
           label.style.fontSize = `13px`
-          label.style.color = `blue`
+          label.style.color = `rgb(0,255,187)`
         } else{
           label.style.transform = `translateY(-50%)`
           label.style.fontSize = `16px`
-          label.style.color = `rgb(76, 76, 76)`
+          label.style.color = dark
+          // label.style.color = light
         }
       })
     })

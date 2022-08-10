@@ -1,0 +1,279 @@
+.testimonial{
+  .swiper{
+    background-color: rgb(255, 255, 255);
+    // padding: 80px 0;
+    padding-top: 30px;
+    .swiper-wrapper{
+      .swiper-slide {
+        font-size: 18px;
+        padding-bottom: 80px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+    .swiper-button-next, .swiper-button-prev{
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border-radius: 50%;
+      top: 35%;
+      background-color: #fa255f;
+      background-repeat: no-repeat;
+      background-size: 27%;
+      box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.6);
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        transform: scale(1.2);
+      }
+      &::after{
+       content: "";
+      }
+    }
+    .swiper-button-prev{
+      background-position: 45% 50%;
+      left: 40px;
+      background-image: url('../../../../media/images/testimonial/chevron-left.svg');
+    }
+    .swiper-button-next{
+      background-position: 55% 50%;
+      right: 40px;
+      background-image: url('../../../../media/images/testimonial/chevron-right.svg');
+    }
+    .swiper-pagination{
+      background-color: #fa255f;
+      border-radius: 15px;
+      bottom: 35px;
+      border: 1px solid black;
+      width: fit-content;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 15px;
+      display: flex;
+      .swiper-pagination-bullet {
+        margin: 0 8px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid black;
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.4);
+      }
+      
+      .swiper-pagination-bullet-active {
+        background: #ffffff;
+      }
+    }
+    .slide{
+      display: flex;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      width: calc(100% - 200px);
+      .imgbox{
+        width: 30%;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../../../media/images/testimonial/imgbg.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        .img{
+          position: relative;
+          top: 11px;
+          left: 18px;
+          height: 200px;
+          width: 200px;
+          border: 2px solid white;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: -10px 30%;
+        }
+      }
+      .contentbox{
+        width: 70%;
+        max-width: calc(100% - 300px);
+        padding: 20px 0;
+        color: rgb(46, 46, 46);
+        .para{
+          position: relative;
+          
+          span{
+            position: absolute;
+            svg{
+              path{
+                fill: rgb(211, 211, 211);  
+              }
+            }
+          }
+          span:first-child{
+            left: -15px;
+            top: 0;
+          }
+          p{
+            padding: 30px 40px;
+            padding-right: 10px;
+            // padding-bottom: 50px;
+            text-align: left;
+            line-height: 28px;
+          }
+          span:last-child{
+            right: 0;
+            bottom: -10px;
+          }
+        }
+        .info{
+          
+          padding-left: 40px;
+          span{
+            display: flex;
+            justify-content: flex-start;
+          }
+          .name{
+            font-size: 35px;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+          .profession{
+            margin-top: 5px;
+            color: #fa255f;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .testimonial{
+    .swiper{
+      .slide{
+        width: calc(100% - 200px);
+        .imgbox{
+          width: 30%;
+          min-width: 220px;
+          .img{
+            top: 8px;
+            left: 14px;
+            height: 150px;
+            width: 150px;
+          }
+        }
+        .contentbox{
+          max-width: calc(100% - 220px);
+          padding: 20px 0;
+          .para{
+            p{
+              padding: 30px 20px;
+              padding-right: 10px;
+            }
+          }
+          .info{
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial{
+    .swiper{
+      .swiper-button-prev{
+        left: 30px;
+      }
+      .swiper-button-next{
+        right: 30px;
+      }
+      .slide{
+        flex-direction: column;
+        width: calc(100% - 170px);
+        .imgbox{
+          width: 100%;
+          height: 220px;
+          min-width: fit-content;
+          .img{
+            top: 8px;
+            left: 14px;
+            height: 150px;
+            width: 150px;
+          }
+        }
+        .contentbox{
+          width: 100%;
+          max-width: fit-content;
+          padding: 20px 0;
+          .para{
+            span:first-child{
+              left: 0;
+            }
+          }
+          .info{
+            padding-left: 0;
+            span{
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .testimonial{
+    .swiper{
+      .swiper-button-next, .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+        top: 30%;
+        &:hover{
+          transform: scale(0.95);
+        }
+      }
+      .swiper-button-prev{
+        left: 5px;
+      }
+      .swiper-button-next{
+        right: 5px;
+      }
+      .slide{
+        flex-direction: column;
+        width: calc(100% - 30px);
+        .imgbox{
+          width: 100%;
+          height: 220px;
+          min-width: fit-content;
+          .img{
+            top: 8px;
+            left: 14px;
+            height: 150px;
+            width: 150px;
+          }
+        }
+        .contentbox{
+          width: 100%;
+          max-width: fit-content;
+          padding: 20px 0;
+          .para{
+            span:first-child{
+              left: 0;
+            }
+          }
+          .para{
+            p{
+              padding: 30px 10px;
+            }
+          }
+          .info{
+    
+          }
+        }
+      }
+    }
+  }
+}

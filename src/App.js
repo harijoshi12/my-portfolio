@@ -1,6 +1,5 @@
 import React, {  useState } from 'react';
 import {Route, Switch} from "react-router-dom"
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle"
 import Layout from './Ui/Layout';
 import './App.css'
 
@@ -21,7 +20,6 @@ function App() {
             <Route exact path="/" component={HomePage}></Route>
             <Route exact path="/about" component={AboutPage}></Route>
             <Route exact path="/my-resume" component={MyResumePage}></Route>
-          <ThemeToggle/>
           <SocialLinks/>
         </Layout>
       </Switch>

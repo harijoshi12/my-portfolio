@@ -20,6 +20,9 @@ function Cursor({isMousein}) {
     window.addEventListener('touchend', ()=>{
       setIsTouch(false)
     })
+    window.addEventListener('mousemove',()=>{
+      setIsTouchScreen(false)
+    })
     
     function funMousemove (e) {
       cursorY = e.clientY

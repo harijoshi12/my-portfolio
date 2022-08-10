@@ -61,4 +61,10 @@
 }
 .sideNavigation li.active a::after {
   border: 2px solid transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .sideNavigation {
+    display: none;
+  }
 }/*# sourceMappingURL=SideNavigation.css.map */

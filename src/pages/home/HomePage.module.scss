@@ -1,5 +1,5 @@
 html{
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 #homePage{
     background-color: rgb(41, 41, 41);
@@ -7,7 +7,7 @@ html{
 }
 
 .sec{
-    border: 1px solid white;
+    // border: 1px solid white;
     overflow: hidden;
     padding: 5px;
     .content_wrapper{

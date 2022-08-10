@@ -1,3 +1,6 @@
+$dark: rgb(48, 48, 48);
+$light: rgb(209, 209, 209);
+
 .contact{
   *{
     // border: 2px solid rgb(0, 0, 0);
@@ -9,12 +12,13 @@
     // overflow: hidden;
     padding: 0;
     margin: 0;
-    max-width: 900px;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     // border: 2px solid yellow;
     background-color: rgb(255, 255, 255);
+    // background-color: $dark;
     box-shadow: 0 0 30px 5px black;
   }
   .content_left{
@@ -50,7 +54,8 @@
       text-align: left;
       text-transform: uppercase;
       font-size: 50px;
-      color: black;
+      color: $dark;
+      // color: $light;
       font-style: normal;
       font-family: sans-serif;
       font-weight: 500;
@@ -81,10 +86,13 @@
             border: 0;
             outline: none;
             background-color: transparent;
-            border-bottom: 2px solid rgb(76, 76, 76);
+            border-bottom: 2px solid $dark;
+            // border-bottom: 2px solid $light;
             padding-top: 15px;
             padding-left: 3px;
             font-size: 22px;
+            color: $dark;
+            // color: $light;
           }
           label{
             pointer-events: none;
@@ -101,19 +109,12 @@
               font-family: sans-serif;
               position: absolute;
               transition: all 0.2s ease;
-              color: rgb(76, 76, 76);
+              color: $dark;
+              // color: $light;
               left: 3px;
               top: 55%;
               transform: translateY(-50%);
             }
-          }
-          .border_bottom{
-            // position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            border-bottom: 3px solid rgb(76, 76, 76);
-
           }
         }
         .textarea{
@@ -126,9 +127,12 @@
             height: 140px;
             border: 0;
             font-size: 20px;
-            border-bottom: 2px solid rgb(76, 76, 76);
+            border-bottom: 2px solid $dark;
+            // border-bottom: 2px solid $light;
             outline: none;
             background-color: transparent;
+            color: $dark;
+            // color: $light;
           }
           label{
             position: absolute;
@@ -136,7 +140,6 @@
             height: 170px;
             bottom: 0;
             left: 0;
-            // border: 2px solid black;
             text-transform: uppercase;
             span{
               top: 33px;  
@@ -147,6 +150,8 @@
       }
     }
     button{
+      border: 0;
+      outline: none;
       position: relative;
       font-size: 20px;
       letter-spacing: 2px;
@@ -156,8 +161,10 @@
       border-radius: 40px;
       margin:auto;
       margin-top: 40px;
-      background-color: black;
-      color: white;
+      background-color: rgb(24, 24, 24);
+      // background-color: $light;
+      color: $light;
+      // color: $dark;
       box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.6);
     }
   }
@@ -209,6 +216,7 @@
         background-size: 75%;
         background-position: 50% 20%;
         box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.8);
+        // box-shadow: inset 0 0 0 1000px rgba(48, 48, 48, 0.8);
         transform: rotateZ(0);
       }
     }
@@ -231,8 +239,8 @@
 @media screen and (max-width: 576px) {
   .contact.sec{
     .content_wrapper{
-      padding-left: 20px;
-      padding-right: 20px;
+      // padding-left: 20px;
+      // padding-right: 20px;
       .content{
         margin: 0;
         padding: 0;

@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #homePage {
   background-color: rgb(41, 41, 41);
   position: relative;
 }
 
 .sec {
-  border: 1px solid white;
   overflow: hidden;
   padding: 5px;
 }
@@ -604,10 +607,12 @@
 }
 .portfolio .content_wrapper .content {
   max-width: 980px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 }
 .portfolio .content_wrapper .content .card {
   background-color: transparent;
+  border-radius: 0;
 }
 .portfolio .portfolio_item {
   position: relative;
@@ -652,7 +657,7 @@
 }
 .portfolio .portfolio_item div p {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 3px;
 }
 .portfolio .portfolio_item div p span:nth-child(2) {
@@ -754,11 +759,40 @@
     height: 210px;
   }
 }
+.testimonial .content_wrapper .content {
+  width: 100%;
+  max-width: 1100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: white;
+  box-shadow: 0 0 30px 5px black;
+}
+.testimonial .content_wrapper .content h1, .testimonial .content_wrapper .content h4 {
+  padding: 7px;
+  margin: 0;
+  color: black;
+  font-family: sans-serif;
+  font-style: normal;
+}
+.testimonial .content_wrapper .content h4 {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 992px) {
+  .testimonial .content_wrapper .content {
+    padding: 0px;
+    padding-top: 50px;
+  }
+}
 .contact .content {
   position: relative;
   padding: 0;
   margin: 0;
-  max-width: 900px;
+  max-width: 1100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -798,7 +832,7 @@
   text-align: left;
   text-transform: uppercase;
   font-size: 50px;
-  color: black;
+  color: rgb(48, 48, 48);
   font-style: normal;
   font-family: sans-serif;
   font-weight: 500;
@@ -829,10 +863,11 @@
   border: 0;
   outline: none;
   background-color: transparent;
-  border-bottom: 2px solid rgb(76, 76, 76);
+  border-bottom: 2px solid rgb(48, 48, 48);
   padding-top: 15px;
   padding-left: 3px;
   font-size: 22px;
+  color: rgb(48, 48, 48);
 }
 .contact .content_right form .row .input_field label {
   pointer-events: none;
@@ -850,16 +885,10 @@
   font-family: sans-serif;
   position: absolute;
   transition: all 0.2s ease;
-  color: rgb(76, 76, 76);
+  color: rgb(48, 48, 48);
   left: 3px;
   top: 55%;
   transform: translateY(-50%);
-}
-.contact .content_right form .row .input_field .border_bottom {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 3px solid rgb(76, 76, 76);
 }
 .contact .content_right form .row .textarea {
   margin-top: 20px;
@@ -872,9 +901,10 @@
   height: 140px;
   border: 0;
   font-size: 20px;
-  border-bottom: 2px solid rgb(76, 76, 76);
+  border-bottom: 2px solid rgb(48, 48, 48);
   outline: none;
   background-color: transparent;
+  color: rgb(48, 48, 48);
 }
 .contact .content_right form .row .textarea label {
   position: absolute;
@@ -889,6 +919,8 @@
   transform: translateY(0%);
 }
 .contact .content_right button {
+  border: 0;
+  outline: none;
   position: relative;
   font-size: 20px;
   letter-spacing: 2px;
@@ -898,8 +930,8 @@
   border-radius: 40px;
   margin: auto;
   margin-top: 40px;
-  background-color: black;
-  color: white;
+  background-color: rgb(24, 24, 24);
+  color: rgb(209, 209, 209);
   box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.6);
 }
 
@@ -958,10 +990,6 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .contact.sec .content_wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .contact.sec .content_wrapper .content {
     margin: 0;
     padding: 0;
