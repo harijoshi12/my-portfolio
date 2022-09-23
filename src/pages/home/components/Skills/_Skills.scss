@@ -41,7 +41,8 @@
             .progLang:nth-child(1){
                 .progressBarInner{
                     background: rgb(0,220,255);
-                    background: linear-gradient(45deg, rgba(0,220,255,1) 0%, rgba(127,0,255,1) 100%);
+                    // background: linear-gradient(45deg, rgba(0,220,255,1) 0%, rgba(127,0,255,1) 100%);
+                    background: linear-gradient(45deg, rgb(0,220,255) 0%, rgba(255,0,220,1) 100%);
                 }
             }
             .progLang:nth-child(2){

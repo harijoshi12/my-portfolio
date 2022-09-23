@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <meta name="description" content="This is my Portfolio website" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -351,13 +356,17 @@
         </div>
       </div>
     </div>
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
     <script>
       // const lastNameLetters = document.querySelectorAll(".profession svg>path");
       // console.log(lastNameLetters);
       // for (let i = 0; i < lastNameLetters.length; i++) {
       //   console.log(`letter ${i} is ${lastNameLetters[i].getTotalLength()}`);
       // }
+      const preLoaderPage = document.getElementById("preLoader_page");
+      window.addEventListener("resize", () => {
+        preLoaderPage.style.height = "100vh";
+      });
     </script>
   </body>
 </html>

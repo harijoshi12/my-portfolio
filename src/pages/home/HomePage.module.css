@@ -301,7 +301,7 @@ html {
 }
 .skills .content_left .content_container .progLang:nth-child(1) .progressBarInner {
   background: rgb(0, 220, 255);
-  background: linear-gradient(45deg, rgb(0, 220, 255) 0%, rgb(127, 0, 255) 100%);
+  background: linear-gradient(45deg, rgb(0, 220, 255) 0%, rgb(255, 0, 220) 100%);
 }
 .skills .content_left .content_container .progLang:nth-child(2) .progressBarInner {
   background: rgb(0, 220, 255);
