@@ -46,9 +46,7 @@ function HomePage() {
     ];
     // const secBool = [false, false, false, false, false,false, false, false ]
     const secBool = sections.map((sec) => false);
-    for (let i in secBool) {
-      console.log("secBool===> ", i, ": ", secBool[i]);
-    }
+
     const sideNavLinks = sideNavRef.current.children;
 
     function getSecPos() {

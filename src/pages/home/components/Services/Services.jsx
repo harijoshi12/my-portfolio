@@ -31,19 +31,19 @@ const servicesData = [
       { id: 3, icon: <GrNode /> },
     ],
     title: "Backend Development",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus.",
+    desc: "It's about building a product that works seamlessly, meet market needs and creating an enjoyable user experience that earns your clients loyalty. I prefer NodeJs, Django, MongoDB & Sql",
   },
   {
     id: 4,
     icons: [{ id: 1, icon: <SiWordpress /> }],
     title: "Wordpress Development",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus.",
+    desc: "The most effective content management system. It has a tone of features and plugins that make managing websites quick and easy. Affordable WordPress development services are provided by me",
   },
   {
     id: 5,
     icons: [{ id: 1, icon: <SiHiveBlockchain /> }],
     title: "Blockchain Development",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem?  Sed dolorum tempora illo consequuntur cumque, esse minus.",
+    desc: "Blockchain is revolutionizing industries including fintech, real estate, and supply chain management. Blockchain development services help create decentralized apps that provide increased traceability and security of data and transactions.",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const servicesData = [
       { id: 3, icon: <BsApple /> },
     ],
     title: "App Development",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, exercitationem? Sed dolorum tempora illo consequuntur cumque, esse minus.",
+    desc: "Strengthen your customer engagement through affordable and user-friendly mobile app development.  I offer the best mobile app development at an affordable price compared to others in the international market.",
   },
 ];
 

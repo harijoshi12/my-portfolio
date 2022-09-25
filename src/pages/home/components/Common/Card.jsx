@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../HomePage.module.css";
+import Tilt from "react-parallax-tilt";
 
 export const PortfolioItem = (props) => {
   const { bg, title, desc, features, git_link, live_demo_link } = props;
@@ -52,6 +53,7 @@ export const UpcommingProjectItem = (props) => {
 
 export const ServiceItem = ({ id, icons, title, desc }) => {
   return (
+    // <Tilt>
     <div
       className={`${styles.card}  ${styles.services_item} services_item card`}
     >
@@ -63,5 +65,6 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
       <h2>{title}</h2>
       <p>{desc}</p>
     </div>
+    // </Tilt>
   );
 };
