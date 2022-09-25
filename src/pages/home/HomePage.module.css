@@ -163,7 +163,8 @@ html {
 
 @media only screen and (max-width: 768px) {
   .hero .content_wrapper .content {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 30px;
   }
   .hero .content_wrapper .content_left {
     width: 100%;
@@ -175,9 +176,6 @@ html {
   }
   .hero .content_wrapper .content_left .btns .btn_outer button {
     font-size: 18px;
-  }
-  .hero .content_wrapper .content_right {
-    display: none;
   }
 }
 @media only screen and (max-width: 576px) {

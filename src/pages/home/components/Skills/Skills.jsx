@@ -7,7 +7,7 @@ import styles from "../../HomePage.module.css";
 
 export const ProgLang = ({ title, level }) => {
   return (
-    <div className={styles.progLang}>
+    <div data-aos="fade-up" className={styles.progLang}>
       <span className={styles.sm_title_wrapper}>
         <span className={styles.sm_title}>{title}</span>
       </span>
@@ -45,7 +45,7 @@ const TechSkill = ({ title, level }) => {
   }, [level]);
   return (
     <>
-      <div className={styles.circle_outer}>
+      <div data-aos="fade-up" className={styles.circle_outer}>
         <div className={styles.circle_inner}>
           <span className={styles.sm_title}>{title}</span>
           <br />

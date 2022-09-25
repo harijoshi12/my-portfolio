@@ -10,6 +10,10 @@ import Contact from "./components/Contact/Contact";
 import styles from "./HomePage.module.css";
 import React, { useRef, useState, useEffect } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+// AOS.init();
+
 function HomePage() {
   const [show, setShow] = useState(false);
   const heroRef = useRef(null);
@@ -21,6 +25,12 @@ function HomePage() {
   const testimonialRef = useRef(null);
   const contactRef = useRef(null);
   const sideNavRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 80,
+    });
+  }, []);
 
   useEffect(() => {
     function offset(el) {
@@ -45,7 +55,7 @@ function HomePage() {
       contactRef,
     ];
     // const secBool = [false, false, false, false, false,false, false, false ]
-    const secBool = sections.map((sec) => false);
+    // const secBool = sections.map((sec) => false);
 
     const sideNavLinks = sideNavRef.current.children;
 

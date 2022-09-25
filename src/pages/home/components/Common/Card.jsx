@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../HomePage.module.css";
-import Tilt from "react-parallax-tilt";
+import VanillaTilt from "vanilla-tilt";
 
 export const PortfolioItem = (props) => {
   const { bg, title, desc, features, git_link, live_demo_link } = props;
@@ -52,10 +52,44 @@ export const UpcommingProjectItem = (props) => {
 };
 
 export const ServiceItem = ({ id, icons, title, desc }) => {
+  const [isTilt, setIsTilt] = useState(false);
+  const tilt = useRef(null);
+  useEffect(() => {
+    if (isTilt) {
+      VanillaTilt.init(tilt.current, {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.7,
+      });
+    } else {
+      // tilt.current?.vanillaTilt?.destroy();
+      tilt.current.style = "";
+    }
+  }, [isTilt]);
+
+  useEffect(() => {
+    const elTilt = tilt.current;
+    const fun1 = () => {
+      setIsTilt(true);
+    };
+    const fun2 = () => {
+      setIsTilt(false);
+    };
+    tilt.current.addEventListener("mouseenter", fun1);
+    tilt.current.addEventListener("mouseleave", fun2);
+    return () => {
+      elTilt?.removeEventListener("mouseenter", fun1);
+      elTilt?.removeEventListener("mouseleave", fun2);
+    };
+  }, []);
+
   return (
-    // <Tilt>
     <div
-      className={`${styles.card}  ${styles.services_item} services_item card`}
+      ref={tilt}
+      data-aos={id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
+      data-aos-delay={id % 2 === 0 ? 250 : 0}
+      className={`${styles.card} ${styles.services_item} services_item card`}
     >
       <div className={`${styles.iconbox} iconbox`}>
         {icons.map((icon, idx) => {
@@ -65,6 +99,5 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
       <h2>{title}</h2>
       <p>{desc}</p>
     </div>
-    // </Tilt>
   );
 };

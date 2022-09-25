@@ -1,23 +1,48 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styles from "../../HomePage.module.css";
 // import BgAnimation from './BgAnimation'
 function Hero(props, ref) {
+  const [isSmall, setIsSmall] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsSmall(true);
+    } else {
+      setIsSmall(false);
+    }
+  }, []);
   return (
     <section id="top" ref={ref} className={`${styles.sec} ${styles.hero}`}>
-      {/* <BgAnimation/> */}
+      {/* <BgAnimation /> */}
       <div className={styles.overlay}></div>
       <div className={styles.content_wrapper}>
         <div className={styles.content}>
           <div className={styles.content_left}>
-            <h4>Hi! I am </h4>
-            <h1> Hari Joshi</h1>
-            <p>
+            <h4 data-aos="fade-right" data-aos-delay="200">
+              Hi! I am{" "}
+            </h4>
+            <h1
+              data-aos={isSmall ? "fade-right" : "fade-left"}
+              data-aos-delay="300"
+            >
+              {" "}
+              Hari Joshi
+            </h1>
+            <p
+              data-aos="fade-right"
+              data-aos-delay={isSmall ? "0" : "500"}
+              data-aos-offset="30"
+            >
               "I design & build digital products that your users will love"{" "}
               <br />
               UI/UX Designer, Frontend & Backend, Blockchain, Web3, developer
             </p>
 
-            <div className={styles.btns}>
+            <div
+              data-aos={!isSmall ? "fade-right" : "fade-left"}
+              data-aos-delay={isSmall ? "0" : "500"}
+              data-aos-offset="30"
+              className={styles.btns}
+            >
               <span className={styles.btn_outer}>
                 <button>Download Resume</button>
               </span>
@@ -26,7 +51,11 @@ function Hero(props, ref) {
               </span>
             </div>
           </div>
-          <div className={styles.content_right}>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="300"
+            className={styles.content_right}
+          >
             <div className={styles.imgbox}></div>
           </div>
         </div>
