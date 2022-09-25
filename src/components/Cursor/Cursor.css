@@ -1,53 +1,53 @@
-body{
-    cursor: none;
-    overflow-x: hidden;
+body {
+  cursor: none;
+  overflow-x: hidden;
 }
 .mobileCursor {
-    z-index: 2000;
-    width: 35px;
-    height: 35px;
-    top: -100px;
-    left: -100px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    background: rgba(4, 226, 226, 0.7);
-    border: 2px solid rgba(255, 255, 255, 0.9);
+  z-index: 2000;
+  width: 35px;
+  height: 35px;
+  top: -100px;
+  left: -100px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(4, 226, 226, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
-.cursor{
-    width: 50px;
-    height: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    top: -100px;
-    left: -100px;
-    transform: translate(-50%, -50%);
-    transform-origin: 150% 150%;
-    transition: all 0.1s linear;
-    z-index: 299;
-    /* backdrop-filter: invert(); */
+.cursor {
+  width: 50px;
+  height: 50px;
+  /* border: 2px solid rgba(255, 255, 255, 0.9); */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  top: -100px;
+  left: -100px;
+  transform: translate(-50%, -50%);
+  transform-origin: 150% 150%;
+  transition: all 0.1s linear;
+  z-index: 299;
+  backdrop-filter: invert();
 }
-.cursor-point{
-    width: 8px;
-    height: 8px;
-    /* border-radius: 50%; */
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    pointer-events: none;
-    z-index: 301;
-    background: rgb(4, 226, 226);
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-    transition-property: background, transform;
+.cursor-point {
+  width: 8px;
+  height: 8px;
+  /* border-radius: 50%; */
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  pointer-events: none;
+  z-index: 301;
+  background: rgb(4, 226, 226);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  transition-property: background, transform;
 }
-.link-grow{
-    transform: scale(1.5);
-    border-radius: 50%;
-    border: 0;
-    /* background: rgb(238, 255, 0); */
+.link-grow {
+  transform: scale(1.5);
+  border-radius: 50%;
+  border: 0;
+  /* background: rgb(238, 255, 0); */
 }

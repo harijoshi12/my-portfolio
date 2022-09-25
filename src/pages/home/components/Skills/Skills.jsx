@@ -1,6 +1,4 @@
 import React, { forwardRef } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-
 import { useEffect } from "react";
 import { useState } from "react";
 import { useRef } from "react";
@@ -9,19 +7,17 @@ import styles from "../../HomePage.module.css";
 
 export const ProgLang = ({ title, level }) => {
   return (
-    <AnimationOnScroll animateOnce={true} animateIn="animate__pulse">
-      <div className={styles.progLang}>
-        <span className={styles.sm_title_wrapper}>
-          <span className={styles.sm_title}>{title}</span>
-        </span>
-        <span className={styles.progressBarOuter}>
-          <span
-            className={styles.progressBarInner}
-            style={{ width: `${level * 10}%` }}
-          ></span>
-        </span>
-      </div>
-    </AnimationOnScroll>
+    <div className={styles.progLang}>
+      <span className={styles.sm_title_wrapper}>
+        <span className={styles.sm_title}>{title}</span>
+      </span>
+      <span className={styles.progressBarOuter}>
+        <span
+          className={styles.progressBarInner}
+          style={{ width: `${level * 10}%` }}
+        ></span>
+      </span>
+    </div>
   );
 };
 
@@ -49,47 +45,45 @@ const TechSkill = ({ title, level }) => {
   }, [level]);
   return (
     <>
-      <AnimationOnScroll animateOnce={true} animateIn="animate__pulse">
-        <div className={styles.circle_outer}>
-          <div className={styles.circle_inner}>
-            <span className={styles.sm_title}>{title}</span>
-            <br />
-            <span ref={percent} className={styles.level_percent}>
-              {levelutput}%
-            </span>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="120"
-            height="110"
-            viewBox="0 0 120 110"
-            fill="none"
-          >
-            <path
-              ref={svgCircle}
-              d="M115 55C115 82.2136 90.7941 105 60 105C29.2059 105 5 82.2136 5 55C5 27.7864 29.2059 5 60 5C90.7941 5 115 27.7864 115 55Z"
-              fill="#D9D9D9"
-              strokeDashoffset={num}
-              strokeLinecap="round"
-              stroke="url(#paint0_linear_685_10)"
-              strokeWidth="10"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_685_10"
-                x1="60"
-                y1="0"
-                x2="60"
-                y2="110"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#E91E63" />
-                <stop offset="1" stopColor="#673AB7" />
-              </linearGradient>
-            </defs>
-          </svg>
+      <div className={styles.circle_outer}>
+        <div className={styles.circle_inner}>
+          <span className={styles.sm_title}>{title}</span>
+          <br />
+          <span ref={percent} className={styles.level_percent}>
+            {levelutput}%
+          </span>
         </div>
-      </AnimationOnScroll>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="120"
+          height="110"
+          viewBox="0 0 120 110"
+          fill="none"
+        >
+          <path
+            ref={svgCircle}
+            d="M115 55C115 82.2136 90.7941 105 60 105C29.2059 105 5 82.2136 5 55C5 27.7864 29.2059 5 60 5C90.7941 5 115 27.7864 115 55Z"
+            fill="#D9D9D9"
+            strokeDashoffset={num}
+            strokeLinecap="round"
+            stroke="url(#paint0_linear_685_10)"
+            strokeWidth="10"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_685_10"
+              x1="60"
+              y1="0"
+              x2="60"
+              y2="110"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#E91E63" />
+              <stop offset="1" stopColor="#673AB7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" width="110" height="100">
       <defs>
         <linearGradient id="GradientColor">

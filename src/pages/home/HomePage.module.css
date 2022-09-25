@@ -64,7 +64,9 @@ html {
 }
 
 @media only screen and (max-width: 576px) {
-  .portfolio .card, .services .card, .upCommingProjects .card {
+  .portfolio .card,
+.services .card,
+.upCommingProjects .card {
     margin: 0 4px;
   }
 }
@@ -80,109 +82,119 @@ html {
 }
 .hero .content_wrapper .content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
-  text-align: center;
+  max-width: 1000px;
 }
-.hero .content_wrapper h4 {
+.hero .content_wrapper .content_left {
+  width: 65%;
+  padding: 10px;
+}
+.hero .content_wrapper .content_left h4 {
   font-size: 30px;
   white-space: nowrap;
+  padding: 7px 15px;
 }
-.hero .content_wrapper h1 {
+.hero .content_wrapper .content_left h1 {
+  padding: 0 10px;
   font-size: 4.5rem;
+  color: rgb(0, 255, 187);
 }
-.hero .content_wrapper h3 {
+.hero .content_wrapper .content_left p {
   margin: 15px 0;
   font-size: 22px;
   font-weight: 100;
   line-height: 32px;
   letter-spacing: 1px;
-  padding: 40px;
+  padding: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.hero .content_wrapper .btns {
-  width: 80%;
+.hero .content_wrapper .content_left .btns {
+  width: 75%;
+  height: 100px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
 }
-.hero .content_wrapper .btns button {
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 22px;
+.hero .content_wrapper .content_left .btns .btn_outer {
+  border-radius: 50px;
+  padding: 7px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid transparent;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
-.hero .content_wrapper .btns button:first-child {
-  border: 2px solid rgb(255, 255, 255);
-  background-color: transparent;
-  color: white;
-  margin: 0 15px;
-  width: 50%;
-  max-width: 300px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.hero .content_wrapper .btns button:first-child:hover {
-  color: black;
-  background-color: rgb(142, 24, 0);
-}
-.hero .content_wrapper .btns button:last-child {
-  margin: 0 15px;
-  background: rgb(255, 255, 255);
-  color: black;
-  width: 30%;
-  max-width: 220px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.hero .content_wrapper .btns button:last-child:hover {
-  color: white;
+.hero .content_wrapper .content_left .btns .btn_outer button {
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0;
+  outline: none;
   background-color: black;
-  border: 2px solid white;
+  color: rgb(0, 255, 187);
+  transition: all 0.2s ease;
+}
+.hero .content_wrapper .content_left .btns .btn_outer:hover {
+  border: 3px solid rgb(0, 255, 187);
+  transform: scale(1.1);
+}
+.hero .content_wrapper .content_right {
+  width: 30%;
+  min-width: 300px;
+}
+.hero .content_wrapper .content_right .imgbox {
+  background-image: url(../../media/images/hero/myPic.jpg);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(180deg);
+  border: 2px solid rgb(0, 255, 187);
 }
 
+@media only screen and (max-width: 768px) {
+  .hero .content_wrapper .content {
+    flex-direction: column;
+  }
+  .hero .content_wrapper .content_left {
+    width: 100%;
+    text-align: center;
+  }
+  .hero .content_wrapper .content_left .btns {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .hero .content_wrapper .content_left .btns .btn_outer button {
+    font-size: 18px;
+  }
+  .hero .content_wrapper .content_right {
+    display: none;
+  }
+}
 @media only screen and (max-width: 576px) {
   .hero .content_wrapper {
     width: 100%;
   }
-  .hero .content_wrapper h4 {
-    font-size: 30px;
-    padding: 10px 0;
-  }
-  .hero .content_wrapper h1 {
-    font-size: 3.2rem;
-  }
-  .hero .content_wrapper h3 {
-    margin: 15px 0;
-    font-size: 22px;
-    padding: 40px 10px;
-  }
-  .hero .content_wrapper .btns {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero .content_wrapper .btns button {
-    padding: 7px 25px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 100px;
-  }
-  .hero .content_wrapper .btns button:last-child {
-    margin-top: 15px;
+  .hero .content_wrapper .content_left h1 {
+    font-size: 3.5rem;
   }
 }
 .about .content_wrapper .content {
-  max-width: 950px;
-  padding-top: 50px;
+  max-width: 1000px;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 20px 0;
 }
 .about .content_left {
   justify-self: center;
@@ -206,18 +218,20 @@ html {
   height: 102%;
   top: -22px;
   left: -22px;
-  border-top: 10px solid brown;
-  border-left: 10px solid brown;
+  border-top: 10px solid rgb(0, 255, 187);
+  border-left: 10px solid rgb(0, 255, 187);
 }
 .about .content_right {
   width: 350px;
   max-width: 480px;
   flex-grow: 1;
   margin: 15px;
+  margin-top: -5px;
+  font-family: sans-serif;
 }
 .about .content_right h1 {
   font-size: 35px;
-  color: brown;
+  color: rgb(0, 255, 187);
   margin-bottom: 30px;
 }
 .about .content_right h1 span {
@@ -226,7 +240,10 @@ html {
   margin-left: 4px;
   height: 6px;
   width: 60px;
-  background-color: brown;
+  background-color: rgb(0, 255, 187);
+}
+.about .content_right h3 {
+  font-family: cursive;
 }
 .about .content_right p {
   font-size: 20px;
@@ -237,6 +254,7 @@ html {
   margin-top: 26px;
   font-size: 20px;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 576px) {
@@ -249,8 +267,8 @@ html {
     height: 102%;
     top: -18px;
     left: -18px;
-    border-top: 6px solid brown;
-    border-left: 6px solid brown;
+    border-top: 6px solid rgb(0, 255, 187);
+    border-left: 6px solid rgb(0, 255, 187);
   }
   .about .content_right {
     max-width: 400px;
@@ -260,6 +278,9 @@ html {
   .about .content_right h1 {
     margin-left: 5px;
     font-size: 32px;
+  }
+  .about .content_right h3 {
+    padding-left: 5px;
   }
   .about .content_right p {
     font-size: 18px;
@@ -369,6 +390,8 @@ html {
   border-radius: 10px;
   height: 12px;
   background-color: rgb(240, 240, 240);
+  background: rgb(255, 230, 0);
+  background: linear-gradient(45deg, rgb(0, 220, 255) 0%, rgb(255, 0, 220) 100%);
   -webkit-animation: skillbar 4s ease-in-out forwards;
           animation: skillbar 4s ease-in-out forwards;
 }
@@ -592,6 +615,8 @@ html {
   font-size: 17px;
   padding: 5px 10px;
   font-weight: 100;
+  line-height: 22px;
+  font-family: sans-serif;
   color: rgb(240, 240, 240);
 }
 

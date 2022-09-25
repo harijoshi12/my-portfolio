@@ -1,25 +1,24 @@
-.common{
-    
-    .card{
-        overflow: hidden;
-        border-radius: 10px;
-        margin: 10px;
-        min-width: 300px;
-        align-self: stretch;
-        width: 300px;
-        max-width: 450px;
-        flex-grow: 1;
-        background-color: rgb(48, 48, 48);
-        box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
-    }
+.common {
+  .card {
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 300px;
+    align-self: stretch;
+    width: 300px;
+    max-width: 450px;
+    flex-grow: 1;
+    background-color: rgb(48, 48, 48);
+    box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.4);
+  }
 }
 
-@media only screen and (max-width: 576px){
-    .portfolio, .services, .upCommingProjects{
-        .card{
-            margin: 0 4px;
-
-        }
+@media only screen and (max-width: 576px) {
+  .portfolio,
+  .services,
+  .upCommingProjects {
+    .card {
+      margin: 0 4px;
     }
-    
+  }
 }
