@@ -158,9 +158,11 @@
           border: 1px solid rgb(0, 0, 0);
           box-shadow: inset 0 0 10x black;
           border-radius: 10px;
+          overflow: hidden;
           .progressBarInner {
             border-radius: 10px;
             height: 12px;
+            width: 0%;
             background-color: rgb(240, 240, 240);
             background: rgb(255, 230, 0);
             background: linear-gradient(
@@ -168,8 +170,9 @@
               rgb(0, 220, 255) 0%,
               rgba(255, 0, 220, 1) 100%
             );
+            transition: all 1s linear;
 
-            animation: skillbar 4s ease-in-out forwards;
+            // animation: skillbar 4s ease-in-out forwards;
           }
         }
       }
@@ -237,8 +240,9 @@
             // stroke: url(#GradientColor);
             stroke-width: 10px;
             stroke-dasharray: 330;
-            // stroke-dashoffset: 10;
-            animation: circleBar 4s ease-in-out forwards;
+            transition: all 3s linear;
+            stroke-dashoffset: 330;
+            // animation: circleBar 4s ease-in-out forwards;
           }
         }
       }

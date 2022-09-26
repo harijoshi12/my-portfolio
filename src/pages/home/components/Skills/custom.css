@@ -1,0 +1,8 @@
+[data-aos="proglang"] {
+  opacity: 0.9;
+  transition-property: all;
+}
+
+[data-aos="proglang"].aos-animate {
+  opacity: 1;
+}

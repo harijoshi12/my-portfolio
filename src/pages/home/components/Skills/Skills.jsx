@@ -4,48 +4,114 @@ import { useState } from "react";
 import { useRef } from "react";
 import { progLangs, techSkills } from "../../../../data";
 import styles from "../../HomePage.module.css";
+import "./custom.css";
 
-export const ProgLang = ({ title, level }) => {
+export const ProgLang = ({ id, title, level }) => {
+  const innerRef = useRef(null);
+  const proglangRef = useRef(null);
+  useEffect(() => {
+    const fun1 = ({ detail }) => {
+      // console.log("animated in", detail);
+      if (detail.classList.contains("aos-animate")) {
+        innerRef.current.style.width = `${level * 10}%`;
+        proglangRef.current.style.opacity = "1";
+      } else {
+        proglangRef.current.style.opacity = "0";
+        innerRef.current.style.width = `0%`;
+      }
+    };
+    // const fun2 = ({ detail }) => {
+    //   console.log("animated out", detail);
+    // };
+    document.addEventListener(`aos:in:innerBar${id}`, fun1);
+    // document.addEventListener(`aos:out:innerBar${id}`, fun2);
+    return () => {
+      document.removeEventListener(`aos:in:innerBar${id}`, fun1);
+      // document.removeEventListener(`aos:out:innerBar${id}`, fun2);
+    };
+  }, [id, level]);
+
   return (
-    <div data-aos="fade-up" className={styles.progLang}>
+    <div
+      ref={proglangRef}
+      data-aos="fade-up"
+      data-aos-offset="80"
+      className={styles.progLang}
+    >
       <span className={styles.sm_title_wrapper}>
         <span className={styles.sm_title}>{title}</span>
       </span>
       <span className={styles.progressBarOuter}>
         <span
+          ref={innerRef}
+          data-aos-offset="80"
+          data-aos="slide-right"
+          data-aos-duration="0"
+          data-aos-easing="linear"
+          data-aos-id={`innerBar${id}`}
           className={styles.progressBarInner}
-          style={{ width: `${level * 10}%` }}
+          // style={{ width: `${level * 10}%` }}
         ></span>
       </span>
     </div>
   );
 };
 
-const TechSkill = ({ title, level }) => {
+const TechSkill = ({ id, title, level }) => {
   const [levelutput, setLevelOutput] = useState("");
   const svgCircle = useRef(null);
   const percent = useRef(null);
   const num = 330 - level * 33;
-  useEffect(() => {
-    let counter = 0;
-    const idTime = setInterval(() => {
-      if (counter === level * 10) {
-        clearInterval(idTime);
-      } else {
-        counter += 1;
-        setLevelOutput(counter);
-      }
-    }, 50);
+  // useEffect(() => {
+  //   let counter = 0;
+  //   const idTime = setInterval(() => {
+  //     if (counter === level * 10) {
+  //       clearInterval(idTime);
+  //     } else {
+  //       counter += 1;
+  //       setLevelOutput(counter);
+  //     }
+  //   }, 50);
 
-    return () => {
-      clearInterval(idTime);
+  //   return () => {
+  //     clearInterval(idTime);
+  //   };
+  //   // console.log("num", num)
+  //   // console.log(svgCircle.current.getTotalLength())
+  // }, [level]);
+
+  useEffect(() => {
+    const fun1 = ({ detail }) => {
+      if (detail.classList.contains("aos-animate")) {
+        // svgCircle.current.style.animation = "circleBar 4s ease-in-out forwards";
+        svgCircle.current.style.transition = "all 3s linear";
+        svgCircle.current.style.strokeDashoffset = num;
+        let counter = 0;
+        const idTime = setInterval(() => {
+          if (counter === level * 10) {
+            clearInterval(idTime);
+          } else {
+            counter += 1;
+            setLevelOutput(counter);
+          }
+        }, level * 6.5);
+      } else {
+        svgCircle.current.style.transition = "";
+        svgCircle.current.style.strokeDashoffset = "330";
+      }
     };
-    // console.log("num", num)
-    // console.log(svgCircle.current.getTotalLength())
-  }, [level]);
+    document.addEventListener(`aos:in:circle${id}`, fun1);
+    return () => {
+      document.removeEventListener(`aos:in:circle${id}`, fun1);
+    };
+  }, [id, level, num]);
   return (
     <>
-      <div data-aos="fade-up" className={styles.circle_outer}>
+      <div
+        data-aos="fade-up"
+        data-aos-id={`circle${id}`}
+        className={styles.circle_outer}
+      >
         <div className={styles.circle_inner}>
           <span className={styles.sm_title}>{title}</span>
           <br />
@@ -64,7 +130,8 @@ const TechSkill = ({ title, level }) => {
             ref={svgCircle}
             d="M115 55C115 82.2136 90.7941 105 60 105C29.2059 105 5 82.2136 5 55C5 27.7864 29.2059 5 60 5C90.7941 5 115 27.7864 115 55Z"
             fill="#D9D9D9"
-            strokeDashoffset={num}
+            // strokeDashoffset={num}
+            // strokeDashoffset="330"
             strokeLinecap="round"
             stroke="url(#paint0_linear_685_10)"
             strokeWidth="10"
@@ -113,7 +180,9 @@ const Skills = (props, ref) => {
       ref={ref}
       className={`${styles.sec} ${styles.skills} ${styles.common}`}
     >
-      <h1 className={styles.title}>My Skills</h1>
+      <h1 data-aos="rotate-c" className={styles.title}>
+        My Skills
+      </h1>
       <div className={styles.content_wrapper}>
         <div className={styles.content}>
           <div className={`${styles.content_left} ${styles.card}`}>
