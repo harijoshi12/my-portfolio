@@ -57,14 +57,15 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
   useEffect(() => {
     if (isTilt) {
       VanillaTilt.init(tilt.current, {
-        max: 25,
-        speed: 400,
+        max: 35,
+        speed: 300,
         glare: true,
         "max-glare": 0.7,
       });
     } else {
-      // tilt.current?.vanillaTilt?.destroy();
-      tilt.current.style = "";
+      setTimeout(() => {
+        tilt.current.style = "";
+      }, 50);
     }
   }, [isTilt]);
 
@@ -76,10 +77,10 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
     const fun2 = () => {
       setIsTilt(false);
     };
-    tilt.current.addEventListener("mouseenter", fun1);
+    tilt.current.addEventListener("mouseover", fun1);
     tilt.current.addEventListener("mouseleave", fun2);
     return () => {
-      elTilt?.removeEventListener("mouseenter", fun1);
+      elTilt?.removeEventListener("mouseover", fun1);
       elTilt?.removeEventListener("mouseleave", fun2);
     };
   }, []);
@@ -87,8 +88,8 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
   return (
     <div
       ref={tilt}
-      data-aos={id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
-      data-aos-delay={id % 2 === 0 ? 250 : 0}
+      data-aos={isTilt ? null : id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
+      data-aos-delay={isTilt ? null : id % 2 === 0 ? 250 : 0}
       className={`${styles.card} ${styles.services_item} services_item card`}
     >
       <div className={`${styles.iconbox} iconbox`}>

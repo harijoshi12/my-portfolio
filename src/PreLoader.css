@@ -10,6 +10,7 @@
   font-size: 40px;
   padding: 10px;
   cursor: auto;
+  position: relative;
 }
 #preLoader_page .welcome_message {
   margin: 100px auto;
@@ -34,11 +35,16 @@
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
-  padding: 3px;
+  padding: 5px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #preLoader_page .preLoader_wrapper .name_wrapper {
   display: flex;
   padding-right: 20%;
+  padding-left: 5px;
 }
 #preLoader_page .preLoader_wrapper .name_wrapper .firstName {
   display: flex;
