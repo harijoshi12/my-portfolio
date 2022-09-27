@@ -27,19 +27,25 @@ function Hero(props, ref) {
               {" "}
               Hari Joshi
             </h1>
-            <p
+            <h2
               data-aos="fade-right"
+              data-aos-delay={isSmall ? "0" : "400"}
+              data-aos-offset="30"
+            >
+              I design & build digital products
+            </h2>
+            <p
+              data-aos={isSmall ? "fade-right" : "fade-left"}
               data-aos-delay={isSmall ? "0" : "500"}
               data-aos-offset="30"
             >
-              "I design & build digital products that your users will love"{" "}
-              <br />
-              UI/UX Designer, Frontend & Backend, Blockchain, Web3, developer
+              UI/UX Designer, Frontend & Backend Developer, Blockchain/Web3
+              Developer
             </p>
 
             <div
               data-aos={!isSmall ? "fade-right" : "fade-left"}
-              data-aos-delay={isSmall ? "0" : "500"}
+              data-aos-delay={isSmall ? "0" : "550"}
               data-aos-offset="30"
               className={styles.btns}
             >

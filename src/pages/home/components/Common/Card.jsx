@@ -11,8 +11,8 @@ export const PortfolioItem = (props) => {
   // }
   useEffect(() => {
     VanillaTilt.init(tilt.current, {
-      max: 35,
-      speed: 300,
+      max: 20,
+      speed: 200,
       glare: true,
       "max-glare": 0.7,
     });
@@ -72,6 +72,7 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
         speed: 300,
         glare: true,
         "max-glare": 0.7,
+        gyroscope: false,
       });
     } else {
       setTimeout(() => {

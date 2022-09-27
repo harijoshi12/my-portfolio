@@ -8,14 +8,15 @@ $col3: rgb(0, 255, 187);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(
+    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(
       315deg,
       #fa8bff 0%,
       #2bd2ff 30%,
       rgb(143, 6, 255) 50%,
       #2bff88 90%
     );
+    // background: rgba(176, 176, 176, 0.629);
     clip-path: circle(20% at 65% 65%);
     background-blend-mode: overlay;
     animation: move2 150s linear infinite;
@@ -49,8 +50,8 @@ $col3: rgb(0, 255, 187);
     position: relative;
     .content {
       max-width: 980px;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
+      // gap: 30px;
       .card {
       }
     }
@@ -178,6 +179,17 @@ $col3: rgb(0, 255, 187);
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .portfolio {
+    .content_wrapper {
+      .content {
+        justify-content: center;
+        .card {
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 576px) {
   .portfolio {
     .content {

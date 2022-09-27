@@ -100,18 +100,25 @@ html {
   font-size: 4.5rem;
   color: rgb(0, 255, 187);
 }
+.hero .content_wrapper .content_left h2 {
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
 .hero .content_wrapper .content_left p {
-  margin: 15px 0;
   font-size: 22px;
   font-weight: 100;
   line-height: 32px;
   letter-spacing: 1px;
-  padding: 10px;
+  line-height: 40px;
+  padding: 15px 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .hero .content_wrapper .content_left .btns {
   width: 75%;
   height: 100px;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -639,8 +646,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(315deg, #fa8bff 0%, #2bd2ff 30%, rgb(143, 6, 255) 50%, #2bff88 90%);
+  background: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(315deg, #fa8bff 0%, #2bd2ff 30%, rgb(143, 6, 255) 50%, #2bff88 90%);
   -webkit-clip-path: circle(20% at 65% 65%);
           clip-path: circle(20% at 65% 65%);
   background-blend-mode: overlay;
@@ -673,8 +680,7 @@ html {
 }
 .portfolio .content_wrapper .content {
   max-width: 980px;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 .portfolio .portfolio_item {
   position: relative;
@@ -819,6 +825,11 @@ html {
             clip-path: circle(20% at 80% 80%);
   }
 }
+@media only screen and (max-width: 768px) {
+  .portfolio .content_wrapper .content {
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 576px) {
   .portfolio .content .card {
     min-width: 310px;
@@ -878,6 +889,11 @@ html {
   width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+  .upCommingProjects .content_wrapper .content {
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 576px) {
   .upCommingProjects .portfolio_item .imgbox {
     height: 210px;
