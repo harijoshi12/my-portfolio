@@ -97,8 +97,17 @@ html {
 }
 .hero .content_wrapper .content_left h1 {
   padding: 0 10px;
-  font-size: 4.5rem;
+  font-size: 70px;
   color: rgb(0, 255, 187);
+  transition: color 0.1s ease-in-out;
+}
+.hero .content_wrapper .content_left h1 .rubberBand {
+  display: inline-flex;
+  -webkit-animation: rubberband 800ms alternate ease-out;
+          animation: rubberband 800ms alternate ease-out;
+}
+.hero .content_wrapper .content_left h1 .rubberBand:hover {
+  color: white;
 }
 .hero .content_wrapper .content_left h2 {
   padding: 10px;
@@ -168,6 +177,63 @@ html {
   border: 2px solid rgb(0, 255, 187);
 }
 
+@-webkit-keyframes test {
+  to {
+    transform: translate(200px);
+  }
+}
+
+@keyframes test {
+  to {
+    transform: translate(200px);
+  }
+}
+@-webkit-keyframes rubberband {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    transform: scaleX(1.42) scaleY(0.65);
+  }
+  55% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  65% {
+    transform: scaleX(1.39) scaleY(0.75);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.35) scaleY(0.85);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+@keyframes rubberband {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    transform: scaleX(1.42) scaleY(0.65);
+  }
+  55% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  65% {
+    transform: scaleX(1.39) scaleY(0.75);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.35) scaleY(0.85);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
 @media only screen and (max-width: 768px) {
   .hero .content_wrapper .content {
     flex-direction: column-reverse;
@@ -873,20 +939,16 @@ html {
   font-size: 1rem;
   padding: 10px;
 }
-.upCommingProjects .upcommingProject_item div {
+.upCommingProjects .upcommingProject_item .techStack {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
-.upCommingProjects .upcommingProject_item div * {
-  border: 1px solid white;
-  padding: 2px;
-}
-.upCommingProjects .upcommingProject_item div span {
+.upCommingProjects .upcommingProject_item .techStack span {
   display: inline-flex;
   justify-content: center;
-  width: 50%;
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width: 768px) {

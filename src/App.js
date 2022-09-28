@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Switch } from "react-router-dom"
+import 'animate.css';
 
 import Layout from './Ui/Layout';
 import './App.css'

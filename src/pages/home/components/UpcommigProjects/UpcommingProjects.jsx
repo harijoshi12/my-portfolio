@@ -43,7 +43,7 @@ const UpcommingProjects = (props, ref) => {
     {
       id: 3,
       img: social_media,
-      title: "Social media app for revolutionaries",
+      title: "Social media app for Think Tanks",
       desc: "I feel an strong need to unite all the rational minded people all around the world for the betterment of the society, to help humanity reach the Type-1 civilization as soon as possible.As of now we are a type-0.7 civilization.",
       tech: [
         "A.I/M.L",
