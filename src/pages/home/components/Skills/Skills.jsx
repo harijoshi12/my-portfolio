@@ -36,6 +36,7 @@ export const ProgLang = ({ id, title, level }) => {
       ref={proglangRef}
       data-aos="fade-up"
       data-aos-offset="80"
+      data-aos-id={`innerBar${id}`}
       className={styles.progLang}
     >
       <span className={styles.sm_title_wrapper}>
@@ -48,9 +49,9 @@ export const ProgLang = ({ id, title, level }) => {
           data-aos="slide-right"
           data-aos-duration="0"
           data-aos-easing="linear"
-          data-aos-id={`innerBar${id}`}
+          // data-aos-id={`innerBar${id}`}
           className={styles.progressBarInner}
-          // style={{ width: `${level * 10}%` }}
+        // style={{ width: `${level * 10}%` }}
         ></span>
       </span>
     </div>

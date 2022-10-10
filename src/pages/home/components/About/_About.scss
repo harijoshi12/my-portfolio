@@ -60,11 +60,20 @@ $col3: rgb(0, 255, 187);
       }
     }
     h3 {
-      font-family: cursive;
+      font-family: "Merriweather Sans", sans-serif;
+      letter-spacing: 1px;
+      line-height: 25px;
+      font-weight: 100;
+      margin-bottom: 10px;
     }
     p {
       font-size: 20px;
-      padding: 10px 0;
+      padding: 7px 0;
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      a {
+        color: $col3;
+      }
     }
     button {
       margin-left: 5px;
@@ -72,6 +81,11 @@ $col3: rgb(0, 255, 187);
       font-size: 20px;
       padding: 10px 20px;
       cursor: pointer;
+      border-radius: 0;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        border-radius: 30px;
+      }
     }
   }
 }

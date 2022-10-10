@@ -95,8 +95,9 @@ $col3: rgb(0, 255, 187);
             width: fit-content;
             border: 0;
             outline: none;
-            background-color: black;
+            background-color: rgb(44, 44, 44);
             color: $col3;
+            box-shadow: 0 0 10px 1px black;
             transition: all 0.2s ease;
           }
           &:hover {
@@ -120,6 +121,7 @@ $col3: rgb(0, 255, 187);
         background-size: cover;
         transform: rotateY(180deg);
         border: 2px solid $col3;
+        box-shadow: 0 0 20px 5px black;
       }
     }
   }

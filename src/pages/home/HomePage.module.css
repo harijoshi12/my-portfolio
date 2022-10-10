@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&family=Roboto:wght@100&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -154,8 +155,9 @@ html {
   width: fit-content;
   border: 0;
   outline: none;
-  background-color: black;
+  background-color: rgb(44, 44, 44);
   color: rgb(0, 255, 187);
+  box-shadow: 0 0 10px 1px black;
   transition: all 0.2s ease;
 }
 .hero .content_wrapper .content_left .btns .btn_outer:hover {
@@ -175,6 +177,7 @@ html {
   background-size: cover;
   transform: rotateY(180deg);
   border: 2px solid rgb(0, 255, 187);
+  box-shadow: 0 0 20px 5px black;
 }
 
 @-webkit-keyframes test {
@@ -314,11 +317,20 @@ html {
   background-color: rgb(0, 255, 187);
 }
 .about .content_right h3 {
-  font-family: cursive;
+  font-family: "Merriweather Sans", sans-serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 100;
+  margin-bottom: 10px;
 }
 .about .content_right p {
   font-size: 20px;
-  padding: 10px 0;
+  padding: 7px 0;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+.about .content_right p a {
+  color: rgb(0, 255, 187);
 }
 .about .content_right button {
   margin-left: 5px;
@@ -326,6 +338,11 @@ html {
   font-size: 20px;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.about .content_right button:hover {
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -375,9 +392,10 @@ html {
   text-align: center;
   padding: 15px 0;
   margin-bottom: 10;
-  font-style: italic;
   color: rgb(211, 211, 211);
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: "Merriweather Sans", sans-serif;
 }
 .skills .content_left {
   display: flex;
