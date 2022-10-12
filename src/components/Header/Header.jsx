@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
+// import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function Header({ setIsMousein }) {
   const nav = useRef();
   const link1 = useRef();
   // const link2 = useRef()
-  const link3 = useRef();
+  // const link3 = useRef();
   // const link4 = useRef()
   const link5 = useRef();
 
@@ -19,7 +19,7 @@ function Header({ setIsMousein }) {
 
   // cursor link animaition
   useEffect(() => {
-    const navlinks = [link1, link3, link5];
+    const navlinks = [link1, link5];
     navlinks.forEach((link) => {
       link.current.addEventListener("mouseleave", () => {
         link.current.classList.remove("hovered-link");
@@ -34,7 +34,7 @@ function Header({ setIsMousein }) {
 
   // Responsive Navabar
   useEffect(() => {
-    const navlinks = [link1, link3, link5];
+    const navlinks = [link1, link5];
 
     // initial navlinks opacity 0
     let siteWidth = window.innerWidth;
@@ -47,9 +47,8 @@ function Header({ setIsMousein }) {
           link.current.addEventListener("click", () => {
             setToggleMenu(false);
             navlinks.forEach((link, index) => {
-              link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${
-                (navlinks.length - index) / 12
-              }s`;
+              link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12
+                }s`;
             });
           });
         });
@@ -73,9 +72,8 @@ function Header({ setIsMousein }) {
         link.current.addEventListener("click", () => {
           setToggleMenu(false);
           navlinks.forEach((link, index) => {
-            link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${
-              (navlinks.length - index) / 12
-            }s`;
+            link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 12
+              }s`;
           });
         });
       });
@@ -89,14 +87,12 @@ function Header({ setIsMousein }) {
       navlinks.forEach((link, index) => {
         if (!nav.current.classList.contains("toggle")) {
           link.current.style.opacity = 0;
-          link.current.style.animation = `navlinkFadeOpen 0.3s ease forwards ${
-            (index + 1) / 8 + 0.1
-          }s`;
+          link.current.style.animation = `navlinkFadeOpen 0.3s ease forwards ${(index + 1) / 8 + 0.1
+            }s`;
         } else {
           link.current.style.opacity = 1;
-          link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${
-            (navlinks.length - index) / 15
-          }s`;
+          link.current.style.animation = `navlinkFadeClose 0.3s ease forwards ${(navlinks.length - index) / 15
+            }s`;
         }
       });
     });
@@ -187,7 +183,7 @@ function Header({ setIsMousein }) {
               <span>Home</span>{" "}
             </NavLink>
             {/* <NavLink className={toggleMenu ? "toggle" : ""} ref={link2} to='/about' activeStyle={{ color: activeColor }} exact> <span>About Me</span> </NavLink> */}
-            <NavLink
+            {/* <NavLink
               className={toggleMenu ? "toggle" : ""}
               ref={link3}
               to="/my-resume"
@@ -195,7 +191,7 @@ function Header({ setIsMousein }) {
               exact
             >
               <span>My Resume</span>
-            </NavLink>
+            </NavLink> */}
             {/* <NavLink className={toggleMenu ? "toggle": ""} ref={link4} to='/download-resume' activeStyle={{color: activeColor}} exact><span>Download Resume</span></NavLink> */}
             <a
               href="https://www.metaresume.fun/"
@@ -207,7 +203,7 @@ function Header({ setIsMousein }) {
               Create Your Resume
             </a>
           </nav>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <div
             ref={burger}
             className={toggleMenu ? "burger toggle" : "burger"}

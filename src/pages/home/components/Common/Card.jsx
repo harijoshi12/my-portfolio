@@ -3,7 +3,7 @@ import styles from "../../HomePage.module.css";
 import VanillaTilt from "vanilla-tilt";
 
 export const PortfolioItem = (props) => {
-  const { id, title, desc, git_link, live_demo_link } = props;
+  const { id, title, desc, features, git_link, live_demo_link } = props;
   // const bgh= {
   //   bgGradient: 'background-color: #4158D0',
   //   backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)'
@@ -59,14 +59,14 @@ export const PortfolioItem = (props) => {
       <h2 className={styles.projectId}>0{id}</h2>
       <h3 className={styles.projectTitle}>{title}</h3>
       <p className={styles.projectDesc}>"{desc}"</p>
-      {/* <div>
+      <div>
         <h3>Features</h3>
         {features.map((f, idx) => (
           <p key={idx}>
             <span>&#xBB; </span> <span> {f}</span>
           </p>
         ))}
-      </div> */}
+      </div>
       <div className={styles.btn_container}>
         <a href={git_link}>Github</a>
         <a href={live_demo_link}>Live Demo</a>

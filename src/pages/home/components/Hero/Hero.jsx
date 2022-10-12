@@ -1,5 +1,9 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import styles from "../../HomePage.module.css";
+import { saveAs } from 'file-saver'
+
+const url3 = "https://drive.google.com/file/d/10KjMNqfvt0f4r4QxKPcYDStJ8gxGnWrR/view?usp=sharing"
+
 // import BgAnimation from './BgAnimation'
 function Hero(props, ref) {
   const [isSmall, setIsSmall] = useState(false);
@@ -138,10 +142,10 @@ function Hero(props, ref) {
               className={styles.btns}
             >
               <span className={styles.btn_outer}>
-                <button>Download Resume</button>
+                <button onClick={() => { saveAs(url3, "Hari's resume.pdf") }}>Download Resume</button>
               </span>
               <span className={styles.btn_outer}>
-                <button>Let's Talk</button>
+                <button ><a href="#contact">Let's Talk</a></button>
               </span>
             </div>
           </div>

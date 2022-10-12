@@ -12,6 +12,9 @@ import React, { useRef, useState, useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // AOS.init();
 
 function HomePage() {
@@ -93,6 +96,7 @@ function HomePage() {
   }, []);
   return (
     <div id={styles.homePage}>
+      <ToastContainer position="top-center" />
       <div className={styles.homePageOverlay}></div>
       <SideNavigation ref={sideNavRef} show={show} />
       <Hero ref={heroRef} />

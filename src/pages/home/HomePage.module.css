@@ -160,6 +160,9 @@ html {
   box-shadow: 0 0 10px 1px black;
   transition: all 0.2s ease;
 }
+.hero .content_wrapper .content_left .btns .btn_outer button a {
+  color: rgb(0, 255, 187);
+}
 .hero .content_wrapper .content_left .btns .btn_outer:hover {
   border: 3px solid rgb(0, 255, 187);
   transform: scale(1.1);
@@ -538,7 +541,7 @@ html {
   fill: none;
   stroke-width: 10px;
   stroke-dasharray: 330;
-  transition: all 3s linear;
+  transition: all 2s linear;
   stroke-dashoffset: 330;
 }
 
@@ -1151,8 +1154,13 @@ html {
   margin: auto;
   margin-top: 40px;
   background-color: rgb(24, 24, 24);
+  cursor: pointer;
   color: rgb(209, 209, 209);
   box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease;
+}
+.contact .content_right button:hover {
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 992px) {
