@@ -22,7 +22,7 @@ const About = (props, ref) => {
             </h1>
             <h3 data-aos="fade-up">
               Hi, I'm Hari. I'm a self-taught passionate learner with over 7+
-              years of experiencces in wide range of disiplines i.e Mechanical
+              years of experiencces in wide range of disciplines i.e Mechanical
               Engineering, Teaching(Physics & Maths),Software Development,
               entrepreneurship...
             </h3>
