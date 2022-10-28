@@ -48,9 +48,9 @@ export const PortfolioItem = (props) => {
   return (
     <div
       ref={tilt}
+      className={`${styles.card}  ${styles.portfolio_item}`}
       data-aos={isTilt ? null : id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
       data-aos-delay={isTilt ? null : id % 2 === 0 ? 100 : 0}
-      className={`${styles.card}  ${styles.portfolio_item}`}
     >
       {/* <div className={`${styles.card}  ${styles.portfolio_item}`} style={bg}> */}
       {/* <div className={styles.imgbox} style={{backgroundImage:`url(${img})`}}></div> */}
@@ -141,9 +141,9 @@ export const ServiceItem = ({ id, icons, title, desc }) => {
   return (
     <div
       ref={tilt}
+      className={`${styles.card} ${styles.services_item} services_item card`}
       data-aos={isTilt ? null : id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
       data-aos-delay={isTilt ? null : id % 2 === 0 ? 250 : 0}
-      className={`${styles.card} ${styles.services_item} services_item card`}
     >
       <div className={`${styles.iconbox} iconbox`}>
         {icons.map((icon, idx) => {
