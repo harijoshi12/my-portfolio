@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import styles from "../../HomePage.module.css";
 
 import { toast } from "react-toastify";
@@ -23,6 +24,7 @@ const Contact = (props, ref) => {
     message: "",
   });
 
+  const form = useRef();
   const fnameRef = useRef(null);
   const lnameRef = useRef(null);
   const emailRef = useRef(null);
@@ -77,12 +79,22 @@ const Contact = (props, ref) => {
         const { data } = await axios.post(`${baseUrl}/contact-form`, {
           ...contactData,
         });
+
+        //emailjs
+        emailjs.sendForm('service_0n3imd2', 'template_fsi3bzl', form.current, 'Y1g44RpQNGxshhClN')
+          .then((result) => {
+            console.log(result.text);
+          }, (error) => {
+            console.log(error.text);
+          });
+        //emailjs
         console.log(data);
         toast.success("Message sent successfully. We will contact you soon", {
           position: toast.POSITION.TOP_CENTER,
           className: "custom_toast",
         });
       }
+
     } catch (error) {
       console.log(error);
       toast.error(error.message, {
@@ -106,7 +118,7 @@ const Contact = (props, ref) => {
 
           <div className={styles.content_right}>
             <h1 className={styles.title}>Contact Me</h1>
-            <form action="" autoComplete="off" onSubmit={handleSubmit}>
+            <form ref={form} action="" autoComplete="off" onSubmit={handleSubmit}>
               <div className={styles.row}>
                 <div className={styles.input_field}>
                   <input
