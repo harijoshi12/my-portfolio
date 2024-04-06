@@ -21,7 +21,7 @@ const About = (props, ref) => {
               About Me <span></span>
             </h1>
             <h3 data-aos="fade-up">
-              Hi, I'm Hari. I'm a self-taught passionate learner with over 7+
+              Hi, I'm Hari. I'm a self-taught passionate learner with over 9+
               years of experiencces in wide range of disciplines i.e Mechanical
               Engineering, Teaching(Physics & Maths),Software Development,
               entrepreneurship...
@@ -39,8 +39,7 @@ const About = (props, ref) => {
             <p data-aos="fade-up">
               I like to develop expertise in a number of areas over the course
               of my life and career. my personality type is{" "}
-              <a href="https://www.16personalities.com/intj-personality">INTJ</a>/<a href="https://www.16personalities.com/infj-personality">INFJ</a>. I'm currently working on a
-              small project(Resume Builder) and is open for new opportunities.{" "}
+              <a href="https://www.16personalities.com/intj-personality">INTJ</a>/<a href="https://www.16personalities.com/infj-personality">INFJ</a>. I'm currently working for Transcybernetics Private Limited.{" "}
               {!show && "....."}
             </p>
 
