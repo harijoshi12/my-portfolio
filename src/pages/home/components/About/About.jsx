@@ -49,7 +49,7 @@ const About = (props, ref) => {
                 Thanks for stopping by, I’m currently looking to join a new team
                 of creative designers and developers. If you think we might be a
                 good fit for one another, give me a{" "}
-                <a href="tel:+917906519104">call <IoCall /></a> or send me an{" "}
+                <a href="tel:+919634090498">call <IoCall /></a> or send me an{" "}
                 <a href="mailto:mr.hariprasadjoshi@gmail.com">email <MdEmail /> </a>.
               </p>
             )}
