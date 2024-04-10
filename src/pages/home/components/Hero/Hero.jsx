@@ -142,7 +142,19 @@ function Hero(props, ref) {
               className={styles.btns}
             >
               <span className={styles.btn_outer}>
-                <button onClick={() => { saveAs(url3, "Hari's resume.pdf") }}>Download Resume</button>
+                {/* <button onClick={() => { saveAs(url3, "Hari's resume.pdf") }}>Download Resume</button> */}
+                <button onClick={() => { console.log("resume downloaded") }}>
+                  <a
+                    href={url3}
+                    ref={link5}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    id="nav_resumeMaker"
+                  >
+                    Download Resume
+                  </a>
+                </button>
+
               </span>
               <span className={styles.btn_outer}>
                 <button ><a href="#contact">Let's Talk</a></button>
