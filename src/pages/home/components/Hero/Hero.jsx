@@ -146,7 +146,6 @@ function Hero(props, ref) {
                 <button onClick={() => { console.log("resume downloaded") }}>
                   <a
                     href={url3}
-                    ref={link5}
                     rel="noopener noreferrer"
                     target="_blank"
                     id="nav_resumeMaker"
